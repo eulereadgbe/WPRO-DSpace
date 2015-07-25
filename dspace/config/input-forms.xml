@@ -157,6 +157,27 @@ it, please enter the types and the actual numbers or codes.</hint>
        <field>
          <dc-schema>dc</dc-schema>
          <dc-element>subject</dc-element>
+         <dc-qualifier>mesh</dc-qualifier>
+         <!-- An input-type of twobox MUST be marked as repeatable -->
+         <repeatable>true</repeatable>
+         <label>MeSH Headings</label>
+         <input-type>onebox</input-type>
+         <hint>Enter appropriate MeSH headings below. </hint>
+         <required></required>
+       </field>
+       <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>subject</dc-element>
+         <dc-qualifier>meshqualifier</dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>MeSH Qualifiers</label>
+         <input-type>onebox</input-type>
+         <hint>Enter MeSH qualifiers below.</hint>
+         <required></required>
+       </field>
+       <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>subject</dc-element>
          <dc-qualifier></dc-qualifier>
          <!-- An input-type of twobox MUST be marked as repeatable -->
          <repeatable>true</repeatable>
