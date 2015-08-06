@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <document xmlns="http://di.tamu.edu/DRI/1.0/" xmlns:i18n="http://apache.org/cocoon/i18n/2.1" version="1.1">
 <body>
-<div id="file.news.div.news" n="news" rend="primary">
-<head>DSpace Repository</head>
-<p>DSpace is a digital service that collects, preserves, and distributes digital material. Repositories are important tools for preserving an organization&apos;s legacy; they facilitate digital preservation and scholarly communication.</p>
-</div>
+    <div id="file.news.div.news" n="news" rend="primary">
+        <head>Welcome to WPRO IRIS</head>
+        <figure source="/static/images/wprolib.jpg"/>
+        <p>The WHO Regional Office for the Western Pacific's Institutional Repository for Information Sharing (WPRO IRIS) is
+            the digital library of WPRO's published material and technical information in full text produced since 1951.
+            </p>
+        <p>
+            Its content is freely accessible and searchable in English. Content in Chinese and French are currently
+            digitized and are available on request at <xref target="mailto:wprorepository@wpro.who.int">wprorepository@wpro.who.int</xref>.
+        </p>
+    </div>
 </body>
 <options/>
 <meta>
-<userMeta/>
-<pageMeta/>
-<repositoryMeta/>
+    <userMeta/>
+    <pageMeta/>
+    <repositoryMeta/>
 </meta>
 </document>
