@@ -126,7 +126,8 @@
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_sponsor">Sponsor</message>
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_identifier">Identifier</message>
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_language">Language (ISO)</message>
-	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_keyword">Keyword</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_keywords">Keyword</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_type">Type</message>
 
    <!--  some common other possibilities for Advanced Search Fields -->
    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_contributor">Contributor</message>
@@ -2215,6 +2216,7 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.item-preview">Preview</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-title">Title</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-author">Author</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-coauthor">Co-Author</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-abstract">Abstract</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-description">Description</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-uri">URI</message>
@@ -2232,6 +2234,8 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-viewOpen">View/<wbr/>Open</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-access-rights">Read access available for</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-no-files">There are no files associated with this item.</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-language">Language</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-languageVersion">Other Language Versions</message>
 
 	<message key="xmlui.dri2xhtml.METS-1.0.size-bytes">bytes</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.size-kilobytes">Kb</message>
