@@ -80,7 +80,7 @@
         <a href="{@OBJID}">
             <xsl:choose>
 	            <xsl:when test="string-length($data/dim:field[@element='title'][1]) &gt; 0">
-	                <xsl:value-of select="$data/dim:field[@element='title'][1]"/>
+	                <xsl:value-of select="$data/dim:field[@element='title'][1]" disable-output-escaping="yes"/>
 	            </xsl:when>
 	            <xsl:otherwise>
 	                <i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>
