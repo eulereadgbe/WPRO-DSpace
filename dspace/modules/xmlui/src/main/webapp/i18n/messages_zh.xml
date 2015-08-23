@@ -8,7 +8,7 @@
     http://www.dspace.org/license/
 
 -->
-<catalogue xml:lang="en" xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+<catalogue xml:lang="zh" xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
 
 	<!--
 		The format used by all keys is as follows
@@ -24,10 +24,10 @@
 		-->
 
 	<!-- General keys -->
-	<message key="xmlui.general.dspace_home">WPRO IRIS</message>
-	<message key="xmlui.general.search">Search WPRO IRIS</message>
-	<message key="xmlui.general.go">Go</message>
-	<message key="xmlui.general.go_home">Go to WPRO IRIS home</message>
+	<message key="xmlui.general.dspace_home">主页</message>
+	<message key="xmlui.general.search">搜寻</message>
+	<message key="xmlui.general.go">执行</message>
+	<message key="xmlui.general.go_home">Go to DSpace home</message>
 	<message key="xmlui.general.save">Save</message>
 	<message key="xmlui.general.cancel">Cancel</message>
 	<message key="xmlui.general.return">Return</message>
@@ -65,7 +65,7 @@
 	<!--
 		This section is for feed syndications (RSS, atom, etc)
 	-->
-	<message key="xmlui.feed.general_description">The WHO Regional Office for the Western Pacific's Institutional Repository for Information Sharing (WPRO IRIS) is the digital library of WPRO's published material and technical information in full text produced since 1951.</message>
+	<message key="xmlui.feed.general_description">The DSpace digital repository system captures, stores, indexes, preserves, and distributes digital research material.</message>
     <message key="xmlui.feed.header">RSS Feeds</message>
 	<message key="xmlui.feed.logo_title">The Channel Image</message>
 	<message key="xmlui.feed.untitled">Untitled</message>
@@ -78,29 +78,54 @@
 
 
 	<!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-		          ArtifactBrowser Aspect
-        NOTE: As of DSpace 6.0, the ArtifactBrowser Aspect was removed (in favor
-        of the ViewArtifacts, BrowseArtifacts and SearchArtifacts aspects). 
-        However, many of its classes and corresponding i18n keys still exist as 
-        they are used by other aspects.
-	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
-        <!-- Note: As of DSpace 6.0, org.dspace.app.xmlui.aspect.artifactbrowser.AbstractSearch has been removed. -->
-        <!-- The following keys are still in use by Discovery's AbstractSearch -->
-        <message key="xmlui.ArtifactBrowser.AbstractSearch.no_results">Search produced no results.</message>
-	<message key="xmlui.ArtifactBrowser.AbstractSearch.all_of_dspace">All of WPRO IRIS</message>
+
+		             ArtifactBrowser Aspect
+
+		!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+
+
+
+
+
+
+
+	<!-- org.dspace.app.xmlui.artifactbrowser.AbstractSearch.java -->
+	<message key="xmlui.ArtifactBrowser.AbstractSearch.head1_community">Search Results for Community: {0}</message>
+	<message key="xmlui.ArtifactBrowser.AbstractSearch.head1_collection">Search Results for Collection: {0}</message>
+	<message key="xmlui.ArtifactBrowser.AbstractSearch.head1_none">Search Results</message>
+	<message key="xmlui.ArtifactBrowser.AbstractSearch.result_query">Your query "{0}" produced {1} result(s).</message>
+	<message key="xmlui.ArtifactBrowser.AbstractSearch.head2">Communities or Collections matching your query</message>
+	<message key="xmlui.ArtifactBrowser.AbstractSearch.head3">Items matching your query</message>
+	<message key="xmlui.ArtifactBrowser.AbstractSearch.no_results">Search produced no results.</message>
+	<message key="xmlui.ArtifactBrowser.AbstractSearch.all_of_dspace">All of DSpace</message>
+
+   <message key="xmlui.ArtifactBrowser.AbstractSearch.sort_by.title">title</message>
+   <message key="xmlui.ArtifactBrowser.AbstractSearch.sort_by.dateissued">issue date</message>
+   <message key="xmlui.ArtifactBrowser.AbstractSearch.sort_by.dateaccessioned">submit date</message>
+	<message key="xmlui.ArtifactBrowser.AbstractSearch.sort_by.relevance">relevance</message>
+	<message key="xmlui.ArtifactBrowser.AbstractSearch.sort_by">Sort items by</message>
+	<message key="xmlui.ArtifactBrowser.AbstractSearch.order">in order</message>
+	<message key="xmlui.ArtifactBrowser.AbstractSearch.order.asc">ascending</message>
+	<message key="xmlui.ArtifactBrowser.AbstractSearch.order.desc">descending</message>
+	<message key="xmlui.ArtifactBrowser.AbstractSearch.rpp">Results/page</message>
 
     <!-- org.dspace.app.xmlui.artifactbrowser.AdvancedSearch.java -->
-    <!-- Note: As of DSpace 6.0, org.dspace.app.xmlui.aspect.artifactbrowser.AdvancedSearch has been removed. -->
-    <!-- The following "type_*" i18n keys will be left as is as they're referenced by the Discovery's SidebarFacetsTransformer
-         but in future, they should be refactored to a more relevant key prefix -->
-    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_author">Author</message>
-    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_title">Title</message>
-    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_subject">Subject</message>
-    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_abstract">Abstract</message>
-    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_series">Series</message>
-    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_sponsor">Sponsor</message>
-    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_identifier">Identifier</message>
-	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_language">Language</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.title">Advanced Search</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.trail">Advanced Search</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.head">Advanced Search</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.search_scope">Search scope</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.search_scope_help">Limit your search to a community or collection.</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.conjunction">Conjunction</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.search_type">Search type</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.search_for">Search for</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_author">Author</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_title">Title</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_subject">Subject</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_abstract">Abstract</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_series">Series</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_sponsor">Sponsor</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_identifier">Identifier</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_language">Language (ISO)</message>
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_keywords">Keyword</message>
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_type">Type</message>
 
@@ -115,6 +140,10 @@
    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_department">Department</message>
 
    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_ANY">Full Text</message>
+   <message key="xmlui.ArtifactBrowser.AdvancedSearch.and">AND</message>
+   <message key="xmlui.ArtifactBrowser.AdvancedSearch.or">OR</message>
+   <message key="xmlui.ArtifactBrowser.AdvancedSearch.not">NOT</message>
+
 
 	<!-- org.dspace.app.xmlui.artifactbrowser.ConfigureableBrowse.java -->
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.starts_with">Or enter first few letters:</message>
@@ -140,14 +169,10 @@
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.order.desc">descending</message>
 
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.author.column_heading">Authors Name</message>
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.coauthor.column_heading">Co-Authors</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.subject.column_heading">Subject</message>
 
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.author">Browsing {0} by Author {1}</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.author">Browsing {0} by Author</message>
-
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.coauthor">Browsing {0} by Co-Author {1}</message>
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.coauthor">Browsing {0} by Co-Author</message>
 
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.subject">Browsing {0} by Subject {1}</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.subject">Browsing {0} by Subject</message>
@@ -188,7 +213,7 @@
 
 	<!-- org.dspace.app.xmlui.artifactbrowser.CollectionViewer.java -->
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.search_scope">Search Scope</message>
-	<message key="xmlui.ArtifactBrowser.CollectionViewer.all_of_dspace">All of WPRO IRIS</message>
+	<message key="xmlui.ArtifactBrowser.CollectionViewer.all_of_dspace">All of DSpace</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.full_text_search">Search within this collection:</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.head_browse">Browse by</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.browse_titles">Titles</message>
@@ -200,14 +225,12 @@
 	<!-- org.dspace.app.xmlui.artifactbrowser.CommunityBrowser.java -->
 	<message key="xmlui.ArtifactBrowser.CommunityBrowser.title">Community List</message>
 	<message key="xmlui.ArtifactBrowser.CommunityBrowser.trail">Community List</message>
-	<message key="xmlui.ArtifactBrowser.CommunityBrowser.head">Communities and Collections</message>
-    <message key="xmlui.ArtifactBrowser.CommunityBrowser.select">Shown below is a list of communities and the
-        collections and sub-communities within them. Click on a name to view that community or collection home page.
-    </message>
+	<message key="xmlui.ArtifactBrowser.CommunityBrowser.head">文献分类和数据库</message>
+	<message key="xmlui.ArtifactBrowser.CommunityBrowser.select">以下显示的是文献分类、数据库及其子类列表。请点击文献分类或数据库名称浏览主页。</message>
 
 	<!-- org.dspace.app.xmlui.artifactbrowser.CommunityViewer.java -->
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.search_scope">Search Scope</message>
-	<message key="xmlui.ArtifactBrowser.CommunityViewer.all_of_dspace">All of WPRO IRIS</message>
+	<message key="xmlui.ArtifactBrowser.CommunityViewer.all_of_dspace">All of DSpace</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.full_text_search">Search within this community and its collections:</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.head_browse">Browse by</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.browse_titles">Titles</message>
@@ -220,9 +243,9 @@
 
 
 	<!-- org.dspace.app.xmlui.artifactbrowser.Contact.java -->
-	<message key="xmlui.ArtifactBrowser.Contact.title">Contact us</message>
-	<message key="xmlui.ArtifactBrowser.Contact.trail">Contact us</message>
-	<message key="xmlui.ArtifactBrowser.Contact.head">Contact us</message>
+	<message key="xmlui.ArtifactBrowser.Contact.title">联系我们</message>
+	<message key="xmlui.ArtifactBrowser.Contact.trail">联系我们</message>
+	<message key="xmlui.ArtifactBrowser.Contact.head">联系我们</message>
 	<message key="xmlui.ArtifactBrowser.Contact.para1">{0} administrators may be contacted at:</message>
 	<message key="xmlui.ArtifactBrowser.Contact.feedback_label">On-line form</message>
 	<message key="xmlui.ArtifactBrowser.Contact.feedback_link">Feedback</message>
@@ -232,7 +255,7 @@
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.title">Give feedback</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.trail">Give feedback</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.head">Give feedback</message>
-	<message key="xmlui.ArtifactBrowser.FeedbackForm.para1">Thanks for sharing your feedback about the WPRO IRIS system. Your comments are appreciated!</message>
+	<message key="xmlui.ArtifactBrowser.FeedbackForm.para1">Thanks for sharing your feedback about the DSpace system. Your comments are appreciated!</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.email">Your Email</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.email_help">This address will be used to follow up on your feedback.</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.comments">Comments</message>
@@ -253,15 +276,11 @@
         <message key="xmlui.ArtifactBrowser.ItemViewer.withdrawn">This item has been withdrawn and is no longer available.</message>
 
 	<!-- org.dspace.app.xmlui.artifactbrowser.Navigation.java -->
-        <!-- Note: As of DSpace 6.0, org.dspace.app.xmlui.aspect.artifactbrowser.Navigation has been removed. -->
-        <!-- The following i18n keys will be left as is as they're referenced by the Discovery's Navigation
-         but in future, they should be refactored to a more relevant key prefix -->
 	<message key="xmlui.ArtifactBrowser.Navigation.head_browse">Browse</message>
-	<message key="xmlui.ArtifactBrowser.Navigation.head_all_of_dspace">All of WPRO IRIS</message>
-	<message key="xmlui.ArtifactBrowser.Navigation.communities_and_collections">Communities &amp; Collections</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.head_all_of_dspace">All of DSpace</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.communities_and_collections">文献分类和数据库</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_title">Titles</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_author">Authors</message>
-	<message key="xmlui.ArtifactBrowser.Navigation.browse_coauthor">Co-Authors</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_subject">Subjects</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_mesh">Subjects</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_dateissued">By Issue Date</message>
@@ -270,9 +289,6 @@
 	<message key="xmlui.ArtifactBrowser.Navigation.head_this_community">This Community</message>
 
 	<!-- org.dspace.app.xmlui.artifactbrowser.SimpleSearch.java -->
-        <!-- Note: As of DSpace 6.0, org.dspace.app.xmlui.aspect.artifactbrowser.SimpleSearch has been removed. -->
-        <!-- The following i18n keys will be left as is as they're referenced by the Discovery's SimpleSearch
-         but in future, they should be refactored to a more relevant key prefix -->
 	<message key="xmlui.ArtifactBrowser.SimpleSearch.title">Search</message>
 	<message key="xmlui.ArtifactBrowser.SimpleSearch.trail">Search</message>
 	<message key="xmlui.ArtifactBrowser.SimpleSearch.head">Search</message>
@@ -448,7 +464,7 @@
 	<!-- org.dspace.app.xmlui.eperson.CannotRegister.java -->
 	<message key="xmlui.EPerson.CannotRegister.title">Registration unavailable</message>
 	<message key="xmlui.EPerson.CannotRegister.head">Registration unavailable</message>
-	<message key="xmlui.EPerson.CannotRegister.para1">The configuration of this WPRO IRIS repository does not allow registration in this context. Please contact the <a href="../contact">site administrator</a> with questions or comments.</message>
+	<message key="xmlui.EPerson.CannotRegister.para1">The configuration of this DSpace repository does not allow registration in this context. Please contact the <a href="../contact">site administrator</a> with questions or comments.</message>
 
 	<!-- org.dspace.app.xmlui.eperson.EditProfile.java -->
 	<message key="xmlui.EPerson.EditProfile.title_update">Update Profile</message>
@@ -508,20 +524,20 @@
 	<!-- org.dspace.app.xmlui.eperson.PasswordLogin.java -->
 	<message key="xmlui.EPerson.PasswordLogin.title">Sign in</message>
 	<message key="xmlui.EPerson.PasswordLogin.trail">Sign in</message>
-	<message key="xmlui.EPerson.PasswordLogin.head1">Sign in to WPRO IRIS</message>
+	<message key="xmlui.EPerson.PasswordLogin.head1">Sign in to DSpace</message>
 	<message key="xmlui.EPerson.PasswordLogin.email_address">E-Mail Address</message>
 	<message key="xmlui.EPerson.PasswordLogin.error_bad_login">The email address and/or password supplied were not valid.</message>
 	<message key="xmlui.EPerson.PasswordLogin.password">Password</message>
 	<message key="xmlui.EPerson.PasswordLogin.forgot_link"> Forgot your password?</message>
 	<message key="xmlui.EPerson.PasswordLogin.submit">Sign in</message>
 	<message key="xmlui.EPerson.PasswordLogin.head2">Register new user</message>
-	<message key="xmlui.EPerson.PasswordLogin.para1">Register an account to subscribe to collections for email updates, and submit new items to WPRO IRIS.</message>
+	<message key="xmlui.EPerson.PasswordLogin.para1">Register an account to subscribe to collections for email updates, and submit new items to DSpace.</message>
 	<message key="xmlui.EPerson.PasswordLogin.register_link">Click here to register.</message>
 
 	<!-- org.dspace.app.xmlui.eperson.LDAPLogin.java -->
 	<message key="xmlui.EPerson.LDAPLogin.title">Sign in</message>
 	<message key="xmlui.EPerson.LDAPLogin.trail">Sign in</message>
-	<message key="xmlui.EPerson.LDAPLogin.head1">Sign in to WPRO IRIS</message>
+	<message key="xmlui.EPerson.LDAPLogin.head1">Sign in to DSpace</message>
 	<message key="xmlui.EPerson.LDAPLogin.username">User Name</message>
 	<message key="xmlui.EPerson.LDAPLogin.error_bad_login">The user name and/or password supplied were not valid.</message>
 	<message key="xmlui.EPerson.LDAPLogin.password">Password</message>
@@ -560,7 +576,7 @@
 	<!-- org.dspace.app.xmlui.eperson.RegistrationFinished.java -->
 	<message key="xmlui.EPerson.RegistrationFinished.title">Registration finished</message>
 	<message key="xmlui.EPerson.RegistrationFinished.head">Registration Finished</message>
-	<message key="xmlui.EPerson.RegistrationFinished.para1">You're now registered to use the WPRO IRIS system.  You can subscribe to collections to receive email updates about new items.</message>
+	<message key="xmlui.EPerson.RegistrationFinished.para1">You're now registered to use the DSpace system.  You can subscribe to collections to receive email updates about new items.</message>
 
 	<!-- org.dspace.app.xmlui.eperson.ResetPassword.java -->
 	<message key="xmlui.EPerson.ResetPassword.title">Reset password</message>
@@ -576,7 +592,7 @@
 	<!-- org.dspace.app.xmlui.eperson.StartForgotPassword.java -->
 	<message key="xmlui.EPerson.StartForgotPassword.title">Forgot Password</message>
 	<message key="xmlui.EPerson.StartForgotPassword.head">Forgot Password</message>
-	<message key="xmlui.EPerson.StartForgotPassword.para1">Enter the email address you provided when you registered with WPRO IRIS. An email will be sent to that address with further instructions.</message>
+	<message key="xmlui.EPerson.StartForgotPassword.para1">Enter the email address you provided when you registered with DSpace. An email will be sent to that address with further instructions.</message>
 	<message key="xmlui.EPerson.StartForgotPassword.email_address">Email Address</message>
 	<message key="xmlui.EPerson.StartForgotPassword.email_address_help">Enter the same address used when registering.</message>
 	<message key="xmlui.EPerson.StartForgotPassword.error_not_found">Email address not found.</message>
@@ -589,7 +605,7 @@
 	<message key="xmlui.EPerson.StartRegistration.reset_password_for">Reset password for</message>
 	<message key="xmlui.EPerson.StartRegistration.submit_reset">Reset password</message>
 	<message key="xmlui.EPerson.StartRegistration.head2">New user registration</message>
-	<message key="xmlui.EPerson.StartRegistration.para2">Register an account to subscribe to collections for email updates, and submit new items to WPRO IRIS.</message>
+	<message key="xmlui.EPerson.StartRegistration.para2">Register an account to subscribe to collections for email updates, and submit new items to DSpace.</message>
 	<message key="xmlui.EPerson.StartRegistration.email_address">Email Address</message>
 	<message key="xmlui.EPerson.StartRegistration.email_address_help">This address will be verified and used as your login name.</message>
 	<message key="xmlui.EPerson.StartRegistration.error_bad_email">Unable to send email to this address.</message>
@@ -618,8 +634,8 @@
 
 
 	<!-- general submission aspect messages -->
-	<message key="xmlui.Submission.general.mydspace_home">MyWPRO IRIS Home</message>
-	<message key="xmlui.Submission.general.go_mydspace">Go to MyWPRO IRIS Home</message>
+	<message key="xmlui.Submission.general.mydspace_home">MyDSpace Home</message>
+	<message key="xmlui.Submission.general.go_mydspace">Go to MyDSpace Home</message>
 	<message key="xmlui.Submission.general.submission.title">Item submission</message>
 	<message key="xmlui.Submission.general.submission.trail">Item submission</message>
 	<message key="xmlui.Submission.general.submission.head">Item submission</message>
@@ -697,7 +713,7 @@
 	<message key="xmlui.Submission.Submissions.status_unknown">Unknown state</message>
         <!-- Same transformer, completed submissions section -->
         <message key="xmlui.Submission.Submissions.completed.head">Archived Submissions</message>
-        <message key="xmlui.Submission.Submissions.completed.info">These are your completed submissions which have been accepted into WPRO IRIS.</message>
+        <message key="xmlui.Submission.Submissions.completed.info">These are your completed submissions which have been accepted into DSpace.</message>
         <message key="xmlui.Submission.Submissions.completed.column1">Date accepted</message>
         <message key="xmlui.Submission.Submissions.completed.column2">Title</message>
         <message key="xmlui.Submission.Submissions.completed.column3">Collection</message>
@@ -798,8 +814,7 @@
     <message key="xmlui.Submission.submit.AccessStep.column4">End Date</message>
     <message key="xmlui.Submission.submit.AccessStep.table_edit_button">Edit</message>
     <message key="xmlui.Submission.submit.AccessStep.table_delete_button">Remove</message>
-	<message key="xmlui.administrative.authorization.AccessStep.label_date_help">The first day from which access is allowed. Accepted format: yyyy, yyyy-mm, yyyy-mm-dd</message>
-    <message key="xmlui.administrative.authorization.AccessStep.label_date_displayonly_help">The first day from which access is allowed. <b>This date cannot be modified on this form.</b> To set an embargo date for a bitstream, go to the <i>Item Status</i> tab, click <i>Authorizations...</i>, create or edit the bitstream's <i>READ</i> policy, and set the <i>Start Date</i> as desired.</message>
+    <message key="xmlui.administrative.authorization.AccessStep.label_date_help">The first day from which access is allowed. Accepted format: yyyy, yyyy-mm, yyyy-mm-dd</message>
     <message key="xmlui.Submission.submit.AccessStep.review_policy_line">Name: {0}; action: {1}, group: {2}, start date: {3}, end date: {4}</message>
     <message key="xmlui.Submission.submit.AccessStep.review_public_item">The item will be searchable</message>
     <message key="xmlui.Submission.submit.AccessStep.review_private_item">The item will not be searchable</message>
@@ -914,7 +929,7 @@
 
 	<!-- org.dspace.app.xmlui.Submission.submit.LicenseStep -->
 	<message key="xmlui.Submission.submit.LicenseStep.head">Distribution License</message>
-	<message key="xmlui.Submission.submit.LicenseStep.info1"><strong>There is one last step:</strong> In order for WPRO IRIS to reproduce, translate and distribute your submission worldwide, you must agree to the following terms.</message>
+	<message key="xmlui.Submission.submit.LicenseStep.info1"><strong>There is one last step:</strong> In order for DSpace to reproduce, translate and distribute your submission worldwide, you must agree to the following terms.</message>
 	<message key="xmlui.Submission.submit.LicenseStep.info2">Grant the standard distribution license by selecting 'I Grant the License'; and then click 'Complete Submission'.</message>
 	<message key="xmlui.Submission.submit.LicenseStep.info3">If you have questions regarding this license please contact the system administrators.</message>
 	<message key="xmlui.Submission.submit.LicenseStep.decision_label">Distribution license</message>
@@ -1012,10 +1027,9 @@
 	<message key="xmlui.administrative.Navigation.context_create_subcommunity">Create Sub-community</message>
 	<message key="xmlui.administrative.Navigation.context_create_community">Create Community</message>
 	<message key="xmlui.administrative.Navigation.context_export_item">Export Item</message>
-    <message key="xmlui.administrative.Navigation.context_export_collection">Export Collection</message>
-    <message key="xmlui.administrative.Navigation.context_export_community">Export Community</message>
-    <message key="xmlui.administrative.Navigation.context_export_metadata">Export Metadata</message>
-    <message key="xmlui.administrative.Navigation.context_search_export_metadata">Export Search Metadata</message>
+        <message key="xmlui.administrative.Navigation.context_export_collection">Export Collection</message>
+        <message key="xmlui.administrative.Navigation.context_export_community">Export Community</message>
+        <message key="xmlui.administrative.Navigation.context_export_metadata">Export Metadata</message>
 
 	<!-- Site administrator options -->
 	<message key="xmlui.administrative.Navigation.administrative_head">Administrative</message>
@@ -1033,8 +1047,8 @@
     <message key="xmlui.administrative.Navigation.administrative_control_panel">Control Panel</message>
     <message key="xmlui.administrative.Navigation.statistics">Statistics</message>
     <message key="xmlui.administrative.Navigation.administrative_batch_import">Batch Import (ZIP)</message>
-    <message key="xmlui.administrative.Navigation.administrative_import_metadata">Import Metadata</message>
-    <message key="xmlui.administrative.Navigation.administrative_curation">Curation Tasks</message>
+        <message key="xmlui.administrative.Navigation.administrative_import_metadata">Import Metadata</message>
+        <message key="xmlui.administrative.Navigation.administrative_curation">Curation Tasks</message>
 
     <!-- my account items -->
 	<message key="xmlui.administrative.Navigation.account_export">My Exports</message>
@@ -1306,7 +1320,7 @@
 	<!-- org.dspace.app.xmlui.administrative.registries.MetadatRegistryMain.java -->
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.title">Metadata Registry</message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.head1">Metadata registry</message>
-	<message key="xmlui.administrative.registries.MetadataRegistryMain.para1">The metadata registry maintains a list of all metadata fields available in the repository. These fields may be divided amongst multiple schemas.  However, WPRO IRIS requires the qualified Dublin Core schema. You may extend the Dublin Core schema with additional fields or add new schemas to the registry.</message>
+	<message key="xmlui.administrative.registries.MetadataRegistryMain.para1">The metadata registry maintains a list of all metadata fields available in the repository. These fields may be divided amongst multiple schemas.  However, DSpace requires the qualified Dublin Core schema. You may extend the Dublin Core schema with additional fields or add new schemas to the registry.</message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.column1"></message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.column2">ID</message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.column3">Namespace</message>
@@ -1504,7 +1518,6 @@
 	<message key="xmlui.administrative.item.AddBitstreamForm.head1">Upload a new bitstream</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.bundle_label">Bundle</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.bundle.ORIGINAL">Content Files (default)</message>
-	<message key="xmlui.administrative.item.AddBitstreamForm.bundle.TEXT">Text</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.bundle.METADATA">Metadata Files</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.bundle.THUMBNAIL">Thumbnails</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.bundle.LICENSE">Licenses</message>
@@ -1826,7 +1839,7 @@
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.trail">Harvesting</message>
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.options_harvest">Content Source</message>
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.label_source">Content source</message>
-	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.source_normal">This is a standard WPRO IRIS collection</message>
+	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.source_normal">This is a standard DSpace collection</message>
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.source_harvested">This collection harvests its content from an external source</message>
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.submit_save">Save</message>
 
@@ -1870,7 +1883,6 @@
 	<message key="xmlui.administrative.ControlPanel.option_harvest">Harvesting</message>
 	<message key="xmlui.administrative.ControlPanel.harvest_scheduler_head">Harvest Scheduler Controls</message>
 	<message key="xmlui.administrative.ControlPanel.harvest_label_status">Status</message>
-	<message key="xmlui.administrative.ControlPanel.harvest_status_refresh">(refresh)</message>
 	<message key="xmlui.administrative.ControlPanel.harvest_label_actions">Actions</message>
 	<message key="xmlui.administrative.ControlPanel.harvest_submit_start">Start Harvester</message>
 	<message key="xmlui.administrative.ControlPanel.harvest_submit_reset">Reset Harvest Status</message>
@@ -1960,7 +1972,7 @@
 	<message key="xmlui.administrative.ControlPanel.trail">Control panel</message>
 	<message key="xmlui.administrative.ControlPanel.head">Control Panel</message>
 	<message key="xmlui.administrative.ControlPanel.option_java">Java Information</message>
-	<message key="xmlui.administrative.ControlPanel.option_dspace">WPRO IRIS Configuration</message>
+	<message key="xmlui.administrative.ControlPanel.option_dspace">DSpace Configuration</message>
 	<message key="xmlui.administrative.ControlPanel.option_alerts">System-wide Alerts</message>
 	<message key="xmlui.administrative.ControlPanel.hours">{0} h</message>
 	<message key="xmlui.administrative.ControlPanel.minutes">{0} m</message>
@@ -1985,11 +1997,11 @@
         <message key="xmlui.administrative.ControlPanel.cocoon_cache_clear">(Clear Cache Immediately)</message>
         <message key="xmlui.administrative.ControlPanel.cocoon_persistent_cache_size">Persistent Cache Size ({0})</message>
         <message key="xmlui.administrative.ControlPanel.cocoon_transient_cache_size">Transient Cache Size ({0})</message>
-	<message key="xmlui.administrative.ControlPanel.dspace_head">WPRO IRIS Settings</message>
+	<message key="xmlui.administrative.ControlPanel.dspace_head">DSpace Settings</message>
         <message key="xmlui.administrative.ControlPanel.dspace_version">DSpace Version</message>
-	<message key="xmlui.administrative.ControlPanel.dspace_dir">WPRO IRIS Installation Directory</message>
-	<message key="xmlui.administrative.ControlPanel.dspace_url">WPRO IRIS Base URL</message>
-	<message key="xmlui.administrative.ControlPanel.dspace_hostname">WPRO IRIS Host Name</message>
+	<message key="xmlui.administrative.ControlPanel.dspace_dir">DSpace Installation Directory</message>
+	<message key="xmlui.administrative.ControlPanel.dspace_url">DSpace Base URL</message>
+	<message key="xmlui.administrative.ControlPanel.dspace_hostname">DSpace Host Name</message>
 	<message key="xmlui.administrative.ControlPanel.dspace_name">Name of the Site</message>
 	<message key="xmlui.administrative.ControlPanel.db_name">Database Name</message>
 	<message key="xmlui.administrative.ControlPanel.db_url">Database URL</message>
@@ -2031,20 +2043,8 @@
 	<message key="xmlui.administrative.ControlPanel.activity_sort_Agent">User-Agent</message>
 	<message key="xmlui.administrative.ControlPanel.activity_anonymous">Anonymous {0}</message>
 	<message key="xmlui.administrative.ControlPanel.activity_none">No page views have been recorded.</message>
-	<message key="xmlui.administrative.ControlPanel.detail">Detail</message>
-	<message key="xmlui.administrative.ControlPanel.show_hide">show/hide</message>
-	<message key="xmlui.administrative.ControlPanel.host">Host: {0}</message>
-	<message key="xmlui.administrative.ControlPanel.puser">Principal user: {0}</message>
-	<message key="xmlui.administrative.ControlPanel.headers">Headers: {0}</message>
-	<message key="xmlui.administrative.ControlPanel.cookies">Cookies: {0}</message>
 
 	<message key="xmlui.administrative.ControlPanel.select_panel">Use the tabs above to select the information to display</message>
-
-	<message key="xmlui.administrative.ControlPanel.tabs.Java Information">Java Information</message>
-	<message key="xmlui.administrative.ControlPanel.tabs.Configuration">Configuration</message>
-	<message key="xmlui.administrative.ControlPanel.tabs.SystemWide Alerts">SystemWide Alerts</message>
-	<message key="xmlui.administrative.ControlPanel.tabs.Harvesting">Harvesting</message>
-	<message key="xmlui.administrative.ControlPanel.tabs.Current Activity">Current Activity</message>
 
 	<!-- org.dspace.app.xmlui.administrative.SystemwideAlerts -->
 	<message key="xmlui.administrative.SystemwideAlerts.countdown"><strong>In {0} minutes</strong>: </message>
@@ -2061,7 +2061,7 @@
         <!-- System-wide Curation Tasks form (org.dspace.app.xmlui.aspect.administrative.CurateForm) -->
         <message key="xmlui.administrative.CurateForm.title">System Curation Tasks</message>
         <message key="xmlui.administrative.CurateForm.trail">Curation Tasks</message>
-        <message key="xmlui.administrative.CurateForm.object_label_name">Handle of WPRO IRIS Object</message>
+        <message key="xmlui.administrative.CurateForm.object_label_name">Handle of DSpace Object</message>
         <message key="xmlui.administrative.CurateForm.object_hint">Hint: Enter [your-handle-prefix]/0 to run a task across entire site (not all tasks may support this capability)</message>
         <message key="xmlui.administrative.CurateForm.task_label_name">Task</message>
     <!-- Used by Curate<DSO>Form classes also -->
@@ -2178,16 +2178,16 @@
 			<a href="http://dspace.org">http://dspace.org</a>
 		</p>
 	</message>
-	<message key="xmlui.dri2xhtml.structural.contact-link">Contact Us</message>
+	<message key="xmlui.dri2xhtml.structural.contact-link">联系我们</message>
 	<message key="xmlui.dri2xhtml.structural.feedback-link">Send Feedback</message>
 
-	<message key="xmlui.dri2xhtml.structural.head-subtitle">WPRO IRIS Repository</message>
+	<message key="xmlui.dri2xhtml.structural.head-subtitle">DSpace Repository</message>
 
 	<message key="xmlui.dri2xhtml.structural.profile">Profile: </message>
 	<message key="xmlui.dri2xhtml.structural.logout">Logout</message>
 	<message key="xmlui.dri2xhtml.structural.login">Login</message>
 
-	<message key="xmlui.dri2xhtml.structural.search">Search WPRO IRIS</message>
+	<message key="xmlui.dri2xhtml.structural.search">Search DSpace</message>
 	<message key="xmlui.dri2xhtml.structural.search-advanced">Advanced Search</message>
 	<message key="xmlui.dri2xhtml.structural.search-in-community">This Community</message>
 	<message key="xmlui.dri2xhtml.structural.search-in-collection">This Collection</message>
@@ -2215,26 +2215,14 @@
 
 	<message key="xmlui.dri2xhtml.METS-1.0.item-preview">Preview</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-title">Title</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-other-title">Other Titles</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-author">Author</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-coauthor">Co-Author</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-abstract">Abstract</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-description">Description</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-uri">URI</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-edition">Other Editions</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-url">English version URL</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-govdoc">Gov't Doc #</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-date">Date</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-publisher">Publisher</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-series">Series/Report no.</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-subject">Subject</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-keyword">Keyword</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-context">Context</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-isbn">ISBN</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-issn">ISSN</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-type">Type</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-location">Location</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-share">Share</message>
 
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-head">Files in this item</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-file">Files</message>
@@ -2274,8 +2262,8 @@
 	<!-- Internationalization elements specific to the Qualified Dublin Core metadata handler.
 		DS-METS-1.0-QDC.xsl -->
 	<message key="xmlui.dri2xhtml.METS-1.0.qdc-not-applicable">
-		Qualified Dublin Core (QDC) is not applicable to WPRO IRIS communities and collections at
-		this time. When using QDC, you should use the QDC crosswalk for WPRO IRIS items and either
+		Qualified Dublin Core (QDC) is not applicable to DSpace communities and collections at
+		this time. When using QDC, you should use the QDC crosswalk for DSpace items and either
 		DIM or MODS for processing of communities and collections.
 	</message>
 
@@ -2387,7 +2375,7 @@
      - JavaScript (AJAX) that completes the lookup popup window.
      - So, positional parameters are @1@, @2@, etc.
     -->
-  <message key="xmlui.ChoiceLookupTransformer.title">WPRO IRIS Value Lookup</message>
+  <message key="xmlui.ChoiceLookupTransformer.title">DSpace Value Lookup</message>
   <message key="xmlui.ChoiceLookupTransformer.accept">Accept</message>
   <message key="xmlui.ChoiceLookupTransformer.add">Add</message>
   <message key="xmlui.ChoiceLookupTransformer.cancel">Cancel</message>
@@ -2414,7 +2402,7 @@
   <message key="xmlui.ChoiceLookupTransformer.field.dc_subject_mesh.title">Medical Subject Headings lookup</message>
   <message key="xmlui.ChoiceLookupTransformer.field.dc_subject_mesh.help">MeSH Main Heading Terms</message>
 
-  <!-- mobile theme -->
+	<!-- mobile theme -->
   <message key="xmlui.mobile.home_mobile">DSpace Mobile</message>
   <message key="xmlui.mobile.search_all">Search ALL</message>
   <message key="xmlui.mobile.browse_all">Browse ALL by</message>
@@ -2497,7 +2485,6 @@
     <message key="xmlui.aspect.sherpa.submission.blue">blue</message>
     <message key="xmlui.aspect.sherpa.submission.white">white</message>
     <message key="xmlui.aspect.sherpa.submission.yellow">yellow</message>
-    <message key="xmlui.aspect.sherpa.submission.gray">gray</message>
     <!-- End Versioning -->
 
 
@@ -2529,33 +2516,157 @@
 
     <message key="xmlui.mirage2.item-list.thumbnail">Thumbnail</message>
 
+    <!-- Messages for Discovery -->
+    <!-- org.dspace.app.xmlui.artifactbrowser.AdvancedSearch.java -->
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.contributor.author_filter">Author</message>
 
-    <!-- org.dspace.app.xmlui.Submission.submit.StartSubmissionLookupStep -->
-    <message key="xmlui.Submission.submit.StartSubmissionLookupStep.submit_lookup">Search</message>
-    <message key="xmlui.Submission.submit.StartSubmissionLookupStep.title">Publication Search</message>
-    <message key="xmlui.Submission.submit.StartSubmissionLookupStep.lookup_help">Fill in a publication ID, DOI, Title or Author and then press "Search".  A list of all matching publications will be shown to you to select in order to proceed with the submission process.</message>
-    <message key="xmlui.Submission.submit.StartSubmissionLookupStep.submit_publication_item">Imported publication Record</message>
-    <message key="xmlui.Submission.submit.progressbar.lookup">Lookup</message>
-    <message key="xmlui.ChoiceLookupTransformer.lookup">Lookup</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.subject.mesh_filter">Subject (MeSH)</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.subject_filter">Keywords</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.type_filter">Content Type</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.date.issued">Date Issued</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dateIssued">Date Issued</message>
 
 
-	<!-- For news-xmlui.xml -->
-	<message key="wpro.news.title">Welcome to WPRO IRIS</message>
-	<message key="wpro.news.content">
-		<p>The WHO Regional Office for the Western Pacific's Institutional Repository for Information Sharing (WPRO
-			IRIS) is
-			the digital library of WPRO's published material and technical information in full text produced since 1951.
-		</p>
-		<p>
-			Its content is freely accessible and searchable in English. Content in Chinese and French are currently
-			digitized and are available on request at <a target="_blank" href="mailto:wprorepository@wpro.who.int">
-			wprorepository@wpro.who.int</a>.
-		</p>
-	</message>
+    <!-- Site Leve Recently Added Content -->
+    <message key="xmlui.ArtifactBrowser.SiteViewer.head_recent_submissions">Recently Added</message>
 
-	<!-- Tree view -->
-	<message key="wpro.treeview.collapse.all">Collapse All</message>
-	<message key="wpro.treeview.expand.all">Expand All</message>
+    <message key="xmlui.ArtifactBrowser.AbstractRecentSubmissionTransformer.recent_submissions_more">View more</message>
+    <message key="xmlui.Discovery.RecentSubmissions.RecentSubmissionTransformer.head">{0}: Recent submissions</message>
+    <message key="xmlui.Discovery.RecentSubmissions.RecentSubmissionTransformer.trail">Recent submissions</message>
+    <message key="xmlui.Discovery.RecentSubmissions.RecentSubmissionTransformer.recent.head">Recently added</message>
 
-	<message key="wpro.library.information">Library Information</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_type_filter">Kind</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_publisher_filter">Publisher</message>
+
+
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.sort_by.ispartof">Parent</message>
+
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.group_by">Group Results By</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.group_by.none">None</message>
+
+
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.group_by.publication_grp">Publication</message>
+
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_location.comm">Community</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_location.coll">Collection</message>
+
+
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.relation.ispartofseries_filter">Series</message>
+
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.contributor.author_browse">Browsing by: Author</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.title_browse">Browsing by: Title</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.subject_browse">Browsing by: Subject</message>
+
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.description.abstract_browse">Browsing by: Abstract</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_series_browse">Browsing by: Series</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_sponsor_browse">Browsing by: Sponsor</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_identifier_browse">Browsing by: Identifier</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_language_browse">Browsing by: Language (ISO)</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_keyword_browse">Browsing by: Keyword</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_taxon_browse">Browsing by: Scientific Name</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_contributor_browse">Browsing by: Contributor</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_creator_browse">Browsing by: Creator</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_subject_browse">Browsing by: Subject</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_description_browse">Browsing by: Description</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_relation_browse">Browsing by: Relation</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_mime_browse">Browsing by: Mime-Type</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_other_browse">Browsing by: Other Contributor</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_advisor_browse">Browsing by: Advisor</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_department_browse">Browsing by: Department</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dateissued_dt_browse">Browsing by: Issue date</message>
+
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.author">Author</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.title">Title</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject">Subject</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateIssued">Date issued</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.type">Type</message>
+
+
+
+    <message key="xmlui.dri2xhtml.structural.pagination-info.nototal">Now showing items {0}-{1}</message>
+
+    <message key="xmlui.Discovery.AbstractSearch.type_author">Filter by: Author</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.author">Author</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.author_filter">Author</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.coauthor">Co-Author</message>
+    <message key="xmlui.Discovery.AbstractSearch.type_subject">Filter by: Subject</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject">Subject</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.keywords">Keywords</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject_filter">Subject</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateIssued.year">Date Issued</message>
+    <message key="xmlui.Discovery.AbstractSearch.type_type">Filter by: Type</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.language">Language</message>
+    <message key="xmlui.Discovery.AbstractSearch.type_language">Filter by: Language</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.location">Location</message>
+
+
+    <message key="xmlui.Discovery.AbstractSearch.startswith">Starts with</message>
+    <message key="xmlui.Discovery.AbstractSearch.startswith.help">Or enter first few letters:</message>
+
+    <message key="xmlui.Discovery.AbstractSearch.sort_by.head">Sort Options:</message>
+    <message key="xmlui.Discovery.AbstractSearch.sort_by.relevance">Relevance</message>
+    <message key="xmlui.Discovery.AbstractSearch.sort_by.dc.title_sort_desc">Title Desc</message>
+    <message key="xmlui.Discovery.AbstractSearch.sort_by.dc.date.issued_dt_desc">Issue Date Desc</message>
+
+    <message key="xmlui.Discovery.AbstractSearch.sort_by.dc.title_sort_asc">Title Asc</message>
+    <message key="xmlui.Discovery.AbstractSearch.sort_by.dc.date.issued_dt_asc">Issue Date Asc</message>
+
+    <message key="xmlui.Discovery.AbstractSearch.rpp">Results Per Page:</message>
+
+
+    <message key="xmlui.Discovery.AbstractSearch.filters.controls.add-filter">Add Filter</message>
+    <message key="xmlui.Discovery.AbstractSearch.filters.controls.apply-filters">Apply</message>
+    <message key="xmlui.Discovery.AbstractSearch.filters.controls.remove-filter">Remove</message>
+    <message key="xmlui.Discovery.AbstractSearch.filters.controls.new-filters.head">New Filters:</message>
+    <message key="xmlui.Discovery.AbstractSearch.filters.controls.current-filters.head">Current Filters:</message>
+    <message key="xmlui.Discovery.AbstractSearch.filters.display">Add filters</message>
+
+    <message key="xmlui.discovery.SearchFacetFilter.no-results">No filter values found</message>
+
+    <message key="xmlui.discovery.AbstractFiltersTransformer.filters.head">Discover</message>
+    <message key="xmlui.discovery.AbstractFiltersTransformer.filters.view-more">... View More</message>
+
+
+    <message key="xmlui.Discovery.SimpleSearch.search_scope">Search</message>
+    <message key="xmlui.discovery.SimpleSearch.search_label">Search</message>
+    <message key="xmlui.Discovery.SimpleSearch.filter_head">Filters</message>
+    <message key="xmlui.Discovery.SimpleSearch.filter_help">Use filters to refine the search results.</message>
+
+    <message key="xmlui.Discovery.SimpleSearch.filter.contains">Contains</message>
+    <message key="xmlui.Discovery.SimpleSearch.filter.equals">Equals</message>
+    <message key="xmlui.Discovery.SimpleSearch.filter.authority">ID</message>
+    <message key="xmlui.Discovery.SimpleSearch.filter.notcontains">Not Contains</message>
+    <message key="xmlui.Discovery.SimpleSearch.filter.notequals">Not Equals</message>
+    <message key="xmlui.Discovery.SimpleSearch.filter.notauthority">Not ID</message>
+
+    <message key="xmlui.Discovery.RelatedItems.head">Related items</message>
+    <message key="xmlui.Discovery.RelatedItems.help">Showing items related by title, author, creator and subject.</message>
+
+    <message key="xmlui.Discovery.AbstractSearch.head1_community">Showing {0} out of a total of {1} results for community: {2}. <span class="searchTime">({3} seconds)</span></message>
+    <message key="xmlui.Discovery.AbstractSearch.head1_collection">Showing {0} out of a total of {1} results for collection: {2}. <span class="searchTime">({3} seconds)</span></message>
+    <message key="xmlui.Discovery.AbstractSearch.head1_none">Showing {0} out of a total of {1} results. <span class="searchTime">({2} seconds)</span></message>
+
+    <message key="xmlui.Discovery.AbstractSearch.head2">Communities or Collections matching your query</message>
+    <message key="xmlui.Discovery.AbstractSearch.head3">Items matching your query</message>
+
+    <message key="xmlui.Discovery.SimpleSearch.did_you_mean">Did you mean: </message>
+
+    <!-- For news-xmlui.xml -->
+    <message key="wpro.news.title">欢迎访问世卫组织西太区信息共享数据库！</message>
+    <message key="wpro.news.content">
+        <p>
+            世卫组织西太平洋区域办事处信息共享数据库（WPRO IRIS）是西太区的数字图书馆，全文收录了世卫组织西太区自1951年以来的出版资料和技术信息。
+        </p>
+        <p>
+            该数据库内的英文内容可供免费搜索和使用；中文及法文内容正在数字化过程中，可发邮件至
+            <a target="_blank" href="mailto:wprorepository@wpro.who.int">
+                wprorepository@wpro.who.int</a> 索取。.
+        </p>
+    </message>
+
+    <!-- Tree view -->
+    <message key="wpro.treeview.collapse.all">全部收缩</message>
+    <message key="wpro.treeview.expand.all">展开全部</message>
+
+    <message key="wpro.library.information">图书馆信息</message>
 </catalogue>

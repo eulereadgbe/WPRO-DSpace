@@ -53,6 +53,75 @@
 
 
     <xsl:template
+            match="dri:referenceSet[@id='aspect.artifactbrowser.CommunityBrowser.referenceSet.community-browser']">
+        <div id="sidetree">
+            <div id="sidetreecontrol">
+                <a href="?#" class="ds-button-field btn btn-default">
+                    <i18n:text>wpro.treeview.collapse.all</i18n:text>
+                </a>
+                &#160;
+                <a href="?#" class="ds-button-field btn btn-default">
+                    <i18n:text>wpro.treeview.expand.all</i18n:text>
+                </a>
+            </div>
+            <ul id="tree">
+                <xsl:apply-templates select="*[not(name()='head')]" mode="summaryList"/>
+            </ul>
+        </div>
+    </xsl:template>
+
+    <xsl:template match="dri:div[@id='aspect.artifactbrowser.ItemViewer.div.item-view']
+    | dri:div[@id='aspect.artifactbrowser.CollectionViewer.div.collection-home']
+    | dri:div[@id='aspect.artifactbrowser.CommunityViewer.div.community-home']">
+        <xsl:choose>
+            <xsl:when test="count(/dri:document/dri:meta/dri:pageMeta/dri:trail) > 1">
+                <p>
+                    <xsl:apply-templates select="/dri:document/dri:meta/dri:pageMeta/dri:trail"/>
+                </p>
+            </xsl:when>
+            <xsl:otherwise>
+                <p>
+                    <xsl:apply-templates select="/dri:document/dri:meta/dri:pageMeta/dri:trail"/>
+                </p>
+            </xsl:otherwise>
+        </xsl:choose>
+        <xsl:apply-templates />
+    </xsl:template>
+
+    <xsl:template match="dri:trail">
+        <xsl:if test="position()>1 and position() != last()">
+            &#160;<i class="fa fa-angle-double-right" aria-hidden="true"/>&#160;
+        </xsl:if>
+        <!-- Determine whether we are dealing with a link or plain text trail link -->
+        <xsl:choose>
+            <xsl:when test="./@target">
+                <a>
+                    <xsl:attribute name="href">
+                        <xsl:value-of select="./@target"/>
+                    </xsl:attribute>
+                    <xsl:if test="position()=1">
+                        <i class="fa fa-home fa-lg" aria-hidden="true"/>&#160;
+                    </xsl:if>
+                    <xsl:apply-templates />
+                </a>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+
+    <xsl:template
+            match="dri:list[@n='language']/dri:item/dri:xref/text()
+            | dri:list[@id='aspect.discovery.SidebarFacetsTransformer.list.language']/dri:item/text()
+            | dri:div[@id='aspect.discovery.SearchFacetFilter.div.browse-by-language-results']/dri:table/dri:row/dri:cell/dri:xref/text()">
+        <xsl:apply-templates select="*[not(name()='head')]"/>
+        <xsl:variable name="language">
+            <xsl:value-of select="substring-before(.,' (')"/>
+        </xsl:variable>
+        <xsl:for-each select=".">
+            <xsl:value-of select="concat(util:isoLanguageToDisplay($language),' (', substring-after(.,'('))"/>
+        </xsl:for-each>
+    </xsl:template>
+
+    <xsl:template
             match="dri:list[@id='aspect.discovery.SidebarFacetsTransformer.list.subject' and @n='subject']/dri:item//text()
                         | dri:list[@id='aspect.discovery.SidebarFacetsTransformer.list.subject']//text()
                         | dri:div[@id='aspect.discovery.SearchFacetFilter.div.browse-by-subject-results']/dri:table/dri:row/dri:cell//text()">
@@ -91,18 +160,6 @@
         <xsl:for-each select=".">
             <xsl:value-of select="concat($subject-sidebar-facet,' (', substring-after(.,'('))"/>
         </xsl:for-each>
-    </xsl:template>
-
-    <xsl:template
-            match="dri:referenceSet[@id='aspect.artifactbrowser.CommunityBrowser.referenceSet.community-browser']">
-        <div id="sidetree">
-            <div id="sidetreecontrol"><a href="?#" class="ds-button-field btn btn-default">Collapse All</a>&#160;
-                <a href="?#" class="ds-button-field btn btn-default">Expand All</a>
-            </div>
-            <ul id="tree">
-                <xsl:apply-templates select="*[not(name()='head')]" mode="summaryList"/>
-            </ul>
-        </div>
     </xsl:template>
 
 </xsl:stylesheet>
