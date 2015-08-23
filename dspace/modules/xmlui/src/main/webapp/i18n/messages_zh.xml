@@ -8,7 +8,7 @@
     http://www.dspace.org/license/
 
 -->
-<catalogue xml:lang="en" xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+<catalogue xml:lang="zh" xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
 
 	<!--
 		The format used by all keys is as follows
@@ -24,9 +24,9 @@
 		-->
 
 	<!-- General keys -->
-	<message key="xmlui.general.dspace_home">DSpace Home</message>
-	<message key="xmlui.general.search">Search</message>
-	<message key="xmlui.general.go">Go</message>
+	<message key="xmlui.general.dspace_home">主页</message>
+	<message key="xmlui.general.search">搜寻</message>
+	<message key="xmlui.general.go">执行</message>
 	<message key="xmlui.general.go_home">Go to DSpace home</message>
 	<message key="xmlui.general.save">Save</message>
 	<message key="xmlui.general.cancel">Cancel</message>
@@ -225,12 +225,10 @@
 	<!-- org.dspace.app.xmlui.artifactbrowser.CommunityBrowser.java -->
 	<message key="xmlui.ArtifactBrowser.CommunityBrowser.title">Community List</message>
 	<message key="xmlui.ArtifactBrowser.CommunityBrowser.trail">Community List</message>
-	<message key="xmlui.ArtifactBrowser.CommunityBrowser.head">Communities and Collections</message>
-    <message key="xmlui.ArtifactBrowser.CommunityBrowser.select">Shown below is a list of communities and the
-        collections and sub-communities within them. Click on a name to view that community or collection home page.
-    </message>
+	<message key="xmlui.ArtifactBrowser.CommunityBrowser.head">文献分类和数据库</message>
+	<message key="xmlui.ArtifactBrowser.CommunityBrowser.select">以下显示的是文献分类、数据库及其子类列表。请点击文献分类或数据库名称浏览主页。</message>
 
-    <!-- org.dspace.app.xmlui.artifactbrowser.CommunityViewer.java -->
+	<!-- org.dspace.app.xmlui.artifactbrowser.CommunityViewer.java -->
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.search_scope">Search Scope</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.all_of_dspace">All of DSpace</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.full_text_search">Search within this community and its collections:</message>
@@ -245,9 +243,9 @@
 
 
 	<!-- org.dspace.app.xmlui.artifactbrowser.Contact.java -->
-	<message key="xmlui.ArtifactBrowser.Contact.title">Contact us</message>
-	<message key="xmlui.ArtifactBrowser.Contact.trail">Contact us</message>
-	<message key="xmlui.ArtifactBrowser.Contact.head">Contact us</message>
+	<message key="xmlui.ArtifactBrowser.Contact.title">联系我们</message>
+	<message key="xmlui.ArtifactBrowser.Contact.trail">联系我们</message>
+	<message key="xmlui.ArtifactBrowser.Contact.head">联系我们</message>
 	<message key="xmlui.ArtifactBrowser.Contact.para1">{0} administrators may be contacted at:</message>
 	<message key="xmlui.ArtifactBrowser.Contact.feedback_label">On-line form</message>
 	<message key="xmlui.ArtifactBrowser.Contact.feedback_link">Feedback</message>
@@ -280,7 +278,7 @@
 	<!-- org.dspace.app.xmlui.artifactbrowser.Navigation.java -->
 	<message key="xmlui.ArtifactBrowser.Navigation.head_browse">Browse</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.head_all_of_dspace">All of DSpace</message>
-	<message key="xmlui.ArtifactBrowser.Navigation.communities_and_collections">Communities &amp; Collections</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.communities_and_collections">文献分类和数据库</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_title">Titles</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_author">Authors</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_subject">Subjects</message>
@@ -2180,7 +2178,7 @@
 			<a href="http://dspace.org">http://dspace.org</a>
 		</p>
 	</message>
-	<message key="xmlui.dri2xhtml.structural.contact-link">Contact Us</message>
+	<message key="xmlui.dri2xhtml.structural.contact-link">联系我们</message>
 	<message key="xmlui.dri2xhtml.structural.feedback-link">Send Feedback</message>
 
 	<message key="xmlui.dri2xhtml.structural.head-subtitle">DSpace Repository</message>
@@ -2654,22 +2652,21 @@
     <message key="xmlui.Discovery.SimpleSearch.did_you_mean">Did you mean: </message>
 
     <!-- For news-xmlui.xml -->
-    <message key="wpro.news.title">Welcome to WPRO IRIS</message>
+    <message key="wpro.news.title">欢迎访问世卫组织西太区信息共享数据库！</message>
     <message key="wpro.news.content">
-        <p>The WHO Regional Office for the Western Pacific's Institutional Repository for Information Sharing (WPRO
-            IRIS) is
-            the digital library of WPRO's published material and technical information in full text produced since 1951.
+        <p>
+            世卫组织西太平洋区域办事处信息共享数据库（WPRO IRIS）是西太区的数字图书馆，全文收录了世卫组织西太区自1951年以来的出版资料和技术信息。
         </p>
         <p>
-            Its content is freely accessible and searchable in English. Content in Chinese and French are currently
-            digitized and are available on request at <a target="_blank" href="mailto:wprorepository@wpro.who.int">
-            wprorepository@wpro.who.int</a>.
+            该数据库内的英文内容可供免费搜索和使用；中文及法文内容正在数字化过程中，可发邮件至
+            <a target="_blank" href="mailto:wprorepository@wpro.who.int">
+                wprorepository@wpro.who.int</a> 索取。.
         </p>
     </message>
 
     <!-- Tree view -->
-    <message key="wpro.treeview.collapse.all">Collapse All</message>
-    <message key="wpro.treeview.expand.all">Expand All</message>
+    <message key="wpro.treeview.collapse.all">全部收缩</message>
+    <message key="wpro.treeview.expand.all">展开全部</message>
 
-    <message key="wpro.library.information">Library Information</message>
+    <message key="wpro.library.information">图书馆信息</message>
 </catalogue>
