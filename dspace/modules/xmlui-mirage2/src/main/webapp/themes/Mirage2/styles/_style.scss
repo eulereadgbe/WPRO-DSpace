@@ -201,3 +201,9 @@ body {
 .newnav > a {
   padding-right: 5px;
 }
+
+.thumbnail > img, .thumbnail a > img {
+    border: 1px solid #dddddd;
+    margin-left: auto;
+    margin-right: auto;
+}
