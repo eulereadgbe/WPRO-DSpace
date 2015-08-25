@@ -26,10 +26,10 @@
 	<!-- General keys -->
 	<!-- Correctif relatif a DS-1159 : "Hardcoded button display text in several XMLUI themes makes i18n difficult" -->
 	<message key="xmlui.general.addbutton">Ajouter</message>
-	<message key="xmlui.general.dspace_home">Accueil de DSpace</message>
+	<message key="xmlui.general.dspace_home">Accueil</message>
 	<message key="xmlui.general.search">Recherche</message>
 	<message key="xmlui.general.go">Aller</message>
-	<message key="xmlui.general.go_home">Aller &#224; la page d'accueil de DSpace</message>
+	<message key="xmlui.general.go_home">Aller &#224; la page d'accueil</message>
 	<message key="xmlui.general.save">Sauvegarder</message>
 	<message key="xmlui.general.cancel">Annuler</message>
 	<message key="xmlui.general.return">Retour</message>
@@ -100,7 +100,7 @@
 	<message key="xmlui.ArtifactBrowser.AbstractSearch.head2">Communaut&#233;s ou collections correspondant &#224; votre recherche</message>
 	<message key="xmlui.ArtifactBrowser.AbstractSearch.head3">Documents correspondant &#224; votre recherche</message>
 	<message key="xmlui.ArtifactBrowser.AbstractSearch.no_results">La recherche n'a produit aucun r&#233;sultat.</message>
-	<message key="xmlui.ArtifactBrowser.AbstractSearch.all_of_dspace">Tout le d&#233;p&#244;t DSpace</message>
+	<message key="xmlui.ArtifactBrowser.AbstractSearch.all_of_dspace">Tout WPRO IRIS</message>
 
    <message key="xmlui.ArtifactBrowser.AbstractSearch.sort_by.title">titre</message>
    <message key="xmlui.ArtifactBrowser.AbstractSearch.sort_by.dateissued">date de publication</message>
@@ -192,7 +192,7 @@
 	
 	<!-- org.dspace.app.xmlui.artifactbrowser.CollectionViewer.java -->
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.search_scope">Port&#233;e de la recherche</message>
-	<message key="xmlui.ArtifactBrowser.CollectionViewer.all_of_dspace">Tout DSpace</message>
+	<message key="xmlui.ArtifactBrowser.CollectionViewer.all_of_dspace">Tout WPRO IRIS</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.full_text_search">Rechercher dans cette collection&#160;:</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.head_browse">Parcourir par</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.browse_titles">Titres</message>
@@ -212,7 +212,7 @@
 
     <!-- org.dspace.app.xmlui.artifactbrowser.CommunityViewer.java -->
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.search_scope">Port&#233;e de la recherche</message>
-	<message key="xmlui.ArtifactBrowser.CommunityViewer.all_of_dspace">Tout DSpace</message>
+	<message key="xmlui.ArtifactBrowser.CommunityViewer.all_of_dspace">Tout WPRO IRIS</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.full_text_search">Rechercher dans cette communaut&#233; et ses collections&#160;:</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.head_browse">Parcourir par</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.browse_titles">Titres</message>
@@ -263,7 +263,7 @@
 	
 	<!-- org.dspace.app.xmlui.artifactbrowser.Navigation.java -->
 	<message key="xmlui.ArtifactBrowser.Navigation.head_browse">Parcourir</message>
-	<message key="xmlui.ArtifactBrowser.Navigation.head_all_of_dspace">Tout DSpace</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.head_all_of_dspace">Tout WPRO IRIS</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.communities_and_collections">Communaut&#233;s &amp; Collections</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_title">Titres</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_author">Auteurs</message>
@@ -2121,7 +2121,9 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.item-date">Date</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-publisher">&#201;diteur</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-subject">Sujet</message>
-	
+	<message key="xmlui.dri2xhtml.METS-1.0.item-keyword">Mots-clés</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-context">Contexte</message>
+
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-head">Fichier(s) constituant ce document</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-file">Fichiers</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-name">Nom</message>
@@ -2365,7 +2367,7 @@
     <!-- End Versioning -->
 
 
-    <message key="xmlui.mirage2.itemSummaryView.MetaData">Metadata</message>
+    <message key="xmlui.mirage2.itemSummaryView.MetaData">Métadonnées</message>
     <message key="xmlui.mirage2.itemSummaryView.Collections">Collections</message>
 
     <message key="xmlui.mirage2.discovery.reset">Reset</message>
@@ -2452,29 +2454,30 @@
     <message key="xmlui.ArtifactBrowser.AbstractSearch.type_department_browse">Browsing by: Department</message>
     <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dateissued_dt_browse">Browsing by: Issue date</message>
 
-    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.author">Author</message>
-    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.title">Title</message>
-    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject">Subject</message>
-    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateIssued">Date issued</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.author">Auteur</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.title">Titre</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject">Sujet</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateIssued">Date d'émission</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.type">Type</message>
 
 
 
     <message key="xmlui.dri2xhtml.structural.pagination-info.nototal">Now showing items {0}-{1}</message>
 
-    <message key="xmlui.Discovery.AbstractSearch.type_author">Filter by: Author</message>
-    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.author">Author</message>
-    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.author_filter">Author</message>
-    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.coauthor">Co-Author</message>
-    <message key="xmlui.Discovery.AbstractSearch.type_subject">Filter by: Subject</message>
-    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject">Subject</message>
-    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.keywords">Keywords</message>
-    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject_filter">Subject</message>
-    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateIssued.year">Date Issued</message>
-    <message key="xmlui.Discovery.AbstractSearch.type_type">Filter by: Type</message>
-    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.language">Language</message>
-    <message key="xmlui.Discovery.AbstractSearch.type_language">Filter by: Language</message>
-    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.location">Location</message>
+    <message key="xmlui.Discovery.AbstractSearch.type_author">Filtrer par: Auteur</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.author">Auteur</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.author_filter">Auteur</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.coauthor">Co-Auteur</message>
+    <message key="xmlui.Discovery.AbstractSearch.type_subject">Filtrer par: Sujet</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject">Sujet</message>
+	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.keywords">Mots-clés</message>
+	<message key="xmlui.Discovery.AbstractSearch.type_keywords">Filtrer par: Mot-clé</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject_filter">Sujet</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateIssued.year">Date d'émission</message>
+    <message key="xmlui.Discovery.AbstractSearch.type_type">Filtrer par: Type</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.language">Langue</message>
+    <message key="xmlui.Discovery.AbstractSearch.type_language">Filtrer par: Langue</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.location">Emplacement</message>
 
 
     <message key="xmlui.Discovery.AbstractSearch.startswith">Starts with</message>
