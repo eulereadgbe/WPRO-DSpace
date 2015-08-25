@@ -2669,4 +2669,7 @@
     <message key="wpro.treeview.expand.all">展开全部</message>
 
     <message key="wpro.library.information">图书馆信息</message>
+	<message key="wpro.related.link">相关链接</message>
+	<message key="wpro.related.link.who.iris">世卫组织信息共享数据库</message>
+	<message key="wpro.related.link.wpro.library">西太区图书馆</message>
 </catalogue>
