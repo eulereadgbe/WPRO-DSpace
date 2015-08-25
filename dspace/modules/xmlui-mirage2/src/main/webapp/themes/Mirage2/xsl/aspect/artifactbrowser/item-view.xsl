@@ -121,12 +121,16 @@
                 <div class="col-sm-8">
                     <xsl:call-template name="itemSummaryView-DIM-authors"/>
                     <xsl:call-template name="itemSummaryView-DIM-coauthors"/>
+                    <xsl:call-template name="itemSummaryView-DIM-keyword"/>
                     <xsl:call-template name="itemSummaryView-DIM-publisher"/>
                     <xsl:call-template name="itemSummaryView-DIM-abstract"/>
                     <xsl:call-template name="itemSummaryView-DIM-URI"/>
-                    <xsl:call-template name="itemSummaryView-language"/>
-                    <xsl:call-template name="itemSummaryView-other-language"/>
                     <xsl:call-template name="itemSummaryView-subject"/>
+                    <xsl:call-template name="itemSummaryView-DIM-context"/>
+                    <div class="row">
+                        <xsl:call-template name="itemSummaryView-language"/>
+                        <xsl:call-template name="itemSummaryView-other-language"/>
+                    </div>
                     <xsl:if test="$ds_item_view_toggle_url != ''">
                         <xsl:call-template name="itemSummaryView-show-full"/>
                     </xsl:if>
@@ -477,7 +481,7 @@
 
     <xsl:template name="itemSummaryView-language">
         <xsl:if test="dim:field[@element='language' and @qualifier='iso' and descendant::text()]">
-            <div class="simple-item-view-uri item-page-field-wrapper table">
+            <div class="col-sm-4 col-print-4 item-page-field-wrapper">
                 <h5><i18n:text>xmlui.dri2xhtml.METS-1.0.item-language</i18n:text></h5>
                 <span>
                     <xsl:for-each select="dim:field[@element='language' and @qualifier='iso']">
@@ -493,7 +497,7 @@
 
     <xsl:template name="itemSummaryView-other-language">
         <xsl:if test="dim:field[@element='relation' and @qualifier='languageVersion' and descendant::text()]">
-            <div class="simple-item-view-uri item-page-field-wrapper table">
+            <div class="col-sm-6 col-print-4 item-page-field-wrapper">
                 <h5><i18n:text>xmlui.dri2xhtml.METS-1.0.item-languageVersion</i18n:text></h5>
                 <span>
                     <xsl:for-each select="dim:field[@element='relation' and @qualifier='languageVersion']">
@@ -587,6 +591,42 @@
                     <xsl:for-each select="dim:field[@element='publisher' and not(@qualifier)]">
                         <xsl:copy-of select="./node()"/>
                         <xsl:if test="count(following-sibling::dim:field[@element='publisher' and not(@qualifier)]) != 0">
+                            <xsl:text>; </xsl:text>
+                        </xsl:if>
+                    </xsl:for-each>
+                </span>
+            </div>
+        </xsl:if>
+    </xsl:template>
+
+    <xsl:template name="itemSummaryView-DIM-keyword">
+        <xsl:if test="dim:field[@element='subject' and not(@qualifier)]">
+            <div class="simple-item-view-uri item-page-field-wrapper table">
+                <h5>
+                    <i18n:text>xmlui.dri2xhtml.METS-1.0.item-keyword</i18n:text>
+                </h5>
+                <span>
+                    <xsl:for-each select="dim:field[@element='subject' and not(@qualifier)]">
+                        <xsl:copy-of select="./node()"/>
+                        <xsl:if test="count(following-sibling::dim:field[@element='subject' and not(@qualifier)]) != 0">
+                            <xsl:text>; </xsl:text>
+                        </xsl:if>
+                    </xsl:for-each>
+                </span>
+            </div>
+        </xsl:if>
+    </xsl:template>
+
+    <xsl:template name="itemSummaryView-DIM-context">
+        <xsl:if test="dim:field[@element='subject' and @qualifier='meshqualifier' and descendant::text()]">
+            <div class="simple-item-view-context item-page-field-wrapper table">
+                <h5>
+                    <i18n:text>xmlui.dri2xhtml.METS-1.0.item-context</i18n:text>
+                </h5>
+                <span>
+                    <xsl:for-each select="dim:field[@element='subject' and @qualifier='meshqualifier']">
+                        <xsl:copy-of select="./node()"/>
+                        <xsl:if test="count(following-sibling::dim:field[@element='subject' and @qualifier='meshqualifier']) != 0">
                             <xsl:text>; </xsl:text>
                         </xsl:if>
                     </xsl:for-each>
