@@ -27,7 +27,7 @@
 	<message key="xmlui.general.dspace_home">主页</message>
 	<message key="xmlui.general.search">搜寻</message>
 	<message key="xmlui.general.go">执行</message>
-	<message key="xmlui.general.go_home">Go to DSpace home</message>
+	<message key="xmlui.general.go_home">前往世卫组织IRIS系统主頁</message>
 	<message key="xmlui.general.save">Save</message>
 	<message key="xmlui.general.cancel">Cancel</message>
 	<message key="xmlui.general.return">Return</message>
@@ -271,7 +271,7 @@
 	<message key="xmlui.ArtifactBrowser.ItemViewer.trail">View Item</message>
 	<message key="xmlui.ArtifactBrowser.ItemViewer.head_parent_collections">This item appears in the following Collection(s)</message>
 	<message key="xmlui.ArtifactBrowser.ItemViewer.show_simple">Show simple item record</message>
-	<message key="xmlui.ArtifactBrowser.ItemViewer.show_full">Show full item record</message>
+	<message key="xmlui.ArtifactBrowser.ItemViewer.show_full">显示条目完整记录</message>
 
         <message key="xmlui.ArtifactBrowser.ItemViewer.withdrawn">This item has been withdrawn and is no longer available.</message>
 
@@ -646,8 +646,8 @@
 	<message key="xmlui.Submission.general.workflow.title">Item submission</message>
 	<message key="xmlui.Submission.general.workflow.trail">Item submission</message>
 	<message key="xmlui.Submission.general.workflow.head">Item submission</message>
-	<message key="xmlui.Submission.general.showfull">Show full item record</message>
-	<message key="xmlui.Submission.general.showsimple">Show simple item record</message>
+	<message key="xmlui.Submission.general.showfull">显示条目完整记录</message>
+	<message key="xmlui.Submission.general.showsimple">显示条目简单记录</message>
 	<message key="xmlui.Submission.general.default.title">Submission</message>
 	<message key="xmlui.Submission.general.default.trail">Submission</message>
 
@@ -2214,15 +2214,15 @@
     </message>
 
 	<message key="xmlui.dri2xhtml.METS-1.0.item-preview">Preview</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-title">Title</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-author">Author</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-coauthor">Co-Author</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-title">标题</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-author">作者</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-coauthor">合作者</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-abstract">Abstract</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-description">Description</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-uri">URI</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-date">Date</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-publisher">Publisher</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-subject">Subject</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-uri">网址</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-date">发表日期</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-publisher">出版者</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-subject">主题</message>
 
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-head">Files in this item</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-file">Files</message>
@@ -2659,8 +2659,8 @@
         </p>
         <p>
             该数据库内的英文内容可供免费搜索和使用；中文及法文内容正在数字化过程中，可发邮件至
-            <a target="_blank" href="mailto:wprorepository@wpro.who.int">
-                wprorepository@wpro.who.int</a> 索取。.
+            <a target="_blank" href="mailto:library@wpro.who.int">
+                library@wpro.who.int</a> 索取。.
         </p>
     </message>
 

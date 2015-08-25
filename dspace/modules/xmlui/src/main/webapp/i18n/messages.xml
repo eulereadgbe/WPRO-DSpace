@@ -24,7 +24,7 @@
 		-->
 
 	<!-- General keys -->
-	<message key="xmlui.general.dspace_home">DSpace Home</message>
+	<message key="xmlui.general.dspace_home">Home</message>
 	<message key="xmlui.general.search">Search</message>
 	<message key="xmlui.general.go">Go</message>
 	<message key="xmlui.general.go_home">Go to DSpace home</message>
@@ -2662,8 +2662,8 @@
         </p>
         <p>
             Its content is freely accessible and searchable in English. Content in Chinese and French are currently
-            digitized and are available on request at <a target="_blank" href="mailto:wprorepository@wpro.who.int">
-            wprorepository@wpro.who.int</a>.
+            digitized and are available on request at <a target="_blank" href="mailto:library@wpro.who.int">
+			library@wpro.who.int</a>.
         </p>
     </message>
 
