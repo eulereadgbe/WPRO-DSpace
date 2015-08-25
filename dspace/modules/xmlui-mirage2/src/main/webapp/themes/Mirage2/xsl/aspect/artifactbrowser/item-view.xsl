@@ -273,6 +273,15 @@
         </div>
     </xsl:template>
 
+    <xsl:template name="itemSummaryView-DIM-coauthors-entry">
+        <div>
+            <xsl:if test="@authority">
+                <xsl:attribute name="class"><xsl:text>ds-dc_contributor_author-authority</xsl:text></xsl:attribute>
+            </xsl:if>
+            <xsl:copy-of select="node()"/>
+        </div>
+    </xsl:template>
+
     <xsl:template name="itemSummaryView-DIM-URI">
         <xsl:if test="dim:field[@element='identifier' and @qualifier='uri' and descendant::text()]">
             <div class="simple-item-view-uri item-page-field-wrapper table">
@@ -556,7 +565,7 @@
                 <xsl:choose>
                     <xsl:when test="dim:field[@element='contributor'][@qualifier='coauthor']">
                         <xsl:for-each select="dim:field[@element='contributor'][@qualifier='coauthor']">
-                            <xsl:call-template name="itemSummaryView-DIM-authors-entry" />
+                            <xsl:call-template name="itemSummaryView-DIM-coauthors-entry" />
                         </xsl:for-each>
                     </xsl:when>
                     <xsl:otherwise>
