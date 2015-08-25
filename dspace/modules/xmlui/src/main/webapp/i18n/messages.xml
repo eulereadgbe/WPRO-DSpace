@@ -2570,4 +2570,7 @@
 	<message key="wpro.treeview.expand.all">Expand All</message>
 
     <message key="wpro.library.information">Library Information</message>
+	<message key="wpro.related.link">Related links</message>
+	<message key="wpro.related.link.who.iris">WHO IRIS</message>
+	<message key="wpro.related.link.wpro.library">WPRO Library</message>
 </catalogue>
