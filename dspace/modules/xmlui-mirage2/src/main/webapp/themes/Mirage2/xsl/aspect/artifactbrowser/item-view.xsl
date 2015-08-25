@@ -263,7 +263,13 @@
             <xsl:if test="@authority">
                 <xsl:attribute name="class"><xsl:text>ds-dc_contributor_author-authority</xsl:text></xsl:attribute>
             </xsl:if>
+            <a>
+                <xsl:attribute name="href">
+                    <xsl:text>/browse?type=author&amp;value=</xsl:text>
+                    <xsl:value-of select="." disable-output-escaping="yes"/>
+                </xsl:attribute>
             <xsl:copy-of select="node()"/>
+            </a>
         </div>
     </xsl:template>
 
