@@ -121,6 +121,7 @@
                 <div class="col-sm-8">
                     <xsl:call-template name="itemSummaryView-DIM-authors"/>
                     <xsl:call-template name="itemSummaryView-DIM-coauthors"/>
+                    <xsl:call-template name="itemSummaryView-DIM-publisher"/>
                     <xsl:call-template name="itemSummaryView-DIM-abstract"/>
                     <xsl:call-template name="itemSummaryView-DIM-URI"/>
                     <xsl:call-template name="itemSummaryView-language"/>
@@ -572,6 +573,24 @@
                         <i18n:text>xmlui.dri2xhtml.METS-1.0.no-author</i18n:text>
                     </xsl:otherwise>
                 </xsl:choose>
+            </div>
+        </xsl:if>
+    </xsl:template>
+
+    <xsl:template name="itemSummaryView-DIM-publisher">
+        <xsl:if test="dim:field[@element='publisher' and not(@qualifier)]">
+            <div class="simple-item-view-uri item-page-field-wrapper table">
+                <h5>
+                    <i18n:text>xmlui.dri2xhtml.METS-1.0.item-publisher</i18n:text>
+                </h5>
+                <span>
+                    <xsl:for-each select="dim:field[@element='publisher' and not(@qualifier)]">
+                        <xsl:copy-of select="./node()"/>
+                        <xsl:if test="count(following-sibling::dim:field[@element='publisher' and not(@qualifier)]) != 0">
+                            <xsl:text>; </xsl:text>
+                        </xsl:if>
+                    </xsl:for-each>
+                </span>
             </div>
         </xsl:if>
     </xsl:template>
