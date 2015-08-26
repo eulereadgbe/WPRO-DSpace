@@ -2114,15 +2114,21 @@
 	</message>	
 	<message key="xmlui.dri2xhtml.METS-1.0.item-preview">Aper&#231;u</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-title">Titre</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-other-title">Autre(s) titre(s)</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-author">Auteur</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-abstract">R&#233;sum&#233;</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-description">Description</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-uri">URI</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-govdoc">No publ. gouv.</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-date">Date</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-publisher">&#201;diteur</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-series">No. de la collection/du rapport</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-subject">Sujet</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-keyword">Mots-clés</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-context">Contexte</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-isbn">ISBN</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-type">Type de document</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-location">Location</message>
 
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-head">Fichier(s) constituant ce document</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-file">Fichiers</message>
@@ -2133,6 +2139,8 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-description">Description</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-viewOpen">Voir/<wbr/>Ouvrir</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-no-files">Il n'y a pas de fichiers associ&#233;s &#224; ce document.</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-language">Langue</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-languageVersion">Autres langues</message>
 
 	<message key="xmlui.dri2xhtml.METS-1.0.size-bytes">octets</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.size-kilobytes">Ko</message>
