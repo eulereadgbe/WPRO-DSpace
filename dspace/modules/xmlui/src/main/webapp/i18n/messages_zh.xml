@@ -2231,6 +2231,7 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.item-isbn">國際標準書號</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-type">文件类型</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-location">去處</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-share">股票</message>
 
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-head">Files in this item</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-file">Files</message>

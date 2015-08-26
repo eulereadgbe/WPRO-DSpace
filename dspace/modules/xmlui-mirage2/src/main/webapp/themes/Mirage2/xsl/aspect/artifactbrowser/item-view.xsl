@@ -117,6 +117,7 @@
                         </div>
                     </div>
                     <xsl:call-template name="itemSummaryView-DIM-date"/>
+                    <xsl:call-template name="share" />
                 </div>
                 <div class="col-sm-8">
                     <xsl:call-template name="itemSummaryView-DIM-other-title"/>
@@ -788,8 +789,68 @@
         </xsl:if>
     </xsl:template>
 
+    <xsl:template name="share">
+        <div class="simple-item-view-date word-break item-page-field-wrapper table">
+            <h5>
+                <i18n:text>xmlui.dri2xhtml.METS-1.0.item-share</i18n:text>&#160;
+                <i aria-hidden="true" class="fa fa-share-alt"></i>
+            </h5>
+            <xsl:variable name="itemTitle">
+                <xsl:value-of select="dim:field[@element='title'][not(@qualifier)][1]/node()"/>
+            </xsl:variable>
+            <span>
+                <xsl:attribute name="class">
+                    <xsl:text>st_twitter_large</xsl:text>
+                </xsl:attribute>
+                <xsl:attribute name="st_title">
+                    <xsl:value-of select="util:shortenString($itemTitle, 79, 5)"/>
+                </xsl:attribute>
+                <xsl:attribute name="displayText">
+                    <xsl:text>Tweet</xsl:text>
+                </xsl:attribute>
+            </span>
+            <span>
+                <xsl:attribute name="class">
+                    <xsl:text>st_facebook_large</xsl:text>
+                </xsl:attribute>
+                <xsl:attribute name="st_title">
+                    <xsl:value-of select="$itemTitle"/>
+                </xsl:attribute>
+                <xsl:attribute name="displayText">
+                    <xsl:text>Facebook</xsl:text>
+                </xsl:attribute>
+            </span>
+            <span>
+                <xsl:attribute name="class">
+                    <xsl:text>st_linkedin_large</xsl:text>
+                </xsl:attribute>
+                <xsl:attribute name="st_title">
+                    <xsl:value-of select="$itemTitle"/>
+                </xsl:attribute>
+                <xsl:attribute name="displayText">
+                    <xsl:text>LinkedIn</xsl:text>
+                </xsl:attribute>
+            </span>
+            <span>
+                <xsl:attribute name="class">
+                    <xsl:text>st_email_large</xsl:text>
+                </xsl:attribute>
+                <xsl:attribute name="st_title">
+                    <xsl:value-of select="$itemTitle"/>
+                </xsl:attribute>
+                <xsl:attribute name="st_summary">
+                    <xsl:value-of select="dim:field[@element='description' and @qualifier='abstract']"/>
+                </xsl:attribute>
+                <xsl:attribute name="displayText">
+                    <xsl:text>Email</xsl:text>
+                </xsl:attribute>
+            </span>
+        </div>
+    </xsl:template>
+
     <xsl:template match="dim:dim" mode="itemDetailView-DIM">
         <xsl:call-template name="itemSummaryView-DIM-title"/>
+        <xsl:call-template name="share" />
         <div class="ds-table-responsive">
             <table class="ds-includeSet-table detailtable table table-striped table-hover">
                 <xsl:apply-templates mode="itemDetailView-DIM"/>

@@ -2129,6 +2129,7 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.item-isbn">ISBN</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-type">Type de document</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-location">Location</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-share">Partager</message>
 
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-head">Fichier(s) constituant ce document</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-file">Fichiers</message>
