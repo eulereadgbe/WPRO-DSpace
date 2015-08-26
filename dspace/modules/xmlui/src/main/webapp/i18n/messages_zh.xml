@@ -2215,16 +2215,22 @@
 
 	<message key="xmlui.dri2xhtml.METS-1.0.item-preview">Preview</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-title">标题</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-other-title">其他标题</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-author">作者</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-coauthor">合作者</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-abstract">Abstract</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-description">Description</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-abstract">摘要</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-description">描述</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-uri">网址</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-govdoc">政府文件号</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-date">发表日期</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-publisher">出版者</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-series">系列/报告编号</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-subject">主题</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-keyword">关键字</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-context">范畴</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-isbn">國際標準書號</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-type">文件类型</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-location">去處</message>
 
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-head">Files in this item</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-file">Files</message>
@@ -2236,8 +2242,8 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-viewOpen">View/<wbr/>Open</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-access-rights">Read access available for</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-no-files">There are no files associated with this item.</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-language">Language</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-languageVersion">Other Language Versions</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-language">语种</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-languageVersion">其它语言版本</message>
 
 	<message key="xmlui.dri2xhtml.METS-1.0.size-bytes">bytes</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.size-kilobytes">Kb</message>
