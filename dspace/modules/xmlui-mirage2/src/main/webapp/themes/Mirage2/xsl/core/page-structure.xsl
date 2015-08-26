@@ -883,6 +883,9 @@
                   ga('send', 'pageview');
            </xsl:text></script>
         </xsl:if>
+        <script type="text/javascript">var switchTo5x=true;</script>
+        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js">&#160;</script>
+        <script type="text/javascript">stLight.options({publisher: "491a22ef-9600-4646-be10-77ab263d3558", doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
     </xsl:template>
 
     <!--The Language Selection-->
