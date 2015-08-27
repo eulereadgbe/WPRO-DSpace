@@ -1518,6 +1518,7 @@
 	<message key="xmlui.administrative.item.AddBitstreamForm.head1">Upload a new bitstream</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.bundle_label">Bundle</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.bundle.ORIGINAL">Content Files (default)</message>
+	<message key="xmlui.administrative.item.AddBitstreamForm.bundle.TEXT">正文</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.bundle.METADATA">Metadata Files</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.bundle.THUMBNAIL">Thumbnails</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.bundle.LICENSE">Licenses</message>
@@ -2682,4 +2683,5 @@
 	<message key="wpro.related.link">相关链接</message>
 	<message key="wpro.related.link.who.iris">世卫组织信息共享数据库</message>
 	<message key="wpro.related.link.wpro.library">西太区图书馆</message>
+	<message key="wpro.help.link">帮助</message>
 </catalogue>

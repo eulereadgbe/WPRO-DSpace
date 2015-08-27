@@ -24,10 +24,10 @@
 		-->
 
 	<!-- General keys -->
-	<message key="xmlui.general.dspace_home">Home</message>
+	<message key="xmlui.general.dspace_home">WPRO IRIS</message>
 	<message key="xmlui.general.search">Search</message>
 	<message key="xmlui.general.go">Go</message>
-	<message key="xmlui.general.go_home">Go to DSpace home</message>
+	<message key="xmlui.general.go_home">Go to WPRO IRIS home</message>
 	<message key="xmlui.general.save">Save</message>
 	<message key="xmlui.general.cancel">Cancel</message>
 	<message key="xmlui.general.return">Return</message>
@@ -1520,6 +1520,7 @@
 	<message key="xmlui.administrative.item.AddBitstreamForm.head1">Upload a new bitstream</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.bundle_label">Bundle</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.bundle.ORIGINAL">Content Files (default)</message>
+	<message key="xmlui.administrative.item.AddBitstreamForm.bundle.TEXT">Text</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.bundle.METADATA">Metadata Files</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.bundle.THUMBNAIL">Thumbnails</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.bundle.LICENSE">Licenses</message>
@@ -2685,4 +2686,5 @@
 	<message key="wpro.related.link">Related links</message>
 	<message key="wpro.related.link.who.iris">WHO IRIS</message>
 	<message key="wpro.related.link.wpro.library">WPRO Library</message>
+	<message key="wpro.help.link">Help</message>
 </catalogue>

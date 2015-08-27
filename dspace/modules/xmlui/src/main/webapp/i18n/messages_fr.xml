@@ -264,7 +264,7 @@
 	<!-- org.dspace.app.xmlui.artifactbrowser.Navigation.java -->
 	<message key="xmlui.ArtifactBrowser.Navigation.head_browse">Parcourir</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.head_all_of_dspace">Tout WPRO IRIS</message>
-	<message key="xmlui.ArtifactBrowser.Navigation.communities_and_collections">Communaut&#233;s &amp; Collections</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.communities_and_collections">Communaut&#233;s et collections</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_title">Titres</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_author">Auteurs</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_subject">Sujets</message>
@@ -1436,6 +1436,7 @@
 	<message key="xmlui.administrative.item.AddBitstreamForm.head1">T&#233;l&#233;charger un nouveau fichier</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.bundle_label">Groupement de fichiers</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.bundle.ORIGINAL">Fichiers de contenu (par d&#233;faut)</message>
+	<message key="xmlui.administrative.item.AddBitstreamForm.bundle.TEXT">Texte</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.bundle.METADATA">Fichiers de m&#233;tadonn&#233;es</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.bundle.THUMBNAIL">Vignettes</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.bundle.LICENSE">Licences</message>
@@ -2561,4 +2562,5 @@
 	<message key="wpro.related.link">Liens connexes</message>
 	<message key="wpro.related.link.who.iris">WHO IRIS</message>
 	<message key="wpro.related.link.wpro.library">Bibliothèque WPRO</message>
+	<message key="wpro.help.link">Aide</message>
 </catalogue>

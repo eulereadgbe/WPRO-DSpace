@@ -431,7 +431,7 @@
                                         <li>
                                             <a href="/community-list">
                                                 <i class="fa fa-navicon" aria-hidden="true"/>&#160;
-                                                <i18n:text>xmlui.ArtifactBrowser.Navigation.communities_and_collections</i18n:text>
+                                                <i18n:text>xmlui.ArtifactBrowser.CommunityBrowser.head</i18n:text>
                                             </a>
                                         </li>
                                         <li>
@@ -452,13 +452,13 @@
                                     <li class="newnav">
                                         <i class="fa fa-navicon fa-lg" aria-hidden="true"/>&#160;
                                         <a href="/community-list">
-                                            <i18n:text>xmlui.ArtifactBrowser.Navigation.communities_and_collections</i18n:text>
+                                            <i18n:text>xmlui.ArtifactBrowser.CommunityBrowser.head</i18n:text>
                                         </a>
                                     </li>
                                     <li>
                                         <i class="fa fa-question fa-lg" aria-hidden="true"/>&#160;
                                         <a href="http://www.who.int/library/iris_guides/en/index.html" target="_blank">
-                                            <xsl:text>Help</xsl:text>
+                                            <i18n:text>wpro.help.link</i18n:text>
                                         </a>
                                     </li>
                                 </ul>
