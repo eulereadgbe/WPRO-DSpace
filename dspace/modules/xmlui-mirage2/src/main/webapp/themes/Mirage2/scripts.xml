@@ -48,6 +48,7 @@
     <script src="scripts/treeview/jquery.treeview.js">&#160;</script>
     <script src="scripts/treeview/jquery.cookie.js">&#160;</script>
     <script src="scripts/treeview.js">&#160;</script>
+    <script src="scripts/jquery.tablesorter.js">&#160;</script>
     <script src="scripts/wpro.js">&#160;</script>
 
     <!-- endbuild -->
