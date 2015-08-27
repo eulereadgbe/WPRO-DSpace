@@ -798,12 +798,18 @@
             <xsl:variable name="itemTitle">
                 <xsl:value-of select="dim:field[@element='title'][not(@qualifier)][1]/node()"/>
             </xsl:variable>
+            <xsl:variable name="itemURL">
+                <xsl:value-of select="dim:field[@element='identifier' and @qualifier='uri']"/>
+            </xsl:variable>
             <span>
                 <xsl:attribute name="class">
                     <xsl:text>st_twitter_large</xsl:text>
                 </xsl:attribute>
                 <xsl:attribute name="st_title">
                     <xsl:value-of select="util:shortenString($itemTitle, 79, 5)"/>
+                </xsl:attribute>
+                <xsl:attribute name="st_url">
+                    <xsl:value-of select="$itemURL"/>
                 </xsl:attribute>
                 <xsl:attribute name="displayText">
                     <xsl:text>Tweet</xsl:text>
@@ -816,6 +822,9 @@
                 <xsl:attribute name="st_title">
                     <xsl:value-of select="$itemTitle"/>
                 </xsl:attribute>
+                <xsl:attribute name="st_url">
+                    <xsl:value-of select="$itemURL"/>
+                </xsl:attribute>
                 <xsl:attribute name="displayText">
                     <xsl:text>Facebook</xsl:text>
                 </xsl:attribute>
@@ -827,6 +836,9 @@
                 <xsl:attribute name="st_title">
                     <xsl:value-of select="$itemTitle"/>
                 </xsl:attribute>
+                <xsl:attribute name="st_url">
+                    <xsl:value-of select="$itemURL"/>
+                </xsl:attribute>
                 <xsl:attribute name="displayText">
                     <xsl:text>LinkedIn</xsl:text>
                 </xsl:attribute>
@@ -837,6 +849,9 @@
                 </xsl:attribute>
                 <xsl:attribute name="st_title">
                     <xsl:value-of select="$itemTitle"/>
+                </xsl:attribute>
+                <xsl:attribute name="st_url">
+                    <xsl:value-of select="$itemURL"/>
                 </xsl:attribute>
                 <xsl:attribute name="st_summary">
                     <xsl:value-of select="dim:field[@element='description' and @qualifier='abstract']"/>
@@ -1105,6 +1120,9 @@
         <a>
             <xsl:attribute name="href">
                 <xsl:value-of select="mets:FLocat[@LOCTYPE='URL']/@xlink:href"/>
+            </xsl:attribute>
+            <xsl:attribute name="target">
+                <xsl:text>_blank</xsl:text>
             </xsl:attribute>
             <i18n:text>xmlui.dri2xhtml.METS-1.0.item-files-viewOpen</i18n:text>
         </a>
