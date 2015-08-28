@@ -122,8 +122,8 @@
                     </form>
                 </div>
             </xsl:if>
-            <xsl:apply-templates/>
             <xsl:call-template name="addRelatedLinks"/>
+            <xsl:apply-templates/>
             <!-- DS-984 Add RSS Links to Options Box -->
             <xsl:if test="count(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='feed']) != 0">
                 <div>
@@ -234,10 +234,10 @@
     <xsl:template match="dri:list[count(child::*)=0]"/>
 
     <xsl:template name="addRelatedLinks">
-        <div>
-            <h2 class="ds-option-set-head h6">
-                <i18n:text>wpro.related.link</i18n:text>
-            </h2>
+        <div class="list-group">
+            <a class="list-group-item active">
+                <span class="h5 list-group-item-heading"><i18n:text>wpro.related.link</i18n:text></span>
+            </a>
             <div class="ds-option-set list-group">
                 <a class="list-group-item ds-option" href="http://apps.who.int/iris/?locale=en" target="_blank">
                     <i18n:text>wpro.related.link.who.iris</i18n:text>
