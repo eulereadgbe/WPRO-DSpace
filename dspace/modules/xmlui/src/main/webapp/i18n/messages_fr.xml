@@ -2089,7 +2089,7 @@
 	<message key="xmlui.dri2xhtml.structural.logout">D&#233;connexion</message>
 	<message key="xmlui.dri2xhtml.structural.login">Ouvrir une session</message>
 
-	<message key="xmlui.dri2xhtml.structural.search">Chercher dans le d&#233;p&#244;t</message>
+	<message key="xmlui.dri2xhtml.structural.search">Tout WPRO IRIS</message>
 	<message key="xmlui.dri2xhtml.structural.search-advanced">Recherche avanc&#233;e</message>
 	<message key="xmlui.dri2xhtml.structural.search-in-community">Cette communaut&#233;</message>
 	<message key="xmlui.dri2xhtml.structural.search-in-collection">Cette collection</message>
