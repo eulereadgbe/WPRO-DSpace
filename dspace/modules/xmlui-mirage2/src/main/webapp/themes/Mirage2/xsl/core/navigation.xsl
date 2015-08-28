@@ -143,6 +143,9 @@
     <xsl:template name="addRSSLinks">
         <xsl:for-each select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='feed']">
             <a class="list-group-item">
+                <xsl:attribute name="target">
+                    <xsl:text>_blank</xsl:text>
+                </xsl:attribute>
                 <xsl:attribute name="href">
                     <xsl:value-of select="."/>
                 </xsl:attribute>

@@ -482,6 +482,9 @@
         <xsl:param name="size" />
         <div>
             <a>
+                <xsl:attribute name="target">
+                    <xsl:text>_blank</xsl:text>
+                </xsl:attribute>
                 <xsl:attribute name="href">
                     <xsl:value-of select="$href"/>
                 </xsl:attribute>
@@ -997,6 +1000,9 @@
             <div class="col-xs-6 col-sm-3">
                 <div class="thumbnail">
                     <a class="image-link">
+                        <xsl:attribute name="target">
+                            <xsl:text>_blank</xsl:text>
+                        </xsl:attribute>
                         <xsl:attribute name="href">
                             <xsl:value-of select="mets:FLocat[@LOCTYPE='URL']/@xlink:href"/>
                         </xsl:attribute>
