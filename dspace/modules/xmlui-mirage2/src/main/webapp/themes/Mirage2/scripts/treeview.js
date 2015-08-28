@@ -3,6 +3,6 @@ $(function() {
         collapsed: true,
         animated: "medium",
         control:"#sidetreecontrol",
-        persist: "cookie"
+        /*persist: "cookie"*/
     });
 });
