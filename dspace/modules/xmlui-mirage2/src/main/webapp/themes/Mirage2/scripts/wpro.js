@@ -8,6 +8,18 @@ $(function() {
     var logo = $(".ds-logo-wrapper");
     logo.addClass("pull-right");
     logo.detach().prependTo("#aspect_artifactbrowser_CommunityViewer_div_community-search-browse,#aspect_artifactbrowser_CollectionViewer_div_collection-search-browse");
+$('#tree > li > div > h4 > a').each(function(i) {
+    if($(this).attr("href") == "/handle/10665.1/9971")
+    {
+        $(this).html("WPRO IRIS Publications").attr('id', 'topCommunity');
+    }
+    $('#topCommunity').parent().parent().prev().attr('id', 'expand-by-default');
+    if ($('#expand-by-default').hasClass('expandable-hitarea'))
+    {
+    $('#expand-by-default').click();
+    }
+});
+
 });
 
 $(document).ready(function()
