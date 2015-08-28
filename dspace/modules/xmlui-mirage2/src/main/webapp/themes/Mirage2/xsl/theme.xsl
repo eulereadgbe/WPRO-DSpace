@@ -109,6 +109,8 @@
             </xsl:choose>
     </xsl:template>
 
+    <xsl:template match="dri:list[@id='aspect.viewArtifacts.Navigation.list.account']"/>
+
     <xsl:template match="text()[not(../*)]">
         <xsl:call-template name="replace">
             <xsl:with-param name="text" select="."/>
