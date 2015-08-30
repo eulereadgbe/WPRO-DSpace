@@ -73,7 +73,12 @@
 
     <xsl:template match="dri:div[@id='aspect.artifactbrowser.ItemViewer.div.item-view']
     | dri:div[@id='aspect.artifactbrowser.CollectionViewer.div.collection-home']
-    | dri:div[@id='aspect.artifactbrowser.CommunityViewer.div.community-home']">
+    | dri:div[@id='aspect.artifactbrowser.CommunityViewer.div.community-home']
+    | dri:div[@id='aspect.artifactbrowser.ConfigurableBrowse.div.browse-by-dateissued']
+    | dri:div[@id='aspect.artifactbrowser.ConfigurableBrowse.div.browse-by-author']
+    | dri:div[@id='aspect.artifactbrowser.ConfigurableBrowse.div.browse-by-title']
+    | dri:div[@id='aspect.artifactbrowser.ConfigurableBrowse.div.browse-by-mesh']
+    | dri:div[@id='aspect.discovery.SimpleSearch.div.search']">
         <xsl:choose>
             <xsl:when test="count(/dri:document/dri:meta/dri:pageMeta/dri:trail) > 1">
                 <p>
