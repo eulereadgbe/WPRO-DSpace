@@ -191,6 +191,10 @@ body {
   margin-left: -3px;
 }
 
+.breadcrumb .dropdown-menu li {
+  margin-left: 0;
+}
+
 #main-container .row-offcanvas {
   background-color: #fff;
 }
@@ -219,4 +223,33 @@ body {
 
 .page-header {
   clear: both;
+}
+
+#language-container ul
+{
+  margin: 5px 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#language-container ul li {
+  display: inline;
+  padding: 10px;
+  cursor: hand;
+}
+
+#language-container ul li.disabled, #language-container ul li:hover {
+  background-color: #d86422;
+}
+
+#language-container ul li.disabled a:hover {
+  cursor: not-allowed;
+}
+
+#language-container ul li.disabled:hover {
+  background-color: #666666;
+}
+
+#language-container ul li a {
+  color: #fff;
 }
