@@ -88,7 +88,13 @@
                                     </button>
                                 </span>
                             </div>
-                            <a href="/discover">Advanced Search</a>
+                            <a>
+                                <xsl:attribute name="href">
+                                    <xsl:value-of select="$context-path"/>
+                                    <xsl:text>/discover</xsl:text>
+                                </xsl:attribute>
+                                <i18n:text>xmlui.ArtifactBrowser.AdvancedSearch.title</i18n:text>
+                            </a>
                             <xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='focus'][@qualifier='container']">
                                 <div class="radio">
                                     <label>
