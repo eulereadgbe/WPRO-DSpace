@@ -392,9 +392,11 @@
                     </div>
 
                     <div class="navbar-header pull-right hidden-xs">
-                        <ul class="nav navbar-nav pull-left">
+                        <div id="language-container">
+                        <ul class="pull-left">
                               <xsl:call-template name="languageSelection"/>
                         </ul>
+                            </div>
 
                         <button data-toggle="offcanvas" class="navbar-toggle visible-sm" type="button">
                             <span class="sr-only"><i18n:text>xmlui.mirage2.page-structure.toggleNavigation</i18n:text></span>
@@ -420,7 +422,30 @@
                     <!--TODO-->
                     <div id="nav" class="col-xs-12">
                                 <div class="breadcrumb dropdown visible-xs">
-                                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">More <b class="caret"></b></a>
+                                    <xsl:variable name="active-menu">
+                                        <xsl:choose>
+                                            <xsl:when test="$request-uri='community-list'">
+                                                <xsl:text>xmlui.ArtifactBrowser.CommunityBrowser.head</xsl:text>
+                                            </xsl:when>
+                                            <xsl:otherwise>
+                                                <xsl:text>xmlui.general.dspace_home</xsl:text>
+                                            </xsl:otherwise>
+                                        </xsl:choose>
+                                    </xsl:variable>
+                                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                                        <xsl:choose>
+                                            <xsl:when test="$request-uri='community-list'">
+                                                <i class="fa fa-navicon fa-lg" aria-hidden="true"/>&#160;
+                                            </xsl:when>
+                                            <xsl:otherwise>
+                                                <i class="fa fa-home fa-lg" aria-hidden="true"/>&#160;
+                                            </xsl:otherwise>
+                                        </xsl:choose>
+                                        <i18n:text>
+                                            <xsl:value-of select="$active-menu"/>
+                                        </i18n:text>
+                                        <b class="caret"></b>
+                                    </a>
                                     <ul class="dropdown-menu" role="menu">
                                         <li>
                                             <a href="/">
@@ -437,7 +462,7 @@
                                         <li>
                                             <a href="http://www.who.int/library/iris_guides/en/index.html" target="_blank">
                                                 <i class="fa fa-question" aria-hidden="true"/>&#160;
-                                                <xsl:text>Help</xsl:text>
+                                                <i18n:text>wpro.help.link</i18n:text>
                                             </a>
                                         </li>
                                     </ul>
@@ -803,47 +828,56 @@
                   ga('send', 'pageview');
            </xsl:text></script>
         </xsl:if>
+        <xsl:if test="/dri:document//dri:div[@id='aspect.artifactbrowser.ItemViewer.div.item-view']">
         <script type="text/javascript">var switchTo5x=true;</script>
         <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js">&#160;</script>
         <script type="text/javascript">stLight.options({publisher: "491a22ef-9600-4646-be10-77ab263d3558", doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
+        </xsl:if>
     </xsl:template>
 
     <!--The Language Selection-->
     <xsl:template name="languageSelection">
         <xsl:if test="count(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='page'][@qualifier='supportedLocale']) &gt; 1">
-            <li id="ds-language-selection" class="dropdown">
-                <xsl:variable name="active-locale" select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='page'][@qualifier='currentLocale']"/>
-                <a id="language-dropdown-toggle" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
-                    <span class="hidden-xs">
-                        <xsl:value-of
-                                select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='supportedLocale'][@qualifier=$active-locale]"/>
-                        <xsl:text>&#160;</xsl:text>
-                        <b class="caret"/>
-                    </span>
-                </a>
-                <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="language-dropdown-toggle" data-no-collapse="true">
-                    <xsl:for-each
-                            select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='page'][@qualifier='supportedLocale']">
-                        <xsl:variable name="locale" select="."/>
-                        <li role="presentation">
-                            <xsl:if test="$locale = $active-locale">
-                                <xsl:attribute name="class">
-                                    <xsl:text>disabled</xsl:text>
-                                </xsl:attribute>
-                            </xsl:if>
-                            <a>
-                                <xsl:attribute name="href">
-                                    <xsl:value-of select="$current-uri"/>
-                                    <xsl:text>?locale-attribute=</xsl:text>
-                                    <xsl:value-of select="$locale"/>
-                                </xsl:attribute>
-                                <xsl:value-of
-                                        select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='supportedLocale'][@qualifier=$locale]"/>
-                            </a>
-                        </li>
-                    </xsl:for-each>
-                </ul>
-            </li>
+                <xsl:variable name="active-locale"
+                              select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='page'][@qualifier='currentLocale']"/>
+                <xsl:for-each
+                        select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='page'][@qualifier='supportedLocale']">
+                    <xsl:variable name="locale" select="."/>
+                    <li>
+                        <xsl:if test="$locale = $active-locale">
+                            <xsl:attribute name="class">
+                                <xsl:text>disabled</xsl:text>
+                            </xsl:attribute>
+                        </xsl:if>
+                        <a>
+                            <xsl:attribute name="href">
+                                <xsl:choose>
+                                    <xsl:when test="contains($query-string,'locale-attribute=')">
+                                        <xsl:value-of select="$current-uri"/>
+                                        <xsl:text>?</xsl:text>
+                                        <xsl:value-of select="substring-before($query-string,'&amp;locale-attribute')"/>
+                                        <xsl:text>&amp;locale-attribute=</xsl:text>
+                                        <xsl:value-of select="$locale"/>
+                                    </xsl:when>
+                                    <xsl:when test="$query-string=''">
+                                        <xsl:value-of select="$current-uri"/>
+                                        <xsl:text>?locale-attribute=</xsl:text>
+                                        <xsl:value-of select="$locale"/>
+                                    </xsl:when>
+                                    <xsl:otherwise>
+                                        <xsl:value-of select="$current-uri"/>
+                                        <xsl:text>?</xsl:text>
+                                        <xsl:value-of select="$query-string"/>
+                                        <xsl:text>&amp;locale-attribute=</xsl:text>
+                                        <xsl:value-of select="$locale"/>
+                                    </xsl:otherwise>
+                                </xsl:choose>
+                            </xsl:attribute>
+                            <xsl:value-of
+                                    select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='supportedLocale'][@qualifier=$locale]"/>
+                        </a>
+                    </li>
+                </xsl:for-each>
         </xsl:if>
     </xsl:template>
 
