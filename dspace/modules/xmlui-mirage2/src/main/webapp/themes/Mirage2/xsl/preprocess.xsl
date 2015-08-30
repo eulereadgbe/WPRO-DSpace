@@ -39,8 +39,9 @@
     <xsl:output indent="yes"/>
 
     <xsl:template match="dri:list[@n='item-result-list']|dri:div[@id='aspect.discovery.SimpleSearch.div.search-results']">
-        <xsl:if test="contains(@pageURLMask,'query')">
+        <xsl:if test="contains(@pageURLMask,'query') or contains(@pageURLMask,'filter')">
             <xsl:copy-of select="."/>
         </xsl:if>
     </xsl:template>
+
 </xsl:stylesheet>
