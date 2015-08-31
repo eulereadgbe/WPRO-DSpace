@@ -114,7 +114,11 @@
             </xsl:choose>
     </xsl:template>
 
-    <xsl:template match="dri:list[@id='aspect.viewArtifacts.Navigation.list.account']"/>
+    <xsl:template match="dri:list[@id='aspect.viewArtifacts.Navigation.list.account']">
+        <xsl:if test="/dri:document/dri:meta/dri:userMeta/@authenticated = 'yes'">
+            <xsl:apply-templates />
+        </xsl:if>
+    </xsl:template>
 
     <xsl:template match="text()[not(../*)]">
         <xsl:call-template name="replace">
