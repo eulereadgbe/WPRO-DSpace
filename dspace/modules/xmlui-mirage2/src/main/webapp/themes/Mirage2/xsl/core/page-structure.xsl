@@ -469,20 +469,20 @@
                                 </div>
                                 <ul class="breadcrumb hidden-xs">
                                     <li class="newnav">
-                                    <i class="fa fa-home fa-lg" aria-hidden="true"/>&#160;
                                     <a href="/">
+                                        <i class="fa fa-home fa-lg" aria-hidden="true"/>&#160;
                                         <i18n:text>xmlui.general.dspace_home</i18n:text>
                                     </a>
                                     </li>
                                     <li class="newnav">
-                                        <i class="fa fa-navicon fa-lg" aria-hidden="true"/>&#160;
                                         <a href="/community-list">
+                                            <i class="fa fa-navicon fa-lg" aria-hidden="true"/>&#160;
                                             <i18n:text>xmlui.ArtifactBrowser.CommunityBrowser.head</i18n:text>
                                         </a>
                                     </li>
                                     <li>
-                                        <i class="fa fa-question fa-lg" aria-hidden="true"/>&#160;
                                         <a href="http://www.who.int/library/iris_guides/en/index.html" target="_blank">
+                                            <i class="fa fa-question fa-lg" aria-hidden="true"/>&#160;
                                             <i18n:text>wpro.help.link</i18n:text>
                                         </a>
                                     </li>
@@ -499,9 +499,6 @@
     <xsl:template match="dri:trail">
         <!--put an arrow between the parts of the trail-->
         <li>
-            <xsl:if test="position()=1">
-                <i class="glyphicon glyphicon-home" aria-hidden="true"/>&#160;
-            </xsl:if>
             <!-- Determine whether we are dealing with a link or plain text trail link -->
             <xsl:choose>
                 <xsl:when test="./@target">
@@ -509,6 +506,9 @@
                         <xsl:attribute name="href">
                             <xsl:value-of select="./@target"/>
                         </xsl:attribute>
+                        <xsl:if test="position()=1">
+                            <i class="glyphicon glyphicon-home" aria-hidden="true"/>&#160;
+                        </xsl:if>
                         <xsl:apply-templates />
                     </a>
                 </xsl:when>
