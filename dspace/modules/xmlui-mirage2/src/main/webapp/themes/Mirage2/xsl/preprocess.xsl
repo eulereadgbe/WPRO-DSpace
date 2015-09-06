@@ -38,9 +38,21 @@
     <xsl:import href="preprocess/navigation.xsl"/>
     <xsl:output indent="yes"/>
 
-    <xsl:template match="dri:list[@n='item-result-list']|dri:div[@id='aspect.discovery.SimpleSearch.div.search-results']">
-        <xsl:if test="contains(@pageURLMask,'query') or contains(@pageURLMask,'filter')">
-            <xsl:copy-of select="."/>
-        </xsl:if>
+    <xsl:template match="dri:div[@id='aspect.discovery.SimpleSearch.div.search-results']">
+        <xsl:choose>
+            <xsl:when test="contains(@pageURLMask,'query') or contains(@pageURLMask,'filter')">
+                <xsl:apply-templates select="dri:div[@id='aspect.discovery.SimpleSearch.div.masked-page-control']/node()"/>
+                <xsl:copy>
+                    <xsl:apply-templates select="node()|@*"/>
+                </xsl:copy>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:call-template name="no-search-results"/>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
+
+    <xsl:template name="no-search-results" match="dri:div[@id='aspect.discovery.SimpleSearch.div.masked-page-control']"/>
+
+
 </xsl:stylesheet>
