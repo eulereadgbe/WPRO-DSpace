@@ -375,9 +375,27 @@
                                                 </xsl:if>
                                                 <a>
                                                     <xsl:attribute name="href">
-                                                        <xsl:value-of select="$current-uri"/>
-                                                        <xsl:text>?locale-attribute=</xsl:text>
-                                                        <xsl:value-of select="$locale"/>
+                                                        <xsl:choose>
+                                                            <xsl:when test="contains($query-string,'locale-attribute=')">
+                                                                <xsl:value-of select="$current-uri"/>
+                                                                <xsl:text>?</xsl:text>
+                                                                <xsl:value-of select="substring-before($query-string,'&amp;locale-attribute')"/>
+                                                                <xsl:text>&amp;locale-attribute=</xsl:text>
+                                                                <xsl:value-of select="$locale"/>
+                                                            </xsl:when>
+                                                            <xsl:when test="$query-string=''">
+                                                                <xsl:value-of select="$current-uri"/>
+                                                                <xsl:text>?locale-attribute=</xsl:text>
+                                                                <xsl:value-of select="$locale"/>
+                                                            </xsl:when>
+                                                            <xsl:otherwise>
+                                                                <xsl:value-of select="$current-uri"/>
+                                                                <xsl:text>?</xsl:text>
+                                                                <xsl:value-of select="$query-string"/>
+                                                                <xsl:text>&amp;locale-attribute=</xsl:text>
+                                                                <xsl:value-of select="$locale"/>
+                                                            </xsl:otherwise>
+                                                        </xsl:choose>
                                                     </xsl:attribute>
                                                     <xsl:value-of
                                                             select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='supportedLocale'][@qualifier=$locale]"/>
@@ -420,7 +438,7 @@
             <div>
                 <div class="row">
                     <!--TODO-->
-                    <div id="nav" class="col-xs-12">
+                    <div id="nav" class="col-xs-6 col-sm-8">
                                 <div class="breadcrumb dropdown visible-xs">
                                     <xsl:variable name="active-menu">
                                         <xsl:choose>
@@ -488,10 +506,124 @@
                                     </li>
                                 </ul>
                     </div>
+                    <div id="breadcrumb-search" class="col-xs-6 col-sm-4">
+                        <xsl:if test="not(contains(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='request'][@qualifier='URI'], 'discover'))">
+                            <div class="dropdown pull-right visible-xs">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    <span class="glyphicon glyphicon-search" aria-hidden="true"/>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-search" role="menu">
+                                    <li class="search-me">
+                                        <form id="ds-search-form" method="post">
+                                            <xsl:attribute name="action">
+                                                <xsl:value-of
+                                                        select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath']"/>
+                                                <xsl:value-of
+                                                        select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='simpleURL']"/>
+                                            </xsl:attribute>
+                                            <fieldset>
+                                                <div class="input-group">
+                                                    <input class="ds-text-field form-control" type="text"
+                                                           placeholder="xmlui.general.search"
+                                                           i18n:attr="placeholder">
+                                                        <xsl:attribute name="name">
+                                                            <xsl:value-of
+                                                                    select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='queryField']"/>
+                                                        </xsl:attribute>
+                                                    </input>
+                                                    <span class="input-group-btn">
+                                                        <button class="ds-button-field btn btn-primary"
+                                                                title="xmlui.general.go"
+                                                                i18n:attr="title">
+                                                            <span class="glyphicon glyphicon-search" aria-hidden="true"/>
+                                                            <xsl:attribute name="onclick">
+                                                    <xsl:text>
+                                                        var form = document.getElementById(&quot;ds-search-form&quot;);
+                                                        form.action=
+                                                    </xsl:text>
+                                                                <xsl:text>&quot;</xsl:text>
+                                                                <xsl:value-of
+                                                                        select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath']"/>
+                                                                <xsl:text>/handle/&quot;</xsl:text>
+                                                                <xsl:value-of
+                                                                        select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='simpleURL']"/>
+                                                                <xsl:text>&quot; ; </xsl:text>
+                                                            </xsl:attribute>
+                                                        </button>
+                                                    </span>
+                                                    <span class="advanced-search">
+                                                        <a>
+                                                            <xsl:attribute name="href">
+                                                                <xsl:value-of select="$context-path"/>
+                                                                <xsl:text>/discover</xsl:text>
+                                                            </xsl:attribute>
+                                                            <i18n:text>xmlui.ArtifactBrowser.AdvancedSearch.title</i18n:text>
+                                                        </a>
+                                                    </span>
+                                                </div>
+                                            </fieldset>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="breadcrumb hidden-xs">
+                                <div class="search-group breadcrumb-search-group pull-right">
+                                    <form id="ds-search-form" method="post">
+                                        <xsl:attribute name="action">
+                                            <xsl:value-of
+                                                    select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath']"/>
+                                            <xsl:value-of
+                                                    select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='simpleURL']"/>
+                                        </xsl:attribute>
+                                        <fieldset>
+                                            <div class="input-group">
+                                                <input class="ds-text-field form-control" type="text"
+                                                       placeholder="xmlui.general.search"
+                                                       i18n:attr="placeholder">
+                                                    <xsl:attribute name="name">
+                                                        <xsl:value-of
+                                                                select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='queryField']"/>
+                                                    </xsl:attribute>
+                                                </input>
+                                                <span class="input-group-btn">
+                                                    <button class="ds-button-field btn btn-primary"
+                                                            title="xmlui.general.go"
+                                                            i18n:attr="title">
+                                                        <span class="glyphicon glyphicon-search" aria-hidden="true"/>
+                                                        <xsl:attribute name="onclick">
+                                                    <xsl:text>
+                                                        var form = document.getElementById(&quot;ds-search-form&quot;);
+                                                        form.action=
+                                                    </xsl:text>
+                                                            <xsl:text>&quot;</xsl:text>
+                                                            <xsl:value-of
+                                                                    select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath']"/>
+                                                            <xsl:text>/handle/&quot;</xsl:text>
+                                                            <xsl:value-of
+                                                                    select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='simpleURL']"/>
+                                                            <xsl:text>&quot; ; </xsl:text>
+                                                        </xsl:attribute>
+                                                    </button>
+                                                </span>
+                                                <span class="advanced-search">
+                                                    <a>
+                                                        <xsl:attribute name="href">
+                                                            <xsl:value-of select="$context-path"/>
+                                                            <xsl:text>/discover</xsl:text>
+                                                        </xsl:attribute>
+                                                        <i18n:text>xmlui.ArtifactBrowser.AdvancedSearch.title</i18n:text>
+                                                    </a>
+                                                </span>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                        </xsl:if>
+                    </div>
                 </div>
             </div>
         </div>
-
 
     </xsl:template>
 
