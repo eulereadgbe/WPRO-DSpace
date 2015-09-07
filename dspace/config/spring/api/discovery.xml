@@ -112,6 +112,9 @@
                 <ref bean="searchFilterCoAuthor" />
                 <ref bean="searchFilterSubject" />
                 <ref bean="searchFilterKeywords" />
+                <ref bean="searchFilterAbstract"/>
+                <ref bean="searchFilterIdentifier"/>
+                <ref bean="searchFilterSeries"/>
                 <ref bean="searchFilterIssued" />
                 <ref bean="searchFilterType" />
                 <ref bean="searchFilterLanguage" />
@@ -224,6 +227,9 @@
                 <ref bean="searchFilterCoAuthor" />
                 <ref bean="searchFilterSubject" />
                 <ref bean="searchFilterKeywords" />
+                <ref bean="searchFilterAbstract"/>
+                <ref bean="searchFilterIdentifier"/>
+                <ref bean="searchFilterSeries"/>
                 <ref bean="searchFilterIssued" />
                 <ref bean="searchFilterType" />
                 <ref bean="searchFilterLanguage" />
@@ -384,7 +390,7 @@
         </property>
     </bean>
 
-    <bean id="searchFilterAuthor" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
+    <bean id="searchFilterAuthor" class="org.dspace.discovery.configuration.DiscoverySearchFilter">
         <property name="indexFieldName" value="author"/>
         <property name="metadataFields">
             <list>
@@ -392,30 +398,24 @@
                 <value>dc.creator</value>
             </list>
         </property>
-        <property name="facetLimit" value="5"/>
-        <property name="sortOrder" value="COUNT"/>
     </bean>
 
-    <bean id="searchFilterCoAuthor" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
+    <bean id="searchFilterCoAuthor" class="org.dspace.discovery.configuration.DiscoverySearchFilter">
         <property name="indexFieldName" value="coauthor"/>
         <property name="metadataFields">
             <list>
                 <value>wpro.contributor.coauthor</value>
             </list>
         </property>
-        <property name="facetLimit" value="5"/>
-        <property name="sortOrder" value="COUNT"/>
     </bean>
 
-    <bean id="searchFilterLocation" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
+    <bean id="searchFilterLocation" class="org.dspace.discovery.configuration.DiscoverySearchFilter">
         <property name="indexFieldName" value="location"/>
         <property name="metadataFields">
             <list>
                 <value>wpro.description.location</value>
             </list>
         </property>
-        <property name="facetLimit" value="5"/>
-        <property name="sortOrder" value="COUNT"/>
     </bean>
 
     <bean id="searchFilterSubject" class="org.dspace.discovery.configuration.HierarchicalSidebarFacetConfiguration">
@@ -472,6 +472,33 @@
         </property>
         <property name="facetLimit" value="5"/>
         <property name="sortOrder" value="COUNT"/>
+    </bean>
+
+    <bean id="searchFilterAbstract" class="org.dspace.discovery.configuration.DiscoverySearchFilter">
+        <property name="indexFieldName" value="description"/>
+        <property name="metadataFields">
+            <list>
+                <value>dc.description.*</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="searchFilterSeries" class="org.dspace.discovery.configuration.DiscoverySearchFilter">
+        <property name="indexFieldName" value="series"/>
+        <property name="metadataFields">
+            <list>
+                <value>dc.relation.ispartofseries</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="searchFilterIdentifier" class="org.dspace.discovery.configuration.DiscoverySearchFilter">
+        <property name="indexFieldName" value="identifier"/>
+        <property name="metadataFields">
+            <list>
+                <value>dc.identifier.*</value>
+            </list>
+        </property>
     </bean>
 
     <!--Sort properties-->
