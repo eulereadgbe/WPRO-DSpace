@@ -30,7 +30,8 @@
                 xmlns:mods="http://www.loc.gov/mods/v3"
                 xmlns:dc="http://purl.org/dc/elements/1.1/"
                 xmlns:confman="org.dspace.core.ConfigurationManager"
-                exclude-result-prefixes="i18n dri mets xlink xsl dim xhtml mods dc confman">
+                xmlns:util="org.dspace.app.xmlui.utils.XSLUtils"
+                exclude-result-prefixes="i18n dri mets xlink xsl dim xhtml mods dc confman util">
 
     <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
 
@@ -494,13 +495,13 @@
                                     </li>
                                     <li class="newnav">
                                         <a href="/community-list">
-                                            <i18n:text>xmlui.ArtifactBrowser.Navigation.communities_and_collections</i18n:text>
                                             <i class="fa fa-navicon fa-lg" aria-hidden="true"/>&#160;
                                             <i18n:text>xmlui.ArtifactBrowser.Navigation.communities_and_collections</i18n:text>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="http://www.who.int/library/iris_guides/en/index.html" target="_blank">
+                                            <i class="fa fa-question fa-lg" aria-hidden="true"/>&#160;
                                             <i18n:text>wpro.help.link</i18n:text>
                                         </a>
                                     </li>
@@ -761,8 +762,8 @@
         <footer>
                 <div class="footer row">
                     <hr/>
-                    <div class="col-xs-4 col-sm-5 hidden-print">
-                        <div class="pull-left">
+                    <div class="col-xs-12 col-sm-12 hidden-print footer-container">
+                        <div class="pull-left footer-content">
                             <a title="WPRO" target="_blank" href="http://wpro.who.int/">
                                 <xsl:choose>
                                     <xsl:when test="$active-locale='fr'">
@@ -784,10 +785,7 @@
                                 </a>
                             </span>
                         </div>
-
-                    </div>
-                    <div class="col-xs-8 col-sm-7">
-                        <div class="hidden-print">
+                        <div class="hidden-print footer-content">
                             <a>
                                 <xsl:attribute name="href">
                                     <xsl:text>mailto:library@wpro.who.int</xsl:text>
@@ -819,7 +817,6 @@
                     </xsl:attribute>
                     <xsl:text>&#160;</xsl:text>
                 </a>
-            <p>&#160;</p>
         </footer>
     </xsl:template>
 

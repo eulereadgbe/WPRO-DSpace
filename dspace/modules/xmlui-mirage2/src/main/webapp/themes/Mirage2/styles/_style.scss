@@ -197,14 +197,18 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
   }
 }
+
 @media (max-width: 991px) {
   .container {
     width: 100%;
   }
+  footer {
+    margin-bottom: -20px;
+  }
 }
 
 footer .row > div {
-  padding-left: 15px;
+  padding: 15px;
 }
 
 body {
@@ -321,7 +325,7 @@ body {
 }
 
 .advanced-search {
-  padding: 11px 0 0 5px;
+  padding: 10px 0 0 5px;
 }
 
 .advanced-search > a, .input-group .advanced-search a {
@@ -351,4 +355,20 @@ body {
   position: absolute;
   top: 22px;
   left: 0;
+}
+
+.footer-container {
+  width: 100%;
+  display: table;
+  background-color: #E4E4E4;
+}
+
+.footer-content {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+label, .label {
+  font-weight: normal;
+  font-size: 94%;
 }

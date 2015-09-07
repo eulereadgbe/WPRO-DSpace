@@ -574,11 +574,16 @@
                 <h5><i18n:text>xmlui.dri2xhtml.METS-1.0.item-languageVersion</i18n:text></h5>
                 <span>
                     <xsl:for-each select="dim:field[@element='relation' and @qualifier='languageVersion']">
+                        <xsl:variable name="otherItemMetadataURL">
+                            <xsl:text>cocoon://metadata/handle/</xsl:text>
+                            <xsl:value-of select="."/>
+                            <xsl:text>/mets.xml</xsl:text>
+                        </xsl:variable>
                         <a>
                             <xsl:attribute name="href">
                                 <xsl:value-of select="substring-after(.,'10665.1/')"/>
                             </xsl:attribute>
-                            <xsl:value-of select="util:isoLanguageToDisplay(./@language)"/>
+                            <xsl:copy-of select="util:isoLanguageToDisplay(document($otherItemMetadataURL)//dim:field[@element='language' and @qualifier='iso']/node())"/>
                         </a>
                         <xsl:if test="count(following-sibling::dim:field[@element='relation' and @qualifier='languageVersion']) != 0">
                             <xsl:text>; </xsl:text>
@@ -892,11 +897,6 @@
                     <xsl:if test="(position() div 2 mod 2 = 1)">odd </xsl:if>
                 </xsl:attribute>
                 <td class="label-cell">
-                    <xsl:choose>
-                        <xsl:when test="@element='relation' and @qualifier='languageVersion'">
-                            <i18n:text>xmlui.dri2xhtml.METS-1.0.item-languageVersion</i18n:text>
-                        </xsl:when>
-                        <xsl:otherwise>
                             <xsl:value-of select="./@mdschema"/>
                             <xsl:text>.</xsl:text>
                             <xsl:value-of select="./@element"/>
@@ -904,17 +904,20 @@
                                 <xsl:text>.</xsl:text>
                                 <xsl:value-of select="./@qualifier"/>
                             </xsl:if>
-                        </xsl:otherwise>
-                    </xsl:choose>
                 </td>
             <td class="break-word">
                 <xsl:choose>
                     <xsl:when test="@element='relation' and @qualifier='languageVersion'">
+                        <xsl:variable name="otherItemMetadataURL">
+                            <xsl:text>cocoon://metadata/handle/</xsl:text>
+                            <xsl:value-of select="."/>
+                            <xsl:text>/mets.xml</xsl:text>
+                        </xsl:variable>
                         <a>
                             <xsl:attribute name="href">
                                 <xsl:value-of select="substring-after(./node(),'10665.1/')"/>
                             </xsl:attribute>
-                            <xsl:value-of select="util:isoLanguageToDisplay(./@language)"/>
+                            <xsl:copy-of select="util:isoLanguageToDisplay(document($otherItemMetadataURL)//dim:field[@element='language' and @qualifier='iso']/node())"/>
                         </a>
                     </xsl:when>
                     <xsl:when test="@element='subject' and @qualifier='mesh'">
@@ -1170,13 +1173,16 @@
         <xsl:param name="mimetype"/>
             <i aria-hidden="true">
                 <xsl:attribute name="class">
-                <xsl:text>glyphicon </xsl:text>
+                <xsl:text>fa </xsl:text>
                 <xsl:choose>
                     <xsl:when test="contains(mets:FLocat[@LOCTYPE='URL']/@xlink:href,'isAllowed=n')">
-                        <xsl:text> glyphicon-lock</xsl:text>
+                        <xsl:text> fa-lock</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="contains($mimetype,'pdf')">
+                        <xsl:text> fa-file-pdf-o fa-lg</xsl:text>
                     </xsl:when>
                     <xsl:otherwise>
-                        <xsl:text> glyphicon-file</xsl:text>
+                        <xsl:text> fa-file</xsl:text>
                     </xsl:otherwise>
                 </xsl:choose>
                 </xsl:attribute>
