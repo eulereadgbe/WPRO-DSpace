@@ -1173,13 +1173,16 @@
         <xsl:param name="mimetype"/>
             <i aria-hidden="true">
                 <xsl:attribute name="class">
-                <xsl:text>glyphicon </xsl:text>
+                <xsl:text>fa </xsl:text>
                 <xsl:choose>
                     <xsl:when test="contains(mets:FLocat[@LOCTYPE='URL']/@xlink:href,'isAllowed=n')">
-                        <xsl:text> glyphicon-lock</xsl:text>
+                        <xsl:text> fa-lock</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="contains($mimetype,'pdf')">
+                        <xsl:text> fa-file-pdf-o fa-lg</xsl:text>
                     </xsl:when>
                     <xsl:otherwise>
-                        <xsl:text> glyphicon-file</xsl:text>
+                        <xsl:text> fa-file</xsl:text>
                     </xsl:otherwise>
                 </xsl:choose>
                 </xsl:attribute>
