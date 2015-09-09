@@ -68,7 +68,7 @@
 	<!--
 		This section is for feed syndications (RSS, atom, etc)  
 	-->
-	<message key="xmlui.feed.general_description">Le syst&#232;me de d&#233;p&#244;t num&#233;rique DSpace collecte, emmagasine, indexe, archive, et diffuse du mat&#233;riel de recherche en format num&#233;rique.</message>
+	<message key="xmlui.feed.general_description">Le Dépôt institutionnel pour le partage de l’information (WPRO IRIS) du Bureau régional de l’OMS pour le Pacifique occidental est une bibliothèque virtuelle contenant le texte intégral des publications et des documents techniques publiés par WPRO depuis 1951.</message>
     <message key="xmlui.feed.header">Fils RSS</message>
 	<message key="xmlui.feed.logo_title">L'image du canal</message>
 	<message key="xmlui.feed.untitled">[Sans titre]</message>
@@ -237,7 +237,7 @@
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.title">Soumettre un commentaire</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.trail">Soumettre un commentaire</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.head">Soumettre un commentaire</message>
-	<message key="xmlui.ArtifactBrowser.FeedbackForm.para1">Merci de nous faire part de vos commentaires sur le syst&#232;me DSpace; ils sont appr&#233;ci&#233;s!</message>
+	<message key="xmlui.ArtifactBrowser.FeedbackForm.para1">Merci de nous faire part de vos commentaires sur le syst&#232;me WPRO IRIS; ils sont appr&#233;ci&#233;s!</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.email">Votre courriel</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.email_help">Cette adresse sera utilis&#233;e pour effectuer un suivi de votre commentaire.</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.comments">Commentaires</message>
@@ -250,8 +250,8 @@
 	<message key="xmlui.ArtifactBrowser.FeedbackSent.para1">Votre commentaire a &#233;t&#233; re&#231;u.</message>
 	
 	<!-- org.dspace.app.xmlui.artifactbrowser.FrontPageSearch.java -->
-	<message key="xmlui.ArtifactBrowser.FrontPageSearch.head">Recherche dans le d&#233;p&#244;t DSpace</message>
-	<message key="xmlui.ArtifactBrowser.FrontPageSearch.para1">Entrer des termes de recherche dans la case ci-dessous pour rechercher dans le d&#233;p&#244;t DSpace.</message>
+	<message key="xmlui.ArtifactBrowser.FrontPageSearch.head">Recherche dans le d&#233;p&#244;t WPRO IRIS</message>
+	<message key="xmlui.ArtifactBrowser.FrontPageSearch.para1">Entrer des termes de recherche dans la case ci-dessous pour rechercher dans le d&#233;p&#244;t WPRO IRIS.</message>
 	
 	<!-- org.dspace.app.xmlui.artifactbrowser.ItemViewer.java -->
 	<message key="xmlui.ArtifactBrowser.ItemViewer.trail">Voir le document</message>
@@ -415,7 +415,7 @@
 	<!-- org.dspace.app.xmlui.eperson.CannotRegister.java -->
 	<message key="xmlui.EPerson.CannotRegister.title">Inscription non disponible</message>
 	<message key="xmlui.EPerson.CannotRegister.head">Inscription non disponible</message>
-	<message key="xmlui.EPerson.CannotRegister.para1">La configuration de ce d&#233;p&#244;t DSpace ne permet pas de s'inscrire dans ce contexte. Pri&#232;re de contacter <a href="../contact">l'administrateur du site</a> si vous avez des questions ou des commentaires.</message>
+	<message key="xmlui.EPerson.CannotRegister.para1">La configuration de ce d&#233;p&#244;t WPRO IRIS ne permet pas de s'inscrire dans ce contexte. Pri&#232;re de contacter <a href="../contact">l'administrateur du site</a> si vous avez des questions ou des commentaires.</message>
 	
 	<!-- org.dspace.app.xmlui.eperson.EditProfile.java -->
 	<message key="xmlui.EPerson.EditProfile.title_update">Mettre &#224; jour le profil</message>
@@ -475,7 +475,7 @@
 	<!-- org.dspace.app.xmlui.eperson.PasswordLogin.java -->
 	<message key="xmlui.EPerson.PasswordLogin.title">Ouverture de session</message>
 	<message key="xmlui.EPerson.PasswordLogin.trail">Ouverture de session</message>
-	<message key="xmlui.EPerson.PasswordLogin.head1">Identifiez-vous pour acc&#233;der &#224; DSpace</message>
+	<message key="xmlui.EPerson.PasswordLogin.head1">Identifiez-vous pour acc&#233;der &#224; WPRO IRIS</message>
 
 	<message key="xmlui.EPerson.PasswordLogin.email_address">Adresse courriel</message>
 	<message key="xmlui.EPerson.PasswordLogin.error_bad_login">L'adresse courriel et/ou le mot de passe fourni ne sont pas valides.</message>
@@ -483,13 +483,13 @@
 	<message key="xmlui.EPerson.PasswordLogin.forgot_link"> Mot de passe oubli&#233;?</message>
 	<message key="xmlui.EPerson.PasswordLogin.submit">Identifiez-vous</message>
 	<message key="xmlui.EPerson.PasswordLogin.head2">Inscrire un nouvel utilisateur</message>
-	<message key="xmlui.EPerson.PasswordLogin.para1">Cr&#233;er un compte afin de pouvoir vous abonner &#224; des alertes courriel et soumettre de nouveaux documents dans DSpace.</message>
+	<message key="xmlui.EPerson.PasswordLogin.para1">Cr&#233;er un compte afin de pouvoir vous abonner &#224; des alertes courriel et soumettre de nouveaux documents dans WPRO IRIS.</message>
 	<message key="xmlui.EPerson.PasswordLogin.register_link">Cliquer ici pour vous inscrire.</message>
 	
 	<!-- org.dspace.app.xmlui.eperson.LDAPLogin.java -->
 	<message key="xmlui.EPerson.LDAPLogin.title">Ouverture de session</message>
 	<message key="xmlui.EPerson.LDAPLogin.trail">Ouverture de session</message>
-	<message key="xmlui.EPerson.LDAPLogin.head1">Identifiez-vous pour acc&#233;der &#224; DSpace</message>
+	<message key="xmlui.EPerson.LDAPLogin.head1">Identifiez-vous pour acc&#233;der &#224; WPRO IRIS</message>
 
 	<message key="xmlui.EPerson.LDAPLogin.username">Nom d'utilisateur</message>
 	<message key="xmlui.EPerson.LDAPLogin.error_bad_login">Le nom d'utilisateur et/ou mot de passe fourni ne sont pas valides.</message>
@@ -529,7 +529,7 @@
 	<!-- org.dspace.app.xmlui.eperson.RegistrationFinished.java -->
 	<message key="xmlui.EPerson.RegistrationFinished.title">Inscription termin&#233;e</message>
 	<message key="xmlui.EPerson.RegistrationFinished.head">Inscription termin&#233;e</message>
-	<message key="xmlui.EPerson.RegistrationFinished.para1">Vous &#234;tes maintenant inscrit dans le syst&#232;me DSpace. Vous pouvez vous abonner &#224; des collections pour recevoir des alertes par courriel au sujet des nouveaux documents.</message>
+	<message key="xmlui.EPerson.RegistrationFinished.para1">Vous &#234;tes maintenant inscrit dans le syst&#232;me WPRO IRIS. Vous pouvez vous abonner &#224; des collections pour recevoir des alertes par courriel au sujet des nouveaux documents.</message>
 	
 	<!-- org.dspace.app.xmlui.eperson.ResetPassword.java -->
 	<message key="xmlui.EPerson.ResetPassword.title">R&#233;initialiser le mot de passe</message>
@@ -545,7 +545,7 @@
 	<!-- org.dspace.app.xmlui.eperson.StartForgotPassword.java -->
 	<message key="xmlui.EPerson.StartForgotPassword.title">Mot de passe oubli&#233;</message>
 	<message key="xmlui.EPerson.StartForgotPassword.head">Mot de passe oubli&#233;</message>
-	<message key="xmlui.EPerson.StartForgotPassword.para1">Entrer l'adresse courriel indiqu&#233;e lors de votre inscription dans DSpace. Un courriel vous sera envoy&#233; &#224; cette adresse avec de nouvelles instructions.</message>
+	<message key="xmlui.EPerson.StartForgotPassword.para1">Entrer l'adresse courriel indiqu&#233;e lors de votre inscription dans WPRO IRIS. Un courriel vous sera envoy&#233; &#224; cette adresse avec de nouvelles instructions.</message>
 	<message key="xmlui.EPerson.StartForgotPassword.email_address">Adresse courriel</message>
 	<message key="xmlui.EPerson.StartForgotPassword.email_address_help">Entrer la m&#234;me adresse courriel que celle utilis&#233;e lors de votre inscription.</message>
 	<message key="xmlui.EPerson.StartForgotPassword.error_not_found">Adresse courriel inconnue</message>
@@ -558,7 +558,7 @@
 	<message key="xmlui.EPerson.StartRegistration.reset_password_for">R&#233;initialiser mot de passe pour</message>
 	<message key="xmlui.EPerson.StartRegistration.submit_reset">R&#233;initialiser mot de passe</message>
 	<message key="xmlui.EPerson.StartRegistration.head2">Nouvelle inscription</message>
-	<message key="xmlui.EPerson.StartRegistration.para2">Cr&#233;er un compte afin de pouvoir vous abonner &#224; des alertes courriel et soumettre de nouveaux documents dans DSpace.</message>
+	<message key="xmlui.EPerson.StartRegistration.para2">Cr&#233;er un compte afin de pouvoir vous abonner &#224; des alertes courriel et soumettre de nouveaux documents dans WPRO IRIS.</message>
 	<message key="xmlui.EPerson.StartRegistration.email_address">Adresse courriel</message>
 	<message key="xmlui.EPerson.StartRegistration.email_address_help">Cette adresse sera v&#233;rifi&#233;e et devra &#234;tre utilis&#233;e pour ouvrir une session.</message>
 	<message key="xmlui.EPerson.StartRegistration.error_bad_email">Impossible d'envoyer un courriel &#224; cette adresse.</message>
@@ -666,7 +666,7 @@
 	<message key="xmlui.Submission.Submissions.status_unknown">&#233;tat inconnu</message>
         <!-- Same transformer, completed submissions section -->
         <message key="xmlui.Submission.Submissions.completed.head">Soumissions archiv&#233;es</message>
-        <message key="xmlui.Submission.Submissions.completed.info">Ces soumissions ont &#233;t&#233; accept&#233;es dans le d&#233;p&#244;t DSpace.</message>
+        <message key="xmlui.Submission.Submissions.completed.info">Ces soumissions ont &#233;t&#233; accept&#233;es dans le d&#233;p&#244;t WPRO IRIS.</message>
         <message key="xmlui.Submission.Submissions.completed.column1">Date d'acceptation</message>
         <message key="xmlui.Submission.Submissions.completed.column2">Titre</message>
         <message key="xmlui.Submission.Submissions.completed.column3">Collection</message>
@@ -882,7 +882,7 @@
 
 	<!-- org.dspace.app.xmlui.Submission.submit.LicenseStep -->
 	<message key="xmlui.Submission.submit.LicenseStep.head">Licence de diffusion</message>
-	<message key="xmlui.Submission.submit.LicenseStep.info1">Derni&#232;re &#233;tape&#160;: Pour permettre &#224; DSpace de reproduire, traduire et distribuer dans le monde entier votre document, vous devez accepter les dispositions suivantes.</message>
+	<message key="xmlui.Submission.submit.LicenseStep.info1">Derni&#232;re &#233;tape&#160;: Pour permettre &#224; WPRO IRIS de reproduire, traduire et distribuer dans le monde entier votre document, vous devez accepter les dispositions suivantes.</message>
 	<message key="xmlui.Submission.submit.LicenseStep.info2">Accorder la licence de diffusion standard en s&#233;lectionnant "J'accorde la licence", puis en cliquant sur "Finaliser la soumission".</message>
 	<message key="xmlui.Submission.submit.LicenseStep.info3">Si vous avez des questions concernant cette licence pri&#232;re de contacter les administrateurs syst&#232;me.</message>
 	<message key="xmlui.Submission.submit.LicenseStep.decision_label">Licence de diffusion</message>
@@ -1272,7 +1272,7 @@
 	<!-- org.dspace.app.xmlui.administrative.registries.MetadatRegistryMain.java -->
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.title">Registre de m&#233;tadonn&#233;es</message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.head1">Registre de m&#233;tadonn&#233;es</message>
-	<message key="xmlui.administrative.registries.MetadataRegistryMain.para1">Le registre de m&#233;tadonn&#233;es pr&#233;sente une liste &#224; jour de tous les champs de m&#233;tadonn&#233;es disponibles dans le d&#233;p&#244;t. Ces champs peuvent &#234;tre r&#233;partis entre plusieurs sch&#233;mas. DSpace exige toutefois le sch&#233;ma Dublin Core qualifi&#233;. Vous pouvez &#233;tendre le sch&#233;ma Dublin Core avec des champs suppl&#233;mentaires ou encore ajouter de nouveaux sch&#233;mas dans le registre.</message>
+	<message key="xmlui.administrative.registries.MetadataRegistryMain.para1">Le registre de m&#233;tadonn&#233;es pr&#233;sente une liste &#224; jour de tous les champs de m&#233;tadonn&#233;es disponibles dans le d&#233;p&#244;t. Ces champs peuvent &#234;tre r&#233;partis entre plusieurs sch&#233;mas. WPRO IRIS exige toutefois le sch&#233;ma Dublin Core qualifi&#233;. Vous pouvez &#233;tendre le sch&#233;ma Dublin Core avec des champs suppl&#233;mentaires ou encore ajouter de nouveaux sch&#233;mas dans le registre.</message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.column1"></message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.column2">No d'identification</message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.column3">Espace de nommage</message>
@@ -1758,7 +1758,7 @@
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.trail">Moissonnage</message>
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.options_harvest">Source de contenu</message>
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.label_source">Source de contenu</message>
-	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.source_normal">Ceci est une collection standard de DSpace</message>
+	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.source_normal">Ceci est une collection standard de WPRO IRIS</message>
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.source_harvested">Cette collection moissonne son contenu &#224; partir d'une source externe</message>
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.submit_save">Sauvegarder</message>
 
@@ -1893,7 +1893,7 @@
 	<message key="xmlui.administrative.ControlPanel.trail">Panneau de configuration</message>
 	<message key="xmlui.administrative.ControlPanel.head">Panneau de configuration</message>
 	<message key="xmlui.administrative.ControlPanel.option_java">Informations Java</message>
-	<message key="xmlui.administrative.ControlPanel.option_dspace">Configuration de DSpace</message>
+	<message key="xmlui.administrative.ControlPanel.option_dspace">Configuration de WPRO IRIS</message>
 	<message key="xmlui.administrative.ControlPanel.option_alerts">Alertes syst&#232;me</message>
 	<message key="xmlui.administrative.ControlPanel.hours">{0} h</message>
 	<message key="xmlui.administrative.ControlPanel.minutes">{0} min</message>
@@ -1918,11 +1918,11 @@
         <message key="xmlui.administrative.ControlPanel.cocoon_cache_clear">(Nettoyer la cache imm&#233;diatement)</message>
         <message key="xmlui.administrative.ControlPanel.cocoon_persistent_cache_size">Taille de la cache persistante ({0})</message>
         <message key="xmlui.administrative.ControlPanel.cocoon_transient_cache_size">Taille de la cache transitoire ({0})</message>	
-	<message key="xmlui.administrative.ControlPanel.dspace_head">Param&#232;tres de DSpace</message>
+	<message key="xmlui.administrative.ControlPanel.dspace_head">Param&#232;tres de WPRO IRIS</message>
      <message key="xmlui.administrative.ControlPanel.dspace_version">Version de DSpace</message>
-	<message key="xmlui.administrative.ControlPanel.dspace_dir">R&#233;pertoire d'installation de DSpace</message>
-	<message key="xmlui.administrative.ControlPanel.dspace_url">URL de base de DSpace</message>
-	<message key="xmlui.administrative.ControlPanel.dspace_hostname">Nom de l'h&#244;te de DSpace</message>
+	<message key="xmlui.administrative.ControlPanel.dspace_dir">R&#233;pertoire d'installation de WPRO IRIS</message>
+	<message key="xmlui.administrative.ControlPanel.dspace_url">URL de base de WPRO IRIS</message>
+	<message key="xmlui.administrative.ControlPanel.dspace_hostname">Nom de l'h&#244;te de WPRO IRIS</message>
 	<message key="xmlui.administrative.ControlPanel.dspace_name">Nom du site</message>
 	<message key="xmlui.administrative.ControlPanel.db_name">Nom de la base de donn&#233;es (BD)</message>
 	<message key="xmlui.administrative.ControlPanel.db_url">URL de la base de donn&#233;es (BD)</message>
@@ -1982,7 +1982,7 @@
         <!-- System-wide Curation Tasks form (org.dspace.app.xmlui.aspect.administrative.CurateForm) -->
         <message key="xmlui.administrative.CurateForm.title">T&#226;ches de conservation</message>
         <message key="xmlui.administrative.CurateForm.trail">T&#226;ches de conservation</message>
-        <message key="xmlui.administrative.CurateForm.object_label_name">Handle de l'&#233;l&#233;ment de DSpace</message>
+        <message key="xmlui.administrative.CurateForm.object_label_name">Handle de l'&#233;l&#233;ment de WPRO IRIS</message>
         <message key="xmlui.administrative.CurateForm.object_hint">Conseil: Entrer [votre-pr&#233;fixe-de-Handle]/0 pour effectuer une t&#226;che &#224; travers tout le site (cette capacit&#233; peut ne pas &#234;tre support&#233;e par toutes les t&#226;ches).</message>
         <message key="xmlui.administrative.CurateForm.task_label_name">T&#226;che</message>
     <!-- Used by Curate<DSO>Form classes also -->
@@ -2280,7 +2280,7 @@
      - JavaScript (AJAX) that completes the lookup popup window.
      - So, positional parameters are @1@, @2@, etc.
     -->
-  <message key="xmlui.ChoiceLookupTransformer.title">V&#233;rifier une valeur dans DSpace</message>
+  <message key="xmlui.ChoiceLookupTransformer.title">V&#233;rifier une valeur dans WPRO IRIS</message>
   <message key="xmlui.ChoiceLookupTransformer.accept">Accepter</message>
   <message key="xmlui.ChoiceLookupTransformer.add">Ajouter</message>
   <message key="xmlui.ChoiceLookupTransformer.cancel">Annuler</message>

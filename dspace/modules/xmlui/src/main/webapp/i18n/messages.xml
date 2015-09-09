@@ -65,7 +65,7 @@
 	<!--
 		This section is for feed syndications (RSS, atom, etc)
 	-->
-	<message key="xmlui.feed.general_description">The DSpace digital repository system captures, stores, indexes, preserves, and distributes digital research material.</message>
+	<message key="xmlui.feed.general_description">The WHO Regional Office for the Western Pacific's Institutional Repository for Information Sharing (WPRO IRIS) is the digital library of WPRO's published material and technical information in full text produced since 1951.</message>
     <message key="xmlui.feed.header">RSS Feeds</message>
 	<message key="xmlui.feed.logo_title">The Channel Image</message>
 	<message key="xmlui.feed.untitled">Untitled</message>
@@ -1842,7 +1842,7 @@
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.trail">Harvesting</message>
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.options_harvest">Content Source</message>
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.label_source">Content source</message>
-	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.source_normal">This is a standard DSpace collection</message>
+	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.source_normal">This is a standard WPRO IRIS collection</message>
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.source_harvested">This collection harvests its content from an external source</message>
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.submit_save">Save</message>
 
@@ -1975,7 +1975,7 @@
 	<message key="xmlui.administrative.ControlPanel.trail">Control panel</message>
 	<message key="xmlui.administrative.ControlPanel.head">Control Panel</message>
 	<message key="xmlui.administrative.ControlPanel.option_java">Java Information</message>
-	<message key="xmlui.administrative.ControlPanel.option_dspace">DSpace Configuration</message>
+	<message key="xmlui.administrative.ControlPanel.option_dspace">WPRO IRIS Configuration</message>
 	<message key="xmlui.administrative.ControlPanel.option_alerts">System-wide Alerts</message>
 	<message key="xmlui.administrative.ControlPanel.hours">{0} h</message>
 	<message key="xmlui.administrative.ControlPanel.minutes">{0} m</message>
@@ -2000,11 +2000,11 @@
         <message key="xmlui.administrative.ControlPanel.cocoon_cache_clear">(Clear Cache Immediately)</message>
         <message key="xmlui.administrative.ControlPanel.cocoon_persistent_cache_size">Persistent Cache Size ({0})</message>
         <message key="xmlui.administrative.ControlPanel.cocoon_transient_cache_size">Transient Cache Size ({0})</message>
-	<message key="xmlui.administrative.ControlPanel.dspace_head">DSpace Settings</message>
+	<message key="xmlui.administrative.ControlPanel.dspace_head">WPRO IRIS Settings</message>
         <message key="xmlui.administrative.ControlPanel.dspace_version">DSpace Version</message>
-	<message key="xmlui.administrative.ControlPanel.dspace_dir">DSpace Installation Directory</message>
-	<message key="xmlui.administrative.ControlPanel.dspace_url">DSpace Base URL</message>
-	<message key="xmlui.administrative.ControlPanel.dspace_hostname">DSpace Host Name</message>
+	<message key="xmlui.administrative.ControlPanel.dspace_dir">WPRO IRIS Installation Directory</message>
+	<message key="xmlui.administrative.ControlPanel.dspace_url">WPRO IRIS Base URL</message>
+	<message key="xmlui.administrative.ControlPanel.dspace_hostname">WPRO IRIS Host Name</message>
 	<message key="xmlui.administrative.ControlPanel.dspace_name">Name of the Site</message>
 	<message key="xmlui.administrative.ControlPanel.db_name">Database Name</message>
 	<message key="xmlui.administrative.ControlPanel.db_url">Database URL</message>
@@ -2064,7 +2064,7 @@
         <!-- System-wide Curation Tasks form (org.dspace.app.xmlui.aspect.administrative.CurateForm) -->
         <message key="xmlui.administrative.CurateForm.title">System Curation Tasks</message>
         <message key="xmlui.administrative.CurateForm.trail">Curation Tasks</message>
-        <message key="xmlui.administrative.CurateForm.object_label_name">Handle of DSpace Object</message>
+        <message key="xmlui.administrative.CurateForm.object_label_name">Handle of WPRO IRIS Object</message>
         <message key="xmlui.administrative.CurateForm.object_hint">Hint: Enter [your-handle-prefix]/0 to run a task across entire site (not all tasks may support this capability)</message>
         <message key="xmlui.administrative.CurateForm.task_label_name">Task</message>
     <!-- Used by Curate<DSO>Form classes also -->
@@ -2184,7 +2184,7 @@
 	<message key="xmlui.dri2xhtml.structural.contact-link">Contact Us</message>
 	<message key="xmlui.dri2xhtml.structural.feedback-link">Send Feedback</message>
 
-	<message key="xmlui.dri2xhtml.structural.head-subtitle">DSpace Repository</message>
+	<message key="xmlui.dri2xhtml.structural.head-subtitle">WPRO IRIS Repository</message>
 
 	<message key="xmlui.dri2xhtml.structural.profile">Profile: </message>
 	<message key="xmlui.dri2xhtml.structural.logout">Logout</message>
@@ -2275,8 +2275,8 @@
 	<!-- Internationalization elements specific to the Qualified Dublin Core metadata handler.
 		DS-METS-1.0-QDC.xsl -->
 	<message key="xmlui.dri2xhtml.METS-1.0.qdc-not-applicable">
-		Qualified Dublin Core (QDC) is not applicable to DSpace communities and collections at
-		this time. When using QDC, you should use the QDC crosswalk for DSpace items and either
+		Qualified Dublin Core (QDC) is not applicable to WPRO IRIS communities and collections at
+		this time. When using QDC, you should use the QDC crosswalk for WPRO IRIS items and either
 		DIM or MODS for processing of communities and collections.
 	</message>
 
@@ -2388,7 +2388,7 @@
      - JavaScript (AJAX) that completes the lookup popup window.
      - So, positional parameters are @1@, @2@, etc.
     -->
-  <message key="xmlui.ChoiceLookupTransformer.title">DSpace Value Lookup</message>
+  <message key="xmlui.ChoiceLookupTransformer.title">WPRO IRIS Value Lookup</message>
   <message key="xmlui.ChoiceLookupTransformer.accept">Accept</message>
   <message key="xmlui.ChoiceLookupTransformer.add">Add</message>
   <message key="xmlui.ChoiceLookupTransformer.cancel">Cancel</message>
