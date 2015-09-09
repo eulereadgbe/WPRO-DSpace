@@ -467,14 +467,22 @@
                                     </a>
                                     <ul class="dropdown-menu" role="menu">
                                         <li>
-                                            <a href="/">
-                                                <i class="fa fa-home" aria-hidden="true"/>&#160;
+                                            <a>
+                                                <xsl:attribute name="href">
+                                                    <xsl:text>/?locale-attribute=</xsl:text>
+                                                    <xsl:value-of select="$active-locale"/>
+                                                </xsl:attribute>
+                                                <i class="fa fa-home fa-lg" aria-hidden="true"/>&#160;
                                                 <i18n:text>xmlui.general.dspace_home</i18n:text>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/community-list">
-                                                <i class="fa fa-navicon" aria-hidden="true"/>&#160;
+                                            <a>
+                                                <xsl:attribute name="href">
+                                                    <xsl:text>/community-list?locale-attribute=</xsl:text>
+                                                    <xsl:value-of select="$active-locale"/>
+                                                </xsl:attribute>
+                                                <i class="fa fa-navicon fa-lg" aria-hidden="true"/>&#160;
                                                 <i18n:text>xmlui.ArtifactBrowser.CommunityBrowser.head</i18n:text>
                                             </a>
                                         </li>
@@ -488,13 +496,21 @@
                                 </div>
                                 <ul class="breadcrumb hidden-xs">
                                     <li class="newnav">
-                                    <a href="/">
-                                        <i class="fa fa-home fa-lg" aria-hidden="true"/>&#160;
-                                        <i18n:text>xmlui.general.dspace_home</i18n:text>
-                                    </a>
+                                        <a>
+                                            <xsl:attribute name="href">
+                                                <xsl:text>/?locale-attribute=</xsl:text>
+                                                <xsl:value-of select="$active-locale"/>
+                                            </xsl:attribute>
+                                            <i class="fa fa-home fa-lg" aria-hidden="true"/>&#160;
+                                            <i18n:text>xmlui.general.dspace_home</i18n:text>
+                                        </a>
                                     </li>
                                     <li class="newnav">
-                                        <a href="/community-list">
+                                        <a>
+                                            <xsl:attribute name="href">
+                                                <xsl:text>/community-list?locale-attribute=</xsl:text>
+                                                <xsl:value-of select="$active-locale"/>
+                                            </xsl:attribute>
                                             <i class="fa fa-navicon fa-lg" aria-hidden="true"/>&#160;
                                             <i18n:text>xmlui.ArtifactBrowser.CommunityBrowser.head</i18n:text>
                                         </a>
