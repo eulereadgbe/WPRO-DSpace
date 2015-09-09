@@ -55,20 +55,65 @@
 
     <xsl:template
             match="dri:referenceSet[@id='aspect.artifactbrowser.CommunityBrowser.referenceSet.community-browser']">
-        <div id="sidetree">
-            <div id="sidetreecontrol">
-                <a href="?#" class="ds-button-field btn btn-default">
-                    <i18n:text>wpro.treeview.collapse.all</i18n:text>
-                </a>
-                &#160;
-                <a href="?#" class="ds-button-field btn btn-default">
-                    <i18n:text>wpro.treeview.expand.all</i18n:text>
-                </a>
-            </div>
-            <ul id="tree">
-                <xsl:apply-templates select="*[not(name()='head')]" mode="summaryList"/>
-            </ul>
-        </div>
+        <xsl:choose>
+            <xsl:when
+                    test="starts-with($request-uri,'community-list')">
+                <div id="sidetree">
+                    <div id="sidetreecontrol">
+                        <a href="?#" class="ds-button-field btn btn-default">
+                            <i18n:text>wpro.treeview.collapse.all</i18n:text>
+                        </a>
+                        &#160;
+                        <a href="?#" class="ds-button-field btn btn-default">
+                            <i18n:text>wpro.treeview.expand.all</i18n:text>
+                        </a>
+                    </div>
+                    <ul id="tree">
+                        <xsl:apply-templates select="*[not(name()='head')]" mode="summaryList"/>
+                    </ul>
+                </div>
+            </xsl:when>
+            <xsl:otherwise>
+                <div class="ds-static-div secondary">
+                    <!-- External Metadata URL: cocoon://metadata/handle/10665.1/9971/mets.xml-->
+                    <div class="detail-view">&#160;</div>
+                    <h3 class="ds-list-head">Sub-communities within this community</h3>
+                    <ul class="ds-artifact-list list-unstyled">
+                        <!-- External Metadata URL: cocoon://metadata/handle/10665.1/9972/mets.xml?sections=dmdSec,fileSec&fileGrpTypes=THUMBNAIL-->
+                        <li class="ds-artifact-item odd">
+                            <div class="artifact-description">
+                                <h4 class="artifact-title">
+                                    <a href="/handle/10665.1/9972"><span class="Z3988">Regional Committee for the Western Pacific - Comité régional pour le Pacifique occidental</span></a> [3860]</h4>
+                            </div>
+                        </li>
+                    </ul>
+                    <h3 class="ds-list-head">Collections in this community</h3>
+                    <ul class="ds-artifact-list list-unstyled">
+                        <!-- External Metadata URL: cocoon://metadata/handle/10665.1/1278/mets.xml?sections=dmdSec,fileSec&fileGrpTypes=THUMBNAIL-->
+                        <li class="ds-artifact-item odd">
+                            <div class="artifact-description">
+                                <h4 class="artifact-title">
+                                    <a href="/handle/10665.1/1278"><span class="Z3988">Meeting reports</span></a> [970]</h4>
+                            </div>
+                        </li>
+                        <!-- External Metadata URL: cocoon://metadata/handle/10665.1/1280/mets.xml?sections=dmdSec,fileSec&fileGrpTypes=THUMBNAIL-->
+                        <li class="ds-artifact-item even">
+                            <div class="artifact-description">
+                                <h4 class="artifact-title">
+                                    <a href="/handle/10665.1/1280"><span class="Z3988">Information products</span></a> [737]</h4>
+                            </div>
+                        </li>
+                        <!-- External Metadata URL: cocoon://metadata/handle/10665.1/10963/mets.xml?sections=dmdSec,fileSec&fileGrpTypes=THUMBNAIL-->
+                        <li class="ds-artifact-item odd">
+                            <div class="artifact-description">
+                                <h4 class="artifact-title">
+                                    <a href="/handle/10665.1/10963"><span class="Z3988">Bulletins (Measles, Polio, Rubella) - in process</span></a> [125]</h4>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
 
     <xsl:template match="dri:div[@id='aspect.artifactbrowser.ItemViewer.div.item-view']
