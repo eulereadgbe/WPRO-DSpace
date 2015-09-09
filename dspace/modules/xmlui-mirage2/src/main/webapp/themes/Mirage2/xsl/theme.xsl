@@ -25,8 +25,9 @@
 	xmlns:mods="http://www.loc.gov/mods/v3"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:util="org.dspace.app.xmlui.utils.XSLUtils"
-	exclude-result-prefixes="i18n dri mets xlink xsl dim xhtml mods dc util">
+    xmlns:confman="org.dspace.core.ConfigurationManager"
+    xmlns:util="org.dspace.app.xmlui.utils.XSLUtils"
+	exclude-result-prefixes="i18n dri mets xlink xsl dim xhtml mods dc confman util">
 
     <!--<xsl:import href="../dri2xhtml-alt/dri2xhtml.xsl"/>-->
     <xsl:import href="aspect/artifactbrowser/artifactbrowser.xsl"/>
@@ -54,20 +55,79 @@
 
     <xsl:template
             match="dri:referenceSet[@id='aspect.artifactbrowser.CommunityBrowser.referenceSet.community-browser']">
-        <div id="sidetree">
-            <div id="sidetreecontrol">
-                <a href="?#" class="ds-button-field btn btn-default">
-                    <i18n:text>wpro.treeview.collapse.all</i18n:text>
-                </a>
-                &#160;
-                <a href="?#" class="ds-button-field btn btn-default">
-                    <i18n:text>wpro.treeview.expand.all</i18n:text>
-                </a>
-            </div>
-            <ul id="tree">
-                <xsl:apply-templates select="*[not(name()='head')]" mode="summaryList"/>
-            </ul>
-        </div>
+        <xsl:choose>
+            <xsl:when
+                    test="starts-with($request-uri,'community-list')">
+                <div id="sidetree">
+                    <div id="sidetreecontrol">
+                        <a href="?#" class="ds-button-field btn btn-default">
+                            <i18n:text>wpro.treeview.collapse.all</i18n:text>
+                        </a>
+                        &#160;
+                        <a href="?#" class="ds-button-field btn btn-default">
+                            <i18n:text>wpro.treeview.expand.all</i18n:text>
+                        </a>
+                    </div>
+                    <ul id="tree">
+                        <xsl:apply-templates select="*[not(name()='head')]" mode="summaryList"/>
+                    </ul>
+                </div>
+            </xsl:when>
+            <xsl:otherwise>
+                <h3 class="ds-list-head">
+                    <i18n:text>xmlui.ArtifactBrowser.CommunityViewer.head_sub_communities</i18n:text>
+                </h3>
+                <ul class="ds-artifact-list list-unstyled">
+                    <!-- External Metadata URL: cocoon://metadata/handle/10665.1/9972/mets.xml?sections=dmdSec,fileSec&fileGrpTypes=THUMBNAIL-->
+                    <li class="ds-artifact-item odd">
+                        <div class="artifact-description">
+                            <h4 class="artifact-title">
+                                <a href="/handle/10665.1/9972">
+                                    <span class="Z3988">Regional Committee for the Western Pacific - Comité régional
+                                        pour le Pacifique occidental
+                                    </span>
+                                </a>
+                            </h4>
+                        </div>
+                    </li>
+                </ul>
+                <h3 class="ds-list-head">
+                    <i18n:text>xmlui.ArtifactBrowser.CommunityViewer.head_sub_collections</i18n:text>
+                </h3>
+                <ul class="ds-artifact-list list-unstyled">
+                    <!-- External Metadata URL: cocoon://metadata/handle/10665.1/10963/mets.xml?sections=dmdSec,fileSec&fileGrpTypes=THUMBNAIL-->
+                    <li class="ds-artifact-item odd">
+                        <div class="artifact-description">
+                            <h4 class="artifact-title">
+                                <a href="/handle/10665.1/10963">
+                                    <span class="Z3988">Bulletins (Measles, Polio, Rubella) - in process</span>
+                                </a>
+                            </h4>
+                        </div>
+                    </li>
+                    <!-- External Metadata URL: cocoon://metadata/handle/10665.1/1280/mets.xml?sections=dmdSec,fileSec&fileGrpTypes=THUMBNAIL-->
+                    <li class="ds-artifact-item even">
+                        <div class="artifact-description">
+                            <h4 class="artifact-title">
+                                <a href="/handle/10665.1/1280">
+                                    <span class="Z3988">Information products</span>
+                                </a>
+                            </h4>
+                        </div>
+                    </li>
+                    <!-- External Metadata URL: cocoon://metadata/handle/10665.1/1278/mets.xml?sections=dmdSec,fileSec&fileGrpTypes=THUMBNAIL-->
+                    <li class="ds-artifact-item odd">
+                        <div class="artifact-description">
+                            <h4 class="artifact-title">
+                                <a href="/handle/10665.1/1278">
+                                    <span class="Z3988">Meeting reports</span>
+                                </a>
+                            </h4>
+                        </div>
+                    </li>
+                </ul>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
 
     <xsl:template match="dri:div[@id='aspect.artifactbrowser.ItemViewer.div.item-view']
@@ -98,19 +158,19 @@
             &#160;<i class="fa fa-angle-double-right" aria-hidden="true"/>&#160;
         </xsl:if>
         <!-- Determine whether we are dealing with a link or plain text trail link -->
-        <xsl:choose>
-            <xsl:when test="./@target">
-                <a>
-                    <xsl:attribute name="href">
-                        <xsl:value-of select="./@target"/>
-                    </xsl:attribute>
-                    <xsl:if test="position()=1">
-                        <i class="fa fa-home fa-lg" aria-hidden="true"/>&#160;
-                    </xsl:if>
-                    <xsl:apply-templates />
-                </a>
-            </xsl:when>
-        </xsl:choose>
+            <xsl:choose>
+                <xsl:when test="./@target">
+                    <a>
+                        <xsl:attribute name="href">
+                            <xsl:value-of select="./@target"/>
+                        </xsl:attribute>
+                        <xsl:if test="position()=1">
+                            <i class="fa fa-home fa-lg" aria-hidden="true"/>&#160;
+                        </xsl:if>
+                        <xsl:apply-templates />
+                    </a>
+                </xsl:when>
+            </xsl:choose>
     </xsl:template>
 
     <xsl:template match="dri:list[@id='aspect.viewArtifacts.Navigation.list.account']">
