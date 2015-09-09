@@ -19,8 +19,8 @@ $(function () {
     });
     $('ul > li > div > h4 > a').each(function (i) {
             $(this).parentsUntil(".collapsable", "ul").attr('id', 'sort');
+        sortUnorderedList("sort");
     });
-    sortUnorderedList("sort");
 });
 
 $(document).ready(function () {
