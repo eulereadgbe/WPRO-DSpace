@@ -37,12 +37,6 @@ function sortUnorderedList(ul, sortDescending) {
     if(typeof ul == "string")
         ul = document.getElementById(ul);
 
-    // Idiot-proof, remove if you want
-    if(!ul) {
-        alert("The UL object is null!");
-        return;
-    }
-
     // Get the list items and setup an array for sorting
     var lis = ul.getElementsByTagName("a");
     var vals = [];
