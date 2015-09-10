@@ -74,58 +74,11 @@
                 </div>
             </xsl:when>
             <xsl:otherwise>
-                <h3 class="ds-list-head">
-                    <i18n:text>xmlui.ArtifactBrowser.CommunityViewer.head_sub_communities</i18n:text>
-                </h3>
-                <ul class="ds-artifact-list list-unstyled">
-                    <!-- External Metadata URL: cocoon://metadata/handle/10665.1/9972/mets.xml?sections=dmdSec,fileSec&fileGrpTypes=THUMBNAIL-->
-                    <li class="ds-artifact-item odd">
-                        <div class="artifact-description">
-                            <h4 class="artifact-title">
-                                <a href="/handle/10665.1/9972">
-                                    <span class="Z3988">Regional Committee for the Western Pacific - Comité régional
-                                        pour le Pacifique occidental
-                                    </span>
-                                </a>
-                            </h4>
-                        </div>
-                    </li>
-                </ul>
-                <h3 class="ds-list-head">
-                    <i18n:text>xmlui.ArtifactBrowser.CommunityViewer.head_sub_collections</i18n:text>
-                </h3>
-                <ul class="ds-artifact-list list-unstyled">
-                    <!-- External Metadata URL: cocoon://metadata/handle/10665.1/10963/mets.xml?sections=dmdSec,fileSec&fileGrpTypes=THUMBNAIL-->
-                    <li class="ds-artifact-item odd">
-                        <div class="artifact-description">
-                            <h4 class="artifact-title">
-                                <a href="/handle/10665.1/10963">
-                                    <span class="Z3988">Bulletins (Measles, Polio, Rubella) - in process</span>
-                                </a>
-                            </h4>
-                        </div>
-                    </li>
-                    <!-- External Metadata URL: cocoon://metadata/handle/10665.1/1280/mets.xml?sections=dmdSec,fileSec&fileGrpTypes=THUMBNAIL-->
-                    <li class="ds-artifact-item even">
-                        <div class="artifact-description">
-                            <h4 class="artifact-title">
-                                <a href="/handle/10665.1/1280">
-                                    <span class="Z3988">Information products</span>
-                                </a>
-                            </h4>
-                        </div>
-                    </li>
-                    <!-- External Metadata URL: cocoon://metadata/handle/10665.1/1278/mets.xml?sections=dmdSec,fileSec&fileGrpTypes=THUMBNAIL-->
-                    <li class="ds-artifact-item odd">
-                        <div class="artifact-description">
-                            <h4 class="artifact-title">
-                                <a href="/handle/10665.1/1278">
-                                    <span class="Z3988">Meeting reports</span>
-                                </a>
-                            </h4>
-                        </div>
-                    </li>
-                </ul>
+                <xsl:variable name="top-community">
+                    <xsl:value-of select="$current-uri"/>
+                    <xsl:text>handle/10665.1/9971?XML</xsl:text>
+                </xsl:variable>
+                <xsl:apply-templates select="document($top-community)//dri:div[@id='aspect.artifactbrowser.CommunityViewer.div.community-view']/node()" mode="detailView" />
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
