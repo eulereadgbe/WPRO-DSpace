@@ -664,7 +664,7 @@ public class Community extends DSpaceObject
             if(DatabaseManager.isOracle()){
                 query += " ORDER BY cast(m.text_value as varchar2(128))";
             }else{
-                query += " ORDER BY m.text_value DESC";
+                query += " ORDER BY m.text_value";
             }
             tri = DatabaseManager.query(
                     ourContext,

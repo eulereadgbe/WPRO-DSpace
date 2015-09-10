@@ -967,6 +967,16 @@
         <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js">&#160;</script>
         <script type="text/javascript">stLight.options({publisher: "491a22ef-9600-4646-be10-77ab263d3558", doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
         </xsl:if>
+        <xsl:if test="$request-uri='community-list' or $request-uri='handle/10665.1/9972'">
+            <script type="text/javascript">
+                var mylist = $('#aspect_artifactbrowser_CommunityViewer_div_community-view > ul.ds-artifact-list,#tree ul:last');
+                var listitems = mylist.children('li').get();
+                listitems.sort(function(b, a) {
+                return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase());
+                })
+                $.each(listitems, function(idx, itm) { mylist.append(itm); });
+            </script>
+        </xsl:if>
     </xsl:template>
 
     <!--The Language Selection-->
