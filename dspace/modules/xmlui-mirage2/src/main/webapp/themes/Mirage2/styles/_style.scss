@@ -146,43 +146,60 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   padding-left: 5px;
 }
 
-@media (min-width: 640px) {
-  .navbar {
+header .navbar-brand .wpro-logo-en img, header .navbar-brand .wpro-logo-fr img, header .navbar-brand .wpro-logo-zh img {
+  border-right: 1px solid #ffffff;
+}
+
+@media (min-width: 407px) {
+  header .navbar-brand {
     min-height: 125px;
   }
 
-  header .navbar-brand img {
+  .extra-small {
+    display: none !important;
+  }
+
+  header .navbar-brand .iris-logo-en img, header .navbar-brand .iris-logo-fr img, header .navbar-brand .iris-logo-zh img {
+    padding-left: 9px;
+  }
+
+  .navbar-brand .wpro-logo-en img, .navbar-brand .wpro-logo-fr img, .navbar-brand .wpro-logo-zh img {
+    width: 210px;
+    height: 87px;
+  }
+
+  .navbar-brand .iris-logo-en img {
+    width: 137px;
+    height: 77px;
+  }
+
+  .navbar-brand .iris-logo-fr img {
+    width: 154px;
     height: 78px;
   }
 
+  .navbar-brand .iris-logo-zh img {
+    width: 114px;
+    height: 66px;
+  }
 }
 
-@media (min-width: 480px) and (max-width: 639px) {
+@media (max-width: 406px) {
   .navbar {
-    min-height: 90px;
+    padding: 0;
+  }
+  header .navbar-brand .iris-logo-en img, header .navbar-brand .iris-logo-fr img, header .navbar-brand .iris-logo-zh img {
+    padding-left: 3px;
+  }
+  .small {
+    display: none !important;
   }
 
   header .navbar-brand img {
-    height: 55px;
+    height: 47px;
   }
-}
-
-@media (min-width: 360px) and (max-width: 479px) {
-  .navbar {
-    min-height: 69px;
-  }
-
-  header .navbar-brand img {
-    height: 36px;
-  }
-}
-
-@media (min-width: 320px) {
-  header .navbar-brand .wpro-logo img {
-    border-right: 1px solid #ffffff;
-  }
-  header .navbar-brand .iris-logo img {
-    padding-left: 9px;
+  .navbar-header {
+    height: 40px;
   }
 }
 
