@@ -362,6 +362,9 @@
                                 <li id="ds-language-selection-xs" class="dropdown">
                                     <xsl:variable name="active-locale" select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='page'][@qualifier='currentLocale']"/>
                                     <button id="language-dropdown-toggle-xs" href="#" role="button" class="dropdown-toggle navbar-toggle navbar-link" data-toggle="dropdown">
+                                        <xsl:value-of select="util:isoLanguageToDisplay($active-locale)"/>
+                                    </button>
+                                    <button id="language-dropdown-toggle-xs" href="#" role="button" class="dropdown-toggle navbar-toggle navbar-link extra-small" data-toggle="dropdown">
                                         <b class="visible-xs glyphicon glyphicon-globe" aria-hidden="true"/>
                                     </button>
                                     <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="language-dropdown-toggle-xs" data-no-collapse="true">
@@ -377,6 +380,13 @@
                                                 <a>
                                                     <xsl:attribute name="href">
                                                         <xsl:choose>
+                                                            <xsl:when test="/dri:document//dri:field[@id='aspect.discovery.SimpleSearch.field.query']/dri:value/text()!='' and $query-string=''">
+                                                                <xsl:value-of select="$current-uri"/>
+                                                                <xsl:text>?query=</xsl:text>
+                                                                <xsl:value-of select="/dri:document//dri:field[@id='aspect.discovery.SimpleSearch.field.query']/dri:value/text()"/>
+                                                                <xsl:text>&amp;locale-attribute=</xsl:text>
+                                                                <xsl:value-of select="$locale"/>
+                                                            </xsl:when>
                                                             <xsl:when test="contains($query-string,'locale-attribute=')">
                                                                 <xsl:value-of select="$current-uri"/>
                                                                 <xsl:text>?</xsl:text>
@@ -467,14 +477,22 @@
                                     </a>
                                     <ul class="dropdown-menu" role="menu">
                                         <li>
-                                            <a href="/">
-                                                <i class="fa fa-home" aria-hidden="true"/>&#160;
+                                            <a>
+                                                <xsl:attribute name="href">
+                                                    <xsl:text>/?locale-attribute=</xsl:text>
+                                                    <xsl:value-of select="$active-locale"/>
+                                                </xsl:attribute>
+                                                <i class="fa fa-home fa-lg" aria-hidden="true"/>&#160;
                                                 <i18n:text>xmlui.general.dspace_home</i18n:text>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/community-list">
-                                                <i class="fa fa-navicon" aria-hidden="true"/>&#160;
+                                            <a>
+                                                <xsl:attribute name="href">
+                                                    <xsl:text>/community-list?locale-attribute=</xsl:text>
+                                                    <xsl:value-of select="$active-locale"/>
+                                                </xsl:attribute>
+                                                <i class="fa fa-navicon fa-lg" aria-hidden="true"/>&#160;
                                                 <i18n:text>xmlui.ArtifactBrowser.Navigation.communities_and_collections</i18n:text>
                                             </a>
                                         </li>
@@ -488,13 +506,21 @@
                                 </div>
                                 <ul class="breadcrumb hidden-xs">
                                     <li class="newnav">
-                                    <a href="/">
-                                        <i class="fa fa-home fa-lg" aria-hidden="true"/>&#160;
-                                        <i18n:text>xmlui.general.dspace_home</i18n:text>
-                                    </a>
+                                        <a>
+                                            <xsl:attribute name="href">
+                                                <xsl:text>/?locale-attribute=</xsl:text>
+                                                <xsl:value-of select="$active-locale"/>
+                                            </xsl:attribute>
+                                            <i class="fa fa-home fa-lg" aria-hidden="true"/>&#160;
+                                            <i18n:text>xmlui.general.dspace_home</i18n:text>
+                                        </a>
                                     </li>
                                     <li class="newnav">
-                                        <a href="/community-list">
+                                        <a>
+                                            <xsl:attribute name="href">
+                                                <xsl:text>/community-list?locale-attribute=</xsl:text>
+                                                <xsl:value-of select="$active-locale"/>
+                                            </xsl:attribute>
                                             <i class="fa fa-navicon fa-lg" aria-hidden="true"/>&#160;
                                             <i18n:text>xmlui.ArtifactBrowser.Navigation.communities_and_collections</i18n:text>
                                         </a>
@@ -961,6 +987,16 @@
         <script type="text/javascript">var switchTo5x=true;</script>
         <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js">&#160;</script>
         <script type="text/javascript">stLight.options({publisher: "491a22ef-9600-4646-be10-77ab263d3558", doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
+        </xsl:if>
+        <xsl:if test="$request-uri='community-list' or $request-uri='handle/10665.1/9972'">
+            <script type="text/javascript">
+                var mylist = $('#aspect_artifactbrowser_CommunityViewer_div_community-view > ul.ds-artifact-list,#tree ul:last');
+                var listitems = mylist.children('li').get();
+                listitems.sort(function(b, a) {
+                return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase());
+                })
+                $.each(listitems, function(idx, itm) { mylist.append(itm); });
+            </script>
         </xsl:if>
     </xsl:template>
 
