@@ -340,16 +340,16 @@
                         <a href="/" class="navbar-brand">
                             <xsl:choose>
                                 <xsl:when test="$active-locale='fr'">
-                                    <span class="wpro-logo"><img src="/static/images/wpro_logo_fr.gif" /></span>
-                                    <span class="iris-logo"><img src="/static/images/iris_logo_fr.png" /></span>
+                                    <span class="wpro-logo-fr"><img src="/static/images/wpro_logo_fr.gif" /></span>
+                                    <span class="iris-logo-fr"><img src="/static/images/iris_logo_fr.png" /></span>
                                 </xsl:when>
                                 <xsl:when test="$active-locale='zh'">
-                                    <span class="wpro-logo"><img src="/static/images/wpro_logo_zh.gif" /></span>
-                                    <span class="iris-logo"><img src="/static/images/iris_logo_zh.png" /></span>
+                                    <span class="wpro-logo-zh"><img src="/static/images/wpro_logo_zh.gif" /></span>
+                                    <span class="iris-logo-zh"><img src="/static/images/iris_logo_zh.png" /></span>
                                 </xsl:when>
                                 <xsl:otherwise>
-                                    <span class="wpro-logo"><img src="/static/images/wpro_logo_en.gif" /></span>
-                                    <span class="iris-logo"><img src="/static/images/iris_logo_en.png" /></span>
+                                    <span class="wpro-logo-en"><img src="/static/images/wpro_logo_en.gif" /></span>
+                                    <span class="iris-logo-en"><img src="/static/images/iris_logo_en.png" /></span>
                                 </xsl:otherwise>
                             </xsl:choose>
                         </a>
@@ -361,8 +361,11 @@
                             <xsl:if test="count(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='page'][@qualifier='supportedLocale']) &gt; 1">
                                 <li id="ds-language-selection-xs" class="dropdown">
                                     <xsl:variable name="active-locale" select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='page'][@qualifier='currentLocale']"/>
-                                    <button id="language-dropdown-toggle-xs" href="#" role="button" class="dropdown-toggle navbar-toggle navbar-link" data-toggle="dropdown">
+                                    <button id="language-dropdown-toggle-xs" href="#" role="button" class="dropdown-toggle navbar-toggle navbar-link small" data-toggle="dropdown">
                                         <xsl:value-of select="util:isoLanguageToDisplay($active-locale)"/>
+                                    </button>
+                                    <button id="language-dropdown-toggle-xs" href="#" role="button" class="dropdown-toggle navbar-toggle navbar-link extra-small" data-toggle="dropdown">
+                                        <b class="visible-xs glyphicon glyphicon-globe" aria-hidden="true"/>
                                     </button>
                                     <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="language-dropdown-toggle-xs" data-no-collapse="true">
                                         <xsl:for-each
@@ -377,6 +380,13 @@
                                                 <a>
                                                     <xsl:attribute name="href">
                                                         <xsl:choose>
+                                                            <xsl:when test="/dri:document//dri:field[@id='aspect.discovery.SimpleSearch.field.query']/dri:value/text()!='' and $query-string=''">
+                                                                <xsl:value-of select="$current-uri"/>
+                                                                <xsl:text>?query=</xsl:text>
+                                                                <xsl:value-of select="/dri:document//dri:field[@id='aspect.discovery.SimpleSearch.field.query']/dri:value/text()"/>
+                                                                <xsl:text>&amp;locale-attribute=</xsl:text>
+                                                                <xsl:value-of select="$locale"/>
+                                                            </xsl:when>
                                                             <xsl:when test="contains($query-string,'locale-attribute=')">
                                                                 <xsl:value-of select="$current-uri"/>
                                                                 <xsl:text>?</xsl:text>
@@ -996,6 +1006,13 @@
                         <a>
                             <xsl:attribute name="href">
                                 <xsl:choose>
+                                    <xsl:when test="/dri:document//dri:field[@id='aspect.discovery.SimpleSearch.field.query']/dri:value/text()!='' and $query-string=''">
+                                        <xsl:value-of select="$current-uri"/>
+                                        <xsl:text>?query=</xsl:text>
+                                        <xsl:value-of select="/dri:document//dri:field[@id='aspect.discovery.SimpleSearch.field.query']/dri:value/text()"/>
+                                        <xsl:text>&amp;locale-attribute=</xsl:text>
+                                        <xsl:value-of select="$locale"/>
+                                    </xsl:when>
                                     <xsl:when test="contains($query-string,'locale-attribute=')">
                                         <xsl:value-of select="$current-uri"/>
                                         <xsl:text>?</xsl:text>
