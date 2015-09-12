@@ -27,7 +27,8 @@
 	xmlns="http://www.w3.org/1999/xhtml"
     xmlns:confman="org.dspace.core.ConfigurationManager"
     xmlns:util="org.dspace.app.xmlui.utils.XSLUtils"
-	exclude-result-prefixes="i18n dri mets xlink xsl dim xhtml mods dc confman util">
+    xmlns:date="http://exslt.org/dates-and-times"
+	exclude-result-prefixes="i18n dri mets xlink xsl dim xhtml mods dc confman util date">
 
     <!--<xsl:import href="../dri2xhtml-alt/dri2xhtml.xsl"/>-->
     <xsl:import href="aspect/artifactbrowser/artifactbrowser.xsl"/>
@@ -130,6 +131,46 @@
         </xsl:choose>
     </xsl:template>
 
+    <xsl:template match="dri:referenceSet[@id='aspect.discovery.SiteRecentSubmissions.referenceSet.site-last-submitted' and @rend='recent-submissions']
+    |dri:referenceSet[@id='aspect.discovery.CommunityRecentSubmissions.referenceSet.community-last-submitted'and @rend='recent-submissions']">
+        <xsl:choose>
+            <xsl:when test="$pagemeta/dri:metadata[@element='request'][@qualifier='URI']='handle/10665.1/9971'
+        or $pagemeta/dri:metadata[@element='request'][@qualifier='URI']=''">
+                <xsl:for-each select="dri:reference">
+                    <xsl:variable name="externalMetadataURL">
+                        <xsl:text>cocoon:/</xsl:text>
+                        <xsl:value-of select="@url"/>
+                        <!-- No options selected, render the full METS document -->
+                    </xsl:variable>
+                    <xsl:variable name="handle">
+                        <xsl:value-of select="$current-uri"/>
+                        <xsl:value-of select="substring-before(substring-after(@url,'/metadata'),'/mets.xml')"/>
+                        <xsl:text>?XML</xsl:text>
+                    </xsl:variable>
+                    <xsl:variable name="issue-date"  select="document($externalMetadataURL)//dim:field[@element='date'][@qualifier='issued'][1]/text()"/>
+                    <xsl:variable name="owning-collection"  select="document($handle)//dri:trail[@target][last()]/@target"/>
+                    <!--
+                                   Assuming dates conform to YYYY-MM-DD syntax, a simple string compare should work.
+                                   An XSLT extension would be needed to computer the current date.
+                                -->
+                    <xsl:if test="substring($issue-date,1,4) = date:year()">
+                        <xsl:comment> Issue date: <xsl:value-of select="$issue-date"/> </xsl:comment>
+                        <xsl:comment> Current year is: <xsl:value-of select="date:year()"/> </xsl:comment>
+                        <xsl:comment> Owning collection: <xsl:value-of select="$owning-collection"/> </xsl:comment>
+                        <ul class="ds-artifact-list list-unstyled">
+                            <xsl:apply-templates select="." mode="summaryList"/>
+                        </ul>
+                    </xsl:if>
+                </xsl:for-each>
+            </xsl:when>
+            <xsl:otherwise>
+                <ul class="ds-artifact-list list-unstyled">
+                    <xsl:apply-templates select="." mode="summaryList"/>
+                </ul>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+
     <xsl:template match="dri:div[@id='aspect.artifactbrowser.ItemViewer.div.item-view']
     | dri:div[@id='aspect.artifactbrowser.CollectionViewer.div.collection-home']
     | dri:div[@id='aspect.artifactbrowser.CommunityViewer.div.community-home']
@@ -137,6 +178,7 @@
     | dri:div[@id='aspect.artifactbrowser.ConfigurableBrowse.div.browse-by-author']
     | dri:div[@id='aspect.artifactbrowser.ConfigurableBrowse.div.browse-by-title']
     | dri:div[@id='aspect.artifactbrowser.ConfigurableBrowse.div.browse-by-mesh']
+    | dri:div[@id='aspect.discovery.recentSubmissions.RecentSubmissionTransformer.div.main-recent-submissions']
     | dri:div[@id='aspect.discovery.SimpleSearch.div.search']">
         <xsl:choose>
             <xsl:when test="count(/dri:document/dri:meta/dri:pageMeta/dri:trail) > 1">
