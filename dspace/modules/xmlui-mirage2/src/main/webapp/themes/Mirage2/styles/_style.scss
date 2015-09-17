@@ -150,7 +150,11 @@ header .navbar-brand .wpro-logo-en img, header .navbar-brand .wpro-logo-fr img, 
   border-right: 1px solid #ffffff;
 }
 
-@media (min-width: 407px) {
+.navbar {
+  min-height: 100px;
+}
+
+@media (min-width: 506px) {
   header .navbar-brand {
     min-height: 125px;
   }
@@ -184,7 +188,7 @@ header .navbar-brand .wpro-logo-en img, header .navbar-brand .wpro-logo-fr img, 
   }
 }
 
-@media (max-width: 406px) {
+@media (max-width: 505px) {
   .navbar {
     padding: 0;
   }
@@ -196,7 +200,7 @@ header .navbar-brand .wpro-logo-en img, header .navbar-brand .wpro-logo-fr img, 
   }
 
   header .navbar-brand img {
-    height: 47px;
+    height: 58px;
   }
   .navbar-header {
     height: 40px;
@@ -326,7 +330,7 @@ body {
 #ds-search-form > fieldset > div > input, .dropdown-menu-search > .search-me .form-control {
   height: 24px;
   margin-top: 6px;
-  min-width: 131px;
+  min-width: 200px;
 }
 
 .breadcrumb-search-group > #ds-search-form > fieldset > div > span > .btn,
