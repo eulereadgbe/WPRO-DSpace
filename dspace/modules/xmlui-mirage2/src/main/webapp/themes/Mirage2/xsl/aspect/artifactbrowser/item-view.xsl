@@ -809,6 +809,11 @@
             <xsl:variable name="itemURL">
                 <xsl:value-of select="dim:field[@element='identifier' and @qualifier='uri']"/>
             </xsl:variable>
+            <xsl:variable name="itemThumbnail">
+                <xsl:value-of select="confman:getProperty('dspace.url')"/>
+                <xsl:value-of
+                        select="//mets:fileSec/mets:fileGrp[@USE='THUMBNAIL']/mets:file/mets:FLocat[@LOCTYPE='URL']/@xlink:href"/>
+            </xsl:variable>
             <span>
                 <xsl:attribute name="class">
                     <xsl:text>st_twitter_large</xsl:text>
@@ -832,6 +837,9 @@
                 </xsl:attribute>
                 <xsl:attribute name="st_url">
                     <xsl:value-of select="$itemURL"/>
+                </xsl:attribute>
+                <xsl:attribute name="st_image">
+                    <xsl:value-of select="$itemThumbnail"/>
                 </xsl:attribute>
                 <xsl:attribute name="displayText">
                     <xsl:text>Facebook</xsl:text>
@@ -863,6 +871,9 @@
                 </xsl:attribute>
                 <xsl:attribute name="st_summary">
                     <xsl:value-of select="dim:field[@element='description' and @qualifier='abstract']"/>
+                </xsl:attribute>
+                <xsl:attribute name="st_image">
+                    <xsl:value-of select="$itemThumbnail"/>
                 </xsl:attribute>
                 <xsl:attribute name="displayText">
                     <xsl:text>Email</xsl:text>
