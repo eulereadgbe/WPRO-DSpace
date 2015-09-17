@@ -325,9 +325,38 @@
 
         <header>
             <div class="navbar navbar-default navbar-static-top container" role="navigation">
-                <div>
-                    <div class="navbar-header">
-
+                <div class="navbar-header">
+                    <div>
+                        <a href="/" class="navbar-brand">
+                            <xsl:choose>
+                                <xsl:when test="$active-locale='fr'">
+                                    <span class="wpro-logo-fr">
+                                        <img src="/static/images/wpro_logo_fr.gif"/>
+                                    </span>
+                                    <span class="iris-logo-fr">
+                                        <img src="/static/images/iris_logo_fr.png"/>
+                                    </span>
+                                </xsl:when>
+                                <xsl:when test="$active-locale='zh'">
+                                    <span class="wpro-logo-zh">
+                                        <img src="/static/images/wpro_logo_zh.gif"/>
+                                    </span>
+                                    <span class="iris-logo-zh">
+                                        <img src="/static/images/iris_logo_zh.png"/>
+                                    </span>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <span class="wpro-logo-en">
+                                        <img src="/static/images/wpro_logo_en.gif"/>
+                                    </span>
+                                    <span class="iris-logo-en">
+                                        <img src="/static/images/iris_logo_en.png"/>
+                                    </span>
+                                </xsl:otherwise>
+                            </xsl:choose>
+                        </a>
+                    </div>
+                    <div class="pull-right">
                         <button type="button" class="navbar-toggle" data-toggle="offcanvas">
                             <span class="sr-only">
                                 <i18n:text>xmlui.mirage2.page-structure.toggleNavigation</i18n:text>
@@ -336,38 +365,25 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-
-                        <a href="/" class="navbar-brand">
-                            <xsl:choose>
-                                <xsl:when test="$active-locale='fr'">
-                                    <span class="wpro-logo-fr"><img src="/static/images/wpro_logo_fr.gif" /></span>
-                                    <span class="iris-logo-fr"><img src="/static/images/iris_logo_fr.png" /></span>
-                                </xsl:when>
-                                <xsl:when test="$active-locale='zh'">
-                                    <span class="wpro-logo-zh"><img src="/static/images/wpro_logo_zh.gif" /></span>
-                                    <span class="iris-logo-zh"><img src="/static/images/iris_logo_zh.png" /></span>
-                                </xsl:when>
-                                <xsl:otherwise>
-                                    <span class="wpro-logo-en"><img src="/static/images/wpro_logo_en.gif" /></span>
-                                    <span class="iris-logo-en"><img src="/static/images/iris_logo_en.png" /></span>
-                                </xsl:otherwise>
-                            </xsl:choose>
-                        </a>
-
-
-                        <div class="navbar-header pull-right visible-xs hidden-sm hidden-md hidden-lg">
-                        <ul class="nav nav-pills pull-left ">
-
+                    </div>
+                    <div class="navbar-header pull-right">
+                        <ul class="nav nav-pills pull-left">
                             <xsl:if test="count(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='page'][@qualifier='supportedLocale']) &gt; 1">
                                 <li id="ds-language-selection-xs" class="dropdown">
-                                    <xsl:variable name="active-locale" select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='page'][@qualifier='currentLocale']"/>
-                                    <button id="language-dropdown-toggle-xs" href="#" role="button" class="dropdown-toggle navbar-toggle navbar-link small" data-toggle="dropdown">
+                                    <xsl:variable name="active-locale"
+                                                  select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='page'][@qualifier='currentLocale']"/>
+                                    <button id="language-dropdown-toggle-xs" href="#" role="button"
+                                            class="dropdown-toggle navbar-toggle navbar-link small"
+                                            data-toggle="dropdown">
                                         <xsl:value-of select="util:isoLanguageToDisplay($active-locale)"/>
                                     </button>
-                                    <button id="language-dropdown-toggle-xs" href="#" role="button" class="dropdown-toggle navbar-toggle navbar-link extra-small" data-toggle="dropdown">
+                                    <button id="language-dropdown-toggle-xs" href="#" role="button"
+                                            class="dropdown-toggle navbar-toggle navbar-link extra-small"
+                                            data-toggle="dropdown">
                                         <b class="visible-xs glyphicon glyphicon-globe" aria-hidden="true"/>
                                     </button>
-                                    <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="language-dropdown-toggle-xs" data-no-collapse="true">
+                                    <ul class="dropdown-menu pull-right" role="menu"
+                                        aria-labelledby="language-dropdown-toggle-xs" data-no-collapse="true">
                                         <xsl:for-each
                                                 select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='page'][@qualifier='supportedLocale']">
                                             <xsl:variable name="locale" select="."/>
@@ -380,17 +396,21 @@
                                                 <a>
                                                     <xsl:attribute name="href">
                                                         <xsl:choose>
-                                                            <xsl:when test="/dri:document//dri:field[@id='aspect.discovery.SimpleSearch.field.query']/dri:value/text()!='' and $query-string=''">
+                                                            <xsl:when
+                                                                    test="/dri:document//dri:field[@id='aspect.discovery.SimpleSearch.field.query']/dri:value/text()!='' and $query-string=''">
                                                                 <xsl:value-of select="$current-uri"/>
                                                                 <xsl:text>?query=</xsl:text>
-                                                                <xsl:value-of select="/dri:document//dri:field[@id='aspect.discovery.SimpleSearch.field.query']/dri:value/text()"/>
+                                                                <xsl:value-of
+                                                                        select="/dri:document//dri:field[@id='aspect.discovery.SimpleSearch.field.query']/dri:value/text()"/>
                                                                 <xsl:text>&amp;locale-attribute=</xsl:text>
                                                                 <xsl:value-of select="$locale"/>
                                                             </xsl:when>
-                                                            <xsl:when test="contains($query-string,'locale-attribute=')">
+                                                            <xsl:when
+                                                                    test="contains($query-string,'locale-attribute=')">
                                                                 <xsl:value-of select="$current-uri"/>
                                                                 <xsl:text>?</xsl:text>
-                                                                <xsl:value-of select="substring-before($query-string,'&amp;locale-attribute')"/>
+                                                                <xsl:value-of
+                                                                        select="substring-before($query-string,'&amp;locale-attribute')"/>
                                                                 <xsl:text>&amp;locale-attribute=</xsl:text>
                                                                 <xsl:value-of select="$locale"/>
                                                             </xsl:when>
@@ -417,26 +437,24 @@
                                 </li>
                             </xsl:if>
                         </ul>
-                              </div>
-                    </div>
-
-                    <div class="navbar-header pull-right hidden-xs">
-                        <div id="language-container">
-                        <ul class="pull-left">
-                              <xsl:call-template name="languageSelection"/>
-                        </ul>
-                            </div>
-
-                        <button data-toggle="offcanvas" class="navbar-toggle visible-sm" type="button">
-                            <span class="sr-only"><i18n:text>xmlui.mirage2.page-structure.toggleNavigation</i18n:text></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
                     </div>
                 </div>
+                <div class="navbar-header pull-right hidden-xs">
+                    <div id="language-container">
+                        <ul class="pull-left">
+                            <xsl:call-template name="languageSelection"/>
+                        </ul>
+                    </div>
+                    <button data-toggle="offcanvas" class="navbar-toggle visible-sm" type="button">
+                        <span class="sr-only">
+                            <i18n:text>xmlui.mirage2.page-structure.toggleNavigation</i18n:text>
+                        </span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
             </div>
-
         </header>
 
     </xsl:template>
@@ -470,9 +488,11 @@
                                                 <i class="fa fa-home fa-lg" aria-hidden="true"/>&#160;
                                             </xsl:otherwise>
                                         </xsl:choose>
+                                        <span class="active-menu small">
                                         <i18n:text>
                                             <xsl:value-of select="$active-menu"/>
                                         </i18n:text>
+                                        </span>
                                         <b class="caret"></b>
                                     </a>
                                     <ul class="dropdown-menu" role="menu">
@@ -535,65 +555,7 @@
                     </div>
                     <div id="breadcrumb-search" class="col-xs-6 col-sm-4">
                         <xsl:if test="not(contains(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='request'][@qualifier='URI'], 'discover'))">
-                            <div class="dropdown pull-right visible-xs">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    <span class="glyphicon glyphicon-search" aria-hidden="true"/>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-search" role="menu">
-                                    <li class="search-me">
-                                        <form id="ds-search-form" method="post">
-                                            <xsl:attribute name="action">
-                                                <xsl:value-of
-                                                        select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath']"/>
-                                                <xsl:value-of
-                                                        select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='simpleURL']"/>
-                                            </xsl:attribute>
-                                            <fieldset>
-                                                <div class="input-group">
-                                                    <input class="ds-text-field form-control" type="text"
-                                                           placeholder="xmlui.general.search"
-                                                           i18n:attr="placeholder">
-                                                        <xsl:attribute name="name">
-                                                            <xsl:value-of
-                                                                    select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='queryField']"/>
-                                                        </xsl:attribute>
-                                                    </input>
-                                                    <span class="input-group-btn">
-                                                        <button class="ds-button-field btn btn-primary"
-                                                                title="xmlui.general.go"
-                                                                i18n:attr="title">
-                                                            <span class="glyphicon glyphicon-search" aria-hidden="true"/>
-                                                            <xsl:attribute name="onclick">
-                                                    <xsl:text>
-                                                        var form = document.getElementById(&quot;ds-search-form&quot;);
-                                                        form.action=
-                                                    </xsl:text>
-                                                                <xsl:text>&quot;</xsl:text>
-                                                                <xsl:value-of
-                                                                        select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath']"/>
-                                                                <xsl:text>/handle/&quot;</xsl:text>
-                                                                <xsl:value-of
-                                                                        select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='simpleURL']"/>
-                                                                <xsl:text>&quot; ; </xsl:text>
-                                                            </xsl:attribute>
-                                                        </button>
-                                                    </span>
-                                                    <span class="advanced-search">
-                                                        <a>
-                                                            <xsl:attribute name="href">
-                                                                <xsl:value-of select="$context-path"/>
-                                                                <xsl:text>/discover</xsl:text>
-                                                            </xsl:attribute>
-                                                            <i18n:text>xmlui.ArtifactBrowser.AdvancedSearch.title</i18n:text>
-                                                        </a>
-                                                    </span>
-                                                </div>
-                                            </fieldset>
-                                        </form>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="breadcrumb hidden-xs">
+                            <div class="breadcrumb">
                                 <div class="search-group breadcrumb-search-group pull-right">
                                     <form id="ds-search-form" method="post">
                                         <xsl:attribute name="action">
@@ -632,7 +594,7 @@
                                                         </xsl:attribute>
                                                     </button>
                                                 </span>
-                                                <span class="advanced-search">
+                                                <span class="advanced-search small">
                                                     <a>
                                                         <xsl:attribute name="href">
                                                             <xsl:value-of select="$context-path"/>
