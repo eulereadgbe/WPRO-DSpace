@@ -164,7 +164,15 @@
                 <span class="h5 list-group-item-heading"><i18n:text>wpro.related.link</i18n:text></span>
             </a>
             <div class="ds-option-set list-group">
-                <a class="list-group-item ds-option" href="http://apps.who.int/iris/?locale=en" target="_blank">
+                <a>
+                    <xsl:attribute name="class">
+                        <xsl:text>list-group-item ds-option</xsl:text>
+                    </xsl:attribute>
+                    <xsl:attribute name="href">
+                        <xsl:text>http://apps.who.int/iris/?locale=</xsl:text>
+                        <xsl:value-of select="$active-locale"/>
+                    </xsl:attribute>
+                    <xsl:attribute name="target">_blank</xsl:attribute>
                     <i18n:text>wpro.related.link.who.iris</i18n:text>
                 </a>
                 <a class="list-group-item ds-option" href="http://www.wpro.who.int/publications/library_services/en/"
