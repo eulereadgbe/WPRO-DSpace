@@ -27,7 +27,7 @@
 	<!-- Correctif relatif a DS-1159 : "Hardcoded button display text in several XMLUI themes makes i18n difficult" -->
 	<message key="xmlui.general.addbutton">Ajouter</message>
 	<message key="xmlui.general.dspace_home">Accueil</message>
-	<message key="xmlui.general.search">Recherche</message>
+	<message key="xmlui.general.search">Recherche WPRO IRIS</message>
 	<message key="xmlui.general.go">Aller</message>
 	<message key="xmlui.general.go_home">Aller &#224; la page d'accueil</message>
 	<message key="xmlui.general.save">Sauvegarder</message>
@@ -68,7 +68,7 @@
 	<!--
 		This section is for feed syndications (RSS, atom, etc)  
 	-->
-	<message key="xmlui.feed.general_description">Le Dépôt institutionnel pour le partage de l’information (WPRO IRIS) du Bureau régional de l’OMS pour le Pacifique occidental est une bibliothèque virtuelle contenant le texte intégral des publications et des documents techniques publiés par WPRO depuis 1951.</message>
+	<message key="xmlui.feed.general_description">Le D&#233;pôt institutionnel pour le partage de l’information (WPRO IRIS) du Bureau r&#233;gional de l’OMS pour le Pacifique occidental est une bibliothèque virtuelle contenant le texte int&#233;gral des publications et des documents techniques publi&#233;s par WPRO depuis 1951.</message>
     <message key="xmlui.feed.header">Fils RSS</message>
 	<message key="xmlui.feed.logo_title">L'image du canal</message>
 	<message key="xmlui.feed.untitled">[Sans titre]</message>
@@ -128,7 +128,7 @@
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_series">S&#233;rie</message>
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_sponsor">Subventionnaire</message>
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_identifier">Identifiant</message>
-	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_language">Langue (ISO)</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_language">Langue</message>
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_keyword">Mot-cl&#233;</message>
    
    <!--  some common other possibilities for Advanced Search Fields -->
@@ -205,9 +205,9 @@
 	<message key="xmlui.ArtifactBrowser.CommunityBrowser.title">Liste de communaut&#233;s</message>
 	<message key="xmlui.ArtifactBrowser.CommunityBrowser.trail">Liste de communaut&#233;s</message>
 	<message key="xmlui.ArtifactBrowser.CommunityBrowser.head">Communaut&#233;s et collections</message>
-    <message key="xmlui.ArtifactBrowser.CommunityBrowser.select">Vous trouverez ci-après une liste des communautés
-        présentes dans WPRO IRIS ainsi que les collections et sous-communautés qu'elles contiennent. Cliquez sur un nom
-        pour consulter la page d'accueil de cette communauté ou de cette collection.
+    <message key="xmlui.ArtifactBrowser.CommunityBrowser.select">Vous trouverez ci-après une liste des communaut&#233;s
+        pr&#233;sentes dans WPRO IRIS ainsi que les collections et sous-communaut&#233;s qu'elles contiennent. Cliquez sur un nom
+        pour consulter la page d'accueil de cette communaut&#233; ou de cette collection.
     </message>
 
     <!-- org.dspace.app.xmlui.artifactbrowser.CommunityViewer.java -->
@@ -264,11 +264,12 @@
 	<!-- org.dspace.app.xmlui.artifactbrowser.Navigation.java -->
 	<message key="xmlui.ArtifactBrowser.Navigation.head_browse">Parcourir</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.head_all_of_dspace">Tout WPRO IRIS</message>
-	<message key="xmlui.ArtifactBrowser.Navigation.communities_and_collections">Communaut&#233;s &amp; Collections</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.communities_and_collections">Communaut&#233;s et collections</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_title">Titres</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_author">Auteurs</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_subject">Sujets</message>
-	<message key="xmlui.ArtifactBrowser.Navigation.browse_dateissued">Par date de publication</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.browse_mesh">Sujets</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.browse_dateissued">Date de publication</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_dateaccessioned">Par date de soumission</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.head_this_collection">Cette collection</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.head_this_community">Cette communaut&#233;</message>
@@ -739,7 +740,7 @@
 
 	<!-- org.dspace.app.xmlui.Submission.submit.AccessStep -->
     <message key="xmlui.Submission.submit.AccessStep.head">Options d'acc&#232;s</message>
-    <message key="xmlui.Submission.submit.AccessStep.access_settings">Visible pour un groupe des utilisateurs sélectionnés (ceci n'est pas obligatoire pour Anonyme)</message>
+    <message key="xmlui.Submission.submit.AccessStep.access_settings">Visible pour un groupe des utilisateurs s&#233;lectionn&#233;s (ceci n'est pas obligatoire pour Anonyme)</message>
     <message key="xmlui.Submission.submit.AccessStep.open_access">Permetre l'acc&#232;s depuis l'item est accept&#233; dans le d&#233;p&#244;t</message>
     <message key="xmlui.Submission.submit.AccessStep.embargo">Embargo jusqu'&#224; une date sp&#233;cifique</message>
     <message key="xmlui.Submission.submit.AccessStep.embargo_visible">Acc&#232;s pour un groupe s&#233;lectionn&#233;</message>
@@ -752,7 +753,7 @@
     <message key="xmlui.Submission.submit.AccessStep.list_assigned_groups">Groupe</message>
     <message key="xmlui.Submission.submit.AccessStep.error_format_date">Erreur de format de la date</message>
     <message key="xmlui.Submission.submit.AccessStep.error_missing_date">Quand l'embargo est s&#233;lectionn&#233;, la date est obligatoire</message>
-    <message key="xmlui.Submission.submit.AccessStep.error_duplicated_policy">Une politique identique pour ce groupe et cet action est déjà définie.</message>
+    <message key="xmlui.Submission.submit.AccessStep.error_duplicated_policy">Une politique identique pour ce groupe et cet action est d&#233;j&#224;&#224; d&#233;finie.</message>
     <message key="xmlui.Submission.submit.AccessStep.table_policies">Politiques de groupe</message>
     <message key="xmlui.Submission.submit.AccessStep.policies_help">Les politiques list&#233;es dans cette section remplace tous les politiques d&#233;fautes pour la collection pr&#233;f&#233;r&#233;e. Si vous veuillez appliquer un embargo mais la collection permet l'acc&#232;s pour tous utilisateurs, vous devez cr&#233;er une politique qui permet l'acc&#232;s pour le groupe anonyme depuis une date sp&#233;cifique.</message>
     <message key="xmlui.Submission.submit.AccessStep.no_policies">Il n'y a aucune politique en vigueur pour cet item..</message>
@@ -2025,7 +2026,7 @@
     <message key="xmlui.statistics.StatisticsSearchTransformer.search-total.head">Total</message>
     <message key="xmlui.statistics.StatisticsSearchTransformer.time-filter.last-month">Mois pr&#233;c&#233;dent</message>
     <message key="xmlui.statistics.StatisticsSearchTransformer.time-filter.last-6-months">Semestre pr&#233;c&#233;dent</message>
-    <message key="xmlui.statistics.StatisticsSearchTransformer.time-filter.last-year">Année pr&#233;c&#233;dente</message>
+    <message key="xmlui.statistics.StatisticsSearchTransformer.time-filter.last-year">Ann&#233;e pr&#233;c&#233;dente</message>
     <message key="xmlui.statistics.StatisticsSearchTransformer.time-filter.overall">Globale</message>
 
 
@@ -2089,7 +2090,7 @@
 	<message key="xmlui.dri2xhtml.structural.logout">D&#233;connexion</message>
 	<message key="xmlui.dri2xhtml.structural.login">Ouvrir une session</message>
 
-	<message key="xmlui.dri2xhtml.structural.search">Chercher dans le d&#233;p&#244;t</message>
+	<message key="xmlui.dri2xhtml.structural.search">Tout WPRO IRIS</message>
 	<message key="xmlui.dri2xhtml.structural.search-advanced">Recherche avanc&#233;e</message>
 	<message key="xmlui.dri2xhtml.structural.search-in-community">Cette communaut&#233;</message>
 	<message key="xmlui.dri2xhtml.structural.search-in-collection">Cette collection</message>
@@ -2117,6 +2118,7 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.item-title">Titre</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-other-title">Autre(s) titre(s)</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-author">Auteur</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-coauthor">Co-auteur</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-abstract">R&#233;sum&#233;</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-description">Description</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-uri">URI</message>
@@ -2125,9 +2127,10 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.item-publisher">&#201;diteur</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-series">No. de la collection/du rapport</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-subject">Sujet</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-keyword">Mots-clés</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-keyword">Mots-cl&#233;s</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-context">Contexte</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-isbn">ISBN</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-issn">ISSN</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-type">Type de document</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-location">Location</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-share">Partager</message>
@@ -2377,7 +2380,7 @@
     <!-- End Versioning -->
 
 
-    <message key="xmlui.mirage2.itemSummaryView.MetaData">Métadonnées</message>
+    <message key="xmlui.mirage2.itemSummaryView.MetaData">M&#233;tadonn&#233;es</message>
     <message key="xmlui.mirage2.itemSummaryView.Collections">Collections</message>
 
     <message key="xmlui.mirage2.discovery.reset">Reset</message>
@@ -2419,7 +2422,7 @@
     <!-- Site Leve Recently Added Content -->
     <message key="xmlui.ArtifactBrowser.SiteViewer.head_recent_submissions">Dernières</message>
 
-    <message key="xmlui.ArtifactBrowser.AbstractRecentSubmissionTransformer.recent_submissions_more">View more</message>
+    <message key="xmlui.ArtifactBrowser.AbstractRecentSubmissionTransformer.recent_submissions_more">Voir plus</message>
     <message key="xmlui.Discovery.RecentSubmissions.RecentSubmissionTransformer.head">{0}: Recent submissions</message>
     <message key="xmlui.Discovery.RecentSubmissions.RecentSubmissionTransformer.trail">Recent submissions</message>
     <message key="xmlui.Discovery.RecentSubmissions.RecentSubmissionTransformer.recent.head">Recently added</message>
@@ -2466,9 +2469,12 @@
 
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.author">Auteur</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.title">Titre</message>
-    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject">Sujet</message>
-    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateIssued">Date d'émission</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject">Sujet (MeSH)</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateIssued">Date d émission</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.type">Type</message>
+	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.description">R&#233;sum&#233;s</message>
+	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.identifier">Identifiant</message>
+	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.series">S&#233;rie</message>
 
 
 
@@ -2480,10 +2486,10 @@
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.coauthor">Co-Auteur</message>
     <message key="xmlui.Discovery.AbstractSearch.type_subject">Filtrer par: Sujet</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject">Sujet</message>
-	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.keywords">Mots-clés</message>
-	<message key="xmlui.Discovery.AbstractSearch.type_keywords">Filtrer par: Mot-clé</message>
+	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.keywords">Mots-cl&#233;s</message>
+	<message key="xmlui.Discovery.AbstractSearch.type_keywords">Filtrer par: Mot-cl&#233;</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject_filter">Sujet</message>
-    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateIssued.year">Date d'émission</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateIssued.year">Date d'&#233;mission</message>
     <message key="xmlui.Discovery.AbstractSearch.type_type">Filtrer par: Type</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.language">Langue</message>
     <message key="xmlui.Discovery.AbstractSearch.type_language">Filtrer par: Langue</message>
@@ -2513,8 +2519,8 @@
 
     <message key="xmlui.discovery.SearchFacetFilter.no-results">No filter values found</message>
 
-    <message key="xmlui.discovery.AbstractFiltersTransformer.filters.head">Discover</message>
-    <message key="xmlui.discovery.AbstractFiltersTransformer.filters.view-more">... View More</message>
+    <message key="xmlui.discovery.AbstractFiltersTransformer.filters.head">Filtre</message>
+    <message key="xmlui.discovery.AbstractFiltersTransformer.filters.view-more">... Voir plus</message>
 
 
     <message key="xmlui.Discovery.SimpleSearch.search_scope">Search</message>
@@ -2542,24 +2548,25 @@
     <message key="xmlui.Discovery.SimpleSearch.did_you_mean">Did you mean: </message>
 
     <!-- For news-xmlui.xml -->
-    <message key="wpro.news.title">Bienvenue à WPRO IRIS</message>
+    <message key="wpro.news.title">Bienvenue &#224; WPRO IRIS</message>
     <message key="wpro.news.content">
-        <p>Le Dépôt institutionnel pour le partage de l’information (WPRO IRIS) du Bureau régional de l’OMS pour le
-            Pacifique occidental est une bibliothèque virtuelle contenant le texte intégral des publications et des
-            documents techniques publiés par WPRO depuis 1951.
+        <p>Le D&#233;pôt institutionnel pour le partage de l’information (WPRO IRIS) du Bureau r&#233;gional de l’OMS pour le
+            Pacifique occidental est une bibliothèque virtuelle contenant le texte int&#233;gral des publications et des
+            documents techniques publi&#233;s par WPRO depuis 1951.
         </p>
-        <p>Tous les titres sont accessibles gratuitement et consultables en anglais. Les ouvrages publiés en chinois et
-            en français sont en cours de numérisation et peuvent être obtenus sur demande à l’adresse suivante:
+        <p>Tous les titres sont accessibles gratuitement et consultables en anglais. Les ouvrages publi&#233;s en chinois et
+            en français sont en cours de num&#233;risation et peuvent &#234;tre obtenus sur demande &#224; l’adresse suivante:
             <a target="_blank" href="mailto:library@wpro.who.int">library@wpro.who.int</a>.
         </p>
     </message>
 
     <!-- Tree view -->
     <message key="wpro.treeview.collapse.all">Tout replier</message>
-    <message key="wpro.treeview.expand.all">Développer tout</message>
+    <message key="wpro.treeview.expand.all">D&#233;velopper tout</message>
 
-    <message key="wpro.library.information">À propos de la Bibliothèque</message>
+    <message key="wpro.library.information">&#192; propos de la Bibliothèque</message>
 	<message key="wpro.related.link">Liens connexes</message>
-	<message key="wpro.related.link.who.iris">Mondial IRIS</message>
+	<message key="wpro.related.link.who.iris">IRIS global</message>
 	<message key="wpro.related.link.wpro.library">Bibliothèque WPRO</message>
+	<message key="wpro.help.link">Aide</message>
 </catalogue>
