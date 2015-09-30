@@ -131,6 +131,7 @@
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_language">Langue</message>
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_keyword">Mot-cl&#233;</message>
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_keywords">Mot-cl&#233;</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_type">Type de document</message>
 
    <!--  some common other possibilities for Advanced Search Fields -->
    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_contributor">Collaborateur</message>
@@ -2416,8 +2417,8 @@
     <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.subject.mesh_filter">Subject (MeSH)</message>
     <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.subject_filter">Keywords</message>
     <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.type_filter">Content Type</message>
-    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.date.issued">Date Issued</message>
-    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dateIssued">Date Issued</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.date.issued">Date de publication</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dateIssued">Date de publication</message>
 
 
     <!-- Site Leve Recently Added Content -->
