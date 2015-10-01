@@ -454,7 +454,7 @@
 
                     <xsl:for-each select="//mets:fileSec/mets:fileGrp[@USE='CONTENT' or @USE='ORIGINAL' or @USE='LICENSE']/mets:file">
                         <xsl:call-template name="itemSummaryView-DIM-file-section-entry">
-                            <xsl:with-param name="href" select="mets:FLocat[@LOCTYPE='URL']/@xlink:href" />
+                            <xsl:with-param name="href" select="substring-before(mets:FLocat[@LOCTYPE='URL']/@xlink:href,'?sequence')" />
                             <xsl:with-param name="mimetype" select="@MIMETYPE" />
                             <xsl:with-param name="label-1" select="$label-1" />
                             <xsl:with-param name="label-2" select="$label-2" />
@@ -1018,7 +1018,7 @@
                             <xsl:text>_blank</xsl:text>
                         </xsl:attribute>
                         <xsl:attribute name="href">
-                            <xsl:value-of select="mets:FLocat[@LOCTYPE='URL']/@xlink:href"/>
+                            <xsl:value-of select="substring-before(mets:FLocat[@LOCTYPE='URL']/@xlink:href,'?sequence')"/>
                         </xsl:attribute>
                         <xsl:choose>
                             <xsl:when test="$context/mets:fileSec/mets:fileGrp[@USE='THUMBNAIL']/
@@ -1139,7 +1139,7 @@
     <xsl:template name="view-open">
         <a>
             <xsl:attribute name="href">
-                <xsl:value-of select="mets:FLocat[@LOCTYPE='URL']/@xlink:href"/>
+                <xsl:value-of select="substring-before(mets:FLocat[@LOCTYPE='URL']/@xlink:href,'?sequence')"/>
             </xsl:attribute>
             <xsl:attribute name="target">
                 <xsl:text>_blank</xsl:text>
