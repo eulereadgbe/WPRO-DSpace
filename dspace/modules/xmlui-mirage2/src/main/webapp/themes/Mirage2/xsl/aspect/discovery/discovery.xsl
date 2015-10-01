@@ -258,6 +258,17 @@
                             <xsl:text>)</xsl:text>
                             </small></span>
                     </xsl:if>
+                    <xsl:if test="dri:list[@n=(concat($handle, ':dc.identifier.govdoc'))]">
+                        <br/>
+                        <span class="h4">
+                            <small>
+                                <i18n:text>xmlui.dri2xhtml.METS-1.0.item-govdoc</i18n:text>
+                                <xsl:text>: </xsl:text>
+                                <xsl:apply-templates
+                                        select="dri:list[@n=(concat($handle, ':dc.identifier.govdoc'))]/dri:item"/>
+                            </small>
+                        </span>
+                    </xsl:if>
                     <xsl:choose>
                         <xsl:when test="dri:list[@n=(concat($handle, ':dc.description.abstract'))]/dri:item/dri:hi">
                             <div class="abstract">
