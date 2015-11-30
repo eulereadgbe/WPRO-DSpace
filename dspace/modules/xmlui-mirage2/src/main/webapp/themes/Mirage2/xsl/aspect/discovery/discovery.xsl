@@ -264,8 +264,12 @@
                             <small>
                                 <i18n:text>xmlui.dri2xhtml.METS-1.0.item-govdoc</i18n:text>
                                 <xsl:text>: </xsl:text>
-                                <xsl:apply-templates
-                                        select="dri:list[@n=(concat($handle, ':dc.identifier.govdoc'))]/dri:item"/>
+                                <xsl:for-each select="dri:list[@n=(concat($handle, ':dc.identifier.govdoc'))]/dri:item">
+                                    <xsl:apply-templates select="."/>
+                                    <xsl:if test="count(following-sibling::dri:item) != 0">
+                                        <xsl:text>; </xsl:text>
+                                    </xsl:if>
+                                </xsl:for-each>
                             </small>
                         </span>
                     </xsl:if>
