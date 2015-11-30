@@ -170,8 +170,12 @@
                         <small>
                             <i18n:text>xmlui.dri2xhtml.METS-1.0.item-govdoc</i18n:text>
                             <xsl:text>: </xsl:text>
-                            <xsl:apply-templates
-                                    select="dim:field[@element='identifier' and @qualifier='govdoc']/node()"/>
+                            <xsl:for-each select="dim:field[@element='identifier' and @qualifier='govdoc']">
+                                <xsl:apply-templates select="."/>
+                                <xsl:if test="count(following-sibling::dim:field[@element='identifier' and @qualifier='govdoc']) != 0">
+                                    <xsl:text>; </xsl:text>
+                                </xsl:if>
+                            </xsl:for-each>
                         </small>
                     </span>
                 </xsl:if>
