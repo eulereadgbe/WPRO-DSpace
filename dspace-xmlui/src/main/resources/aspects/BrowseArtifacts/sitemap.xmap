@@ -48,7 +48,7 @@ collections / items / and bitstreams.
 
             <map:match pattern="">
                 <map:transform type="CommunityBrowser">
-                        <map:parameter name="depth" value="1"/>
+                        <map:parameter name="depth" value="999"/>
                 </map:transform>
                 <map:serialize type="xml"/>
             </map:match>

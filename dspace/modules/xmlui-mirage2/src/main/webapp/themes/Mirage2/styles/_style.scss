@@ -13,11 +13,354 @@
 
 //example mixin to set the text-selection style
 @mixin selection {
-    ::-moz-selection { @content; }
-    ::selection { @content; }
+  ::-moz-selection {
+    @content;
+  }
+  ::selection {
+    @content;
+  }
 }
 
 @include selection {
-    color: white;
-    background: hotpink;
+  color: white;
+  background: #1e7fb8;
+}
+
+@import url(./font-awesome-4.4.0/css/font-awesome.min.css);
+@import url(../scripts/treeview/jquery.treeview.css);
+@import url(../styles/tablesorter/style.css);
+
+#file_news_div_news > img {
+  float: right;
+  padding-left: 10px;
+}
+
+.break-word {
+  -ms-word-break: break-all;
+  -ms-word-wrap: break-all;
+  -webkit-word-break: break-word;
+  -webkit-word-wrap: break-word;
+  word-break: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+#aspect_artifactbrowser_CommunityBrowser_div_comunity-browser h4 {
+  font-size: 14px;
+}
+
+.trail-wrapper {
+  background-color: #666666;
+  border-bottom: 1px solid #333;
+}
+
+.trail-wrapper .dropdown-menu {
+  background-color: #666666;
+}
+
+.trail-wrapper .breadcrumb li, .trail-wrapper .dropdown {
+  color: #fff;
+  padding: 8px;
+}
+
+.trail-wrapper .breadcrumb li a, .trail-wrapper .dropdown a {
+  color: #fff;
+}
+
+.trail-wrapper .breadcrumb li.active, .breadcrumb .dropdown-menu .disabled > a:hover, .dropdown-menu > .disabled > a:focus,
+.breadcrumb > .dropdown-menu > .active > a {
+  background-color: #d86422;
+  color: #fff;
+}
+
+.trail-wrapper .breadcrumb li:hover, .trail-wrapper .dropdown-menu li a:hover {
+  background-color: #d86422;
+}
+
+.footer a {
+  color: #666666;
+}
+
+.breadcrumb > li + li:before {
+  padding: 0;
+  color: #fff;
+  content: "";
+}
+
+h2, .h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #196aaa;
+}
+
+h3, .h3 {
+  font-size: 18px;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+  font-weight: bold;
+}
+
+.breadcrumb {
+  white-space: nowrap;
+}
+
+.breadcrumb > ul > li > a {
+  display: inline;
+  padding-left: 5px;
+}
+
+header .navbar-brand .wpro-logo-en img, header .navbar-brand .wpro-logo-fr img, header .navbar-brand .wpro-logo-zh img {
+  border-right: 1px solid #ffffff;
+}
+
+.navbar {
+  min-height: 100px;
+}
+
+@media (min-width: 506px) {
+  header .navbar-brand {
+    min-height: 125px;
+  }
+
+  .extra-small {
+    display: none !important;
+  }
+
+  header .navbar-brand .iris-logo-en img, header .navbar-brand .iris-logo-fr img, header .navbar-brand .iris-logo-zh img {
+    padding-left: 9px;
+  }
+
+  .navbar-brand .wpro-logo-en img, .navbar-brand .wpro-logo-fr img, .navbar-brand .wpro-logo-zh img {
+    width: 210px;
+    height: 87px;
+  }
+
+  .navbar-brand .iris-logo-en img {
+    width: 137px;
+    height: 77px;
+  }
+
+  .navbar-brand .iris-logo-fr img {
+    width: 154px;
+    height: 78px;
+  }
+
+  .navbar-brand .iris-logo-zh img {
+    width: 114px;
+    height: 66px;
+  }
+}
+
+@media (max-width: 505px) {
+  .navbar {
+    padding: 0;
+  }
+
+  .navbar-brand {
+    padding-bottom: 50px;
+  }
+
+  header .navbar-brand .iris-logo-en img, header .navbar-brand .iris-logo-fr img, header .navbar-brand .iris-logo-zh img {
+    padding-left: 3px;
+  }
+  .small {
+    display: none !important;
+  }
+
+  header .navbar-brand img {
+    height: 58px;
+  }
+  .navbar-header {
+    height: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1024px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (max-width: 991px) {
+  .container {
+    width: 100%;
+  }
+  footer {
+    margin-bottom: -20px;
+  }
+}
+
+footer .row > div {
+  padding: 15px;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+#main-container, footer .row {
+  background-color: #ffffff;
+}
+
+.newnav {
+  background-image: url("../images/navigation_divider.gif");
+  background-position: right 8px;
+  background-repeat: no-repeat;
+}
+
+.breadcrumb li {
+  margin-left: -3px;
+}
+
+.breadcrumb .dropdown-menu li {
+  margin-left: 0;
+}
+
+#main-container .row-offcanvas {
+  background-color: #fff;
+}
+
+#main-container #sidebar {
+  background-color: #f5f5f5;
+}
+
+.newnav > a {
+  padding-right: 5px;
+}
+
+.thumbnail > img, .thumbnail a > img {
+    border: 1px solid #dddddd;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.item-page-field-wrapper {
+  margin-bottom: 5px;
+}
+
+.item-page-field-wrapper h5 {
+  margin-bottom: 1px;
+}
+
+.page-header {
+  clear: both;
+}
+
+#language-container ul
+{
+  margin: 5px 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#language-container ul li {
+  display: inline;
+  padding: 10px;
+  cursor: hand;
+}
+
+#language-container ul li.disabled, #language-container ul li:hover {
+  background-color: #d86422;
+}
+
+#language-container ul li.disabled a:hover {
+  cursor: not-allowed;
+}
+
+#language-container ul li.disabled:hover {
+  background-color: #666666;
+}
+
+#language-container ul li a {
+  color: #fff;
+}
+
+#ds-options h2 {
+  margin-top: 20px;
+}
+
+.breadcrumb-search-group {
+  display: table;
+  height: 30px;
+}
+
+.breadcrumb-search-group > #ds-search-form, .advanced-search {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#ds-search-form > fieldset > div > input, .dropdown-menu-search > .search-me .form-control {
+  height: 24px;
+  margin-top: 6px;
+  min-width: 155px;
+}
+
+.breadcrumb-search-group > #ds-search-form > fieldset > div > span > .btn,
+.search-me > #ds-search-form > fieldset > .input-group > .input-group-btn > .btn {
+  padding: 4px 9px;
+  -webkit-border-radius: 0 4px 4px 0;
+  -moz-border-radius: 0 4px 4px 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.breadcrumb-search-group > #ds-search-form > fieldset > div > .input-group-btn {
+  padding-top: 4px;
+}
+
+.advanced-search {
+  padding: 10px 0 0 5px;
+}
+
+.advanced-search > a, .input-group .advanced-search a {
+  color: #b8d4f0;
+}
+
+.dropdown-menu li .advanced-search a:hover {
+  background-color: transparent;
+}
+
+.search-me form {
+  position: relative;
+  padding-left: 5px;
+}
+.search-me .btn {
+  position: absolute;
+  right: -30px;
+  top: 5px;
+}
+
+.dropdown-menu-search {
+  min-width: 215px;
+  height: 60px;
+}
+
+.search-me .advanced-search {
+  position: absolute;
+  top: 22px;
+  left: 0;
+}
+
+.footer-container {
+  width: 100%;
+  display: table;
+  background-color: #E4E4E4;
+}
+
+.footer-content {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+label, .label {
+  font-weight: normal;
+  font-size: 94%;
 }

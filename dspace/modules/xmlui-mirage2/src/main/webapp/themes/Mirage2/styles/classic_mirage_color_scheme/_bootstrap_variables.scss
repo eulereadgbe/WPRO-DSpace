@@ -1,0 +1,34 @@
+/**
+ * The contents of this file are subject to the license and copyright
+ * detailed in the LICENSE and NOTICE files at the root of the source
+ * tree and available online at
+ *
+ * http://www.dspace.org/license/
+ */
+// Preset Bootstrap variables
+// ----------------------
+$brand-primary: #1e7fb8 !default;
+
+$navbar-inverse-bg: #1e7fb8 !default;
+$navbar-inverse-link-color: #eee !default;
+
+$link-color: #196aaa;
+
+//** Link hover decoration.
+$link-hover-decoration: none !default;
+$link-hover-color:       #d86422 !default;
+
+$font-size-base:          12px !default;
+
+//== Breadcrumbs
+//
+//##
+
+$breadcrumb-padding-vertical:   0 !default; //default 8px
+$breadcrumb-padding-horizontal: 0 !default;//default 15px
+//** Breadcrumb background color
+$breadcrumb-bg:                 #666666 !default;
+//** Breadcrumb text color
+$breadcrumb-color:              #fff !default;
+//** Text color of current page in the breadcrumb
+$breadcrumb-active-color:       #fff !default;
