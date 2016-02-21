@@ -174,10 +174,14 @@
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.order.desc">descendant</message>
 
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.author.column_heading">Auteurs</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.coauthor.column_heading">Co-auteurs</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.subject.column_heading">Sujet</message>
 
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.author">Parcourir {0} par auteur {1}</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.author">Parcourir {0} par auteur</message>
+
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.coauthor">Parcourir {0} par co-auteur {1}</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.coauthor">Parcourir {0} par co-auteur</message>
 
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.subject">Parcourir {0} par sujet {1}</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.subject">Parcourir {0} par sujet</message>
@@ -269,6 +273,7 @@
 	<message key="xmlui.ArtifactBrowser.Navigation.communities_and_collections">Communaut&#233;s et collections</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_title">Titres</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_author">Auteurs</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.browse_coauthor">Co-Auteurs</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_subject">Sujets</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_mesh">Sujets</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_dateissued">Date de publication</message>
