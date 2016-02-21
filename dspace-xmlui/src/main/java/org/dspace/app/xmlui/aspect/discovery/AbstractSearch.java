@@ -100,7 +100,7 @@ public abstract class AbstractSearch extends AbstractDSpaceTransformer implement
     /**
      * The options for results per page
      */
-    private static final int[] RESULTS_PER_PAGE_PROGRESSION = {5, 10, 20, 40, 60, 80, 100};
+    private static final int[] RESULTS_PER_PAGE_PROGRESSION = {5, 10, 20, 40, 80, 100, 500};
 
     /**
      * Cached validity object
