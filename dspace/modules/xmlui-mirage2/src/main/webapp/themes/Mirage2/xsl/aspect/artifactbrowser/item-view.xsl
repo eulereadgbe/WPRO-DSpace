@@ -126,11 +126,11 @@
                     <xsl:call-template name="itemSummaryView-DIM-keyword"/>
                     <xsl:call-template name="itemSummaryView-DIM-publisher"/>
                     <xsl:call-template name="itemSummaryView-DIM-series"/>
+                    <xsl:call-template name="itemSummaryView-DIM-govdoc"/>
                     <xsl:call-template name="itemSummaryView-DIM-abstract"/>
                     <xsl:call-template name="itemSummaryView-DIM-description"/>
-                    <xsl:call-template name="itemSummaryView-DIM-govdoc"/>
-                    <xsl:call-template name="itemSummaryView-DIM-URI"/>
                     <xsl:call-template name="itemSummaryView-DIM-URL"/>
+                    <xsl:call-template name="itemSummaryView-DIM-URI"/>
                     <xsl:call-template name="itemSummaryView-DIM-ISBN"/>
                     <xsl:call-template name="itemSummaryView-DIM-subject"/>
                     <xsl:call-template name="itemSummaryView-DIM-context"/>
