@@ -2222,6 +2222,7 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.item-abstract">摘要</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-description">描述</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-uri">网址</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-edition">其他版本</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-govdoc">政府文件号</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-date">发表日期</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-publisher">出版者</message>

@@ -2229,6 +2229,7 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.item-abstract">Abstract</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-description">Description</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-uri">URI</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-edition">Other Editions</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-url">English version URL</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-govdoc">Gov't Doc #</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-date">Date</message>

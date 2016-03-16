@@ -2129,6 +2129,7 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.item-abstract">R&#233;sum&#233;</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-description">Description</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-uri">URI</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-edition">Autres Editions</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-govdoc">No publ. gouv.</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-date">Date</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-publisher">&#201;diteur</message>
