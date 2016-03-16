@@ -131,6 +131,7 @@
                     <xsl:call-template name="itemSummaryView-DIM-description"/>
                     <xsl:call-template name="itemSummaryView-DIM-URL"/>
                     <xsl:call-template name="itemSummaryView-DIM-URI"/>
+                    <xsl:call-template name="itemSummaryView-DIM-Edition"/>
                     <xsl:call-template name="itemSummaryView-DIM-ISBN"/>
                     <xsl:call-template name="itemSummaryView-DIM-subject"/>
                     <xsl:call-template name="itemSummaryView-DIM-context"/>
@@ -362,6 +363,32 @@
                         </a>
                         <xsl:if test="count(following-sibling::dim:field[@element='identifier' and @qualifier='uri']) != 0">
                             <br/>
+                        </xsl:if>
+                    </xsl:for-each>
+                </span>
+            </div>
+        </xsl:if>
+    </xsl:template>
+
+    <xsl:template name="itemSummaryView-DIM-Edition">
+        <xsl:if test="dim:field[@element='relation' and @qualifier='hasversion' and descendant::text()]">
+            <div class="simple-item-view-uri item-page-field-wrapper table">
+                <h5><i18n:text>xmlui.dri2xhtml.METS-1.0.item-edition</i18n:text></h5>
+                <span>
+                    <xsl:for-each select="dim:field[@element='relation' and @qualifier='hasversion']">
+                        <xsl:variable name="otherItemMetadataURL">
+                            <xsl:text>cocoon://metadata/handle/</xsl:text>
+                            <xsl:value-of select="."/>
+                            <xsl:text>/mets.xml</xsl:text>
+                        </xsl:variable>
+                        <a>
+                            <xsl:attribute name="href">
+                                <xsl:value-of select="substring-after(.,'10665.1/')"/>
+                            </xsl:attribute>
+                            <xsl:copy-of select="document($otherItemMetadataURL)//dim:field[@element='description' and @qualifier='edition']/node()"/>
+                        </a>
+                        <xsl:if test="count(following-sibling::dim:field[@element='relation' and @qualifier='hasversion']) != 0">
+                            <xsl:text>; </xsl:text>
                         </xsl:if>
                     </xsl:for-each>
                 </span>
@@ -992,6 +1019,19 @@
                     </xsl:when>
                     <xsl:when test="@element='language' and @qualifier='iso'">
                         <xsl:copy-of select="util:isoLanguageToDisplay(./node())"/>
+                    </xsl:when>
+                    <xsl:when test="@element='relation' and @qualifier='hasversion'">
+                        <xsl:variable name="otherItemMetadataURL">
+                            <xsl:text>cocoon://metadata/handle/</xsl:text>
+                            <xsl:value-of select="."/>
+                            <xsl:text>/mets.xml</xsl:text>
+                        </xsl:variable>
+                        <a>
+                            <xsl:attribute name="href">
+                                <xsl:value-of select="substring-after(.,'10665.1/')"/>
+                            </xsl:attribute>
+                            <xsl:copy-of select="document($otherItemMetadataURL)//dim:field[@element='description' and @qualifier='edition']/node()"/>
+                        </a>
                     </xsl:when>
                     <xsl:otherwise>
                         <xsl:copy-of select="./node()"/>
