@@ -132,6 +132,28 @@
 
        <field>
          <dc-schema>dc</dc-schema>
+         <dc-element>relation</dc-element>
+         <dc-qualifier>hasversion</dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Other Editions</label>
+         <input-type>onebox</input-type>
+         <hint>Enter the handle number of the item with a different edition, e.g., 10665.1/12620</hint>
+         <required></required>
+       </field>
+
+       <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>relation</dc-element>
+         <dc-qualifier>uri</dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>English version URL</label>
+         <input-type>onebox</input-type>
+         <hint>Enter the URL of the original file in English from the global IRIS or if not available, from other WHO websites.</hint>
+         <required></required>
+       </field>
+
+       <field>
+         <dc-schema>dc</dc-schema>
          <dc-element>identifier</dc-element>
          <dc-qualifier></dc-qualifier>
          <!-- An input-type of qualdrop_value MUST be marked as repeatable -->
@@ -231,6 +253,16 @@ it, please enter the types and the actual numbers or codes.</hint>
          <label>Description</label>
          <input-type>textarea</input-type>
          <hint>Enter any other description or comments in this box. </hint>
+         <required></required>
+       </field>
+       <field>
+         <dc-schema>wpro</dc-schema>
+         <dc-element>description</dc-element>
+         <dc-qualifier>edition</dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Editions Statement</label>
+         <input-type>onebox</input-type>
+         <hint>Enter the edition statement of the item, e.g., 2nd ed.</hint>
          <required></required>
        </field>
        <field>
