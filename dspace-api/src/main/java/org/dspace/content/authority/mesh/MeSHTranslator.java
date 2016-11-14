@@ -44,7 +44,7 @@ public class MeSHTranslator {
     public static String lookupBabelMeSH(String term, Locale loc) {
         try {
             String lang = getLang(loc);
-            URLConnection babelMeshConn = (new URL("http://babelmesh.nlm.nih.gov/mesh_trans.php?oterm=" + URLEncoder.encode(term, "UTF-8") + "&in=ENG&out=" + lang)).openConnection();
+            URLConnection babelMeshConn = (new URL("https://babelmesh.nlm.nih.gov/mesh_trans.php?oterm=" + URLEncoder.encode(term, "UTF-8") + "&in=ENG&out=" + lang)).openConnection();
             babelMeshConn.setConnectTimeout(5000);
             babelMeshConn.setReadTimeout(5000);
 
