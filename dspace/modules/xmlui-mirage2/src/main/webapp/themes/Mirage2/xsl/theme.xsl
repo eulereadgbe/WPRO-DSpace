@@ -93,4 +93,16 @@
         </xsl:for-each>
     </xsl:template>
 
+    <xsl:template
+            match="dri:referenceSet[@id='aspect.artifactbrowser.CommunityBrowser.referenceSet.community-browser']">
+        <div id="sidetree">
+            <div id="sidetreecontrol"><a href="?#" class="ds-button-field btn btn-default">Collapse All</a>&#160;
+                <a href="?#" class="ds-button-field btn btn-default">Expand All</a>
+            </div>
+            <ul id="tree">
+                <xsl:apply-templates select="*[not(name()='head')]" mode="summaryList"/>
+            </ul>
+        </div>
+    </xsl:template>
+
 </xsl:stylesheet>
