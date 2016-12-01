@@ -19,12 +19,33 @@
 
 @include selection {
     color: white;
-    background: hotpink;
+    background: #1e7fb8;
+}
+
+@import url(../scripts/treeview/jquery.treeview.css);
+#file_news_div_news > img {
+  float: right;
 }
 
 .publication-records-modal, .publication-records-modal ul {
   list-style-type: none;
   padding-left: 0px;
+}
+
+.break-word {
+  -ms-word-break: break-all;
+  -ms-word-wrap: break-all;
+  -webkit-word-break: break-word;
+  -webkit-word-wrap: break-word;
+  word-break: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+#aspect_artifactbrowser_CommunityBrowser_div_comunity-browser h4 {
+  font-weight: bold;
 }
 
 .publication-records-import-btn {
