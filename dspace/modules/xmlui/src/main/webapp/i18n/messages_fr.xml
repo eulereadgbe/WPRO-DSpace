@@ -1436,6 +1436,7 @@
 	<message key="xmlui.administrative.item.AddBitstreamForm.head1">T&#233;l&#233;charger un nouveau fichier</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.bundle_label">Groupement de fichiers</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.bundle.ORIGINAL">Fichiers de contenu (par d&#233;faut)</message>
+	<message key="xmlui.administrative.item.AddBitstreamForm.bundle.TEXT">Texte</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.bundle.METADATA">Fichiers de m&#233;tadonn&#233;es</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.bundle.THUMBNAIL">Vignettes</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.bundle.LICENSE">Licences</message>
