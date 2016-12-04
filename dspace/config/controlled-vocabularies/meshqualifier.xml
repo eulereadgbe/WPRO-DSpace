@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node id="MeSH" label="NIH MeSH Qualifiers">
+    <isComposedBy>
+        <node id="analysis" label="analysis">
+            <isComposedBy>
+                <node id="blood" label="blood"/>
+                <node id="cerebrospinal fluid" label="cerebrospinal fluid"/>
+                <node id="isolation and purification" label="isolation and purification"/>
+                <node id="urine" label="urine"/>
+            </isComposedBy>
+        </node>
+        <node id="anatomy and histology" label="anatomy and histology">
+            <isComposedBy>
+                <node id="blood supply" label="blood supply"/>
+                <node id="cytology" label="cytology">
+                    <isComposedBy>
+                        <node id="ultrastructure" label="ultrastructure"/>
+                    </isComposedBy>
+                </node>
+                <node id="embryology" label="embryology">
+                    <isComposedBy>
+                        <node id="abnormalities" label="abnormalities"/>
+                    </isComposedBy>
+                </node>
+                <node id="innervation" label="innervation"/>
+                <node id="pathology" label="pathology"/>
+            </isComposedBy>
+        </node>
+        <node id="chemistry" label="chemistry">
+            <isComposedBy>
+                <node id="agonists" label="agonists"/>
+                <node id="analogs and derivatives" label="analogs and derivatives"/>
+                <node id="antagonists and inhibitors" label="antagonists and inhibitors"/>
+                <node id="chemical synthesis" label="chemical synthesis"/>
+            </isComposedBy>
+        </node>
+        <node id="classification" label="classification"/>
+        <node id="diagnosis" label="diagnosis">
+            <isComposedBy>
+                <node id="diagnostic imaging" label="diagnostic imaging"/>
+            </isComposedBy>
+        </node>
+        <node id="drug effects" label="drug effects"/>
+        <node id="education" label="education"/>
+        <node id="ethics" label="ethics"/>
+        <node id="etiology" label="etiology">
+            <isComposedBy>
+                <node id="chemically induced" label="chemically induced"/>
+                <node id="complications" label="complications">
+                    <isComposedBy>
+                        <node id="secondary" label="secondary"/>
+                    </isComposedBy>
+                </node>
+                <node id="congenital" label="congenital"/>
+                <node id="embryology" label="embryology"/>
+                <node id="genetics" label="genetics"/>
+                <node id="immunology" label="immunology"/>
+                <node id="microbiology" label="microbiology">
+                    <isComposedBy>
+                        <node id="virology" label="virology"/>
+                    </isComposedBy>
+                </node>
+                <node id="parasitology" label="parasitology"/>
+                <node id="transmission" label="transmission"/>
+            </isComposedBy>
+        </node>
+        <node id="history" label="history"/>
+        <node id="injuries" label="injuries"/>
+        <node id="instrumentation" label="instrumentation"/>
+        <node id="methods" label="methods"/>
+        <node id="organization and administration" label="organization and administration">
+            <isComposedBy>
+                <node id="economics" label="economics"/>
+                <node id="legislation and jurisprudence" label="legislation and jurisprudence"/>
+                <node id="manpower" label="manpower"/>
+                <node id="standards" label="standards"/>
+                <node id="supply and distribution" label="supply and distribution"/>
+                <node id="trends" label="trends"/>
+                <node id="utilization" label="utilization"/>
+            </isComposedBy>
+        </node>
+        <node id="pathogenicity" label="pathogenicity"/>
+        <node id="pharmacology" label="pharmacology">
+            <isComposedBy>
+                <node id="administration and dosage" label="administration and dosage"/>
+                <node id="adverse effects" label="adverse effects">
+                    <isComposedBy>
+                        <node id="poisoning" label="poisoning"/>
+                        <node id="toxicity" label="toxicity"/>
+                    </isComposedBy>
+                </node>
+                <node id="agonists" label="agonists"/>
+                <node id="antagonists and inhibitors" label="antagonists and inhibitors"/>
+                <node id="pharmacokinetics" label="pharmacokinetics"/>
+                <node id="contraindications" label="contraindications"/>
+            </isComposedBy>
+        </node>
+        <node id="physiology" label="physiology">
+            <isComposedBy>
+                <node id="genetics" label="genetics"/>
+                <node id="growth and development" label="growth and development"/>
+                <node id="immunology" label="immunology"/>
+                <node id="metabolism" label="metabolism">
+                    <isComposedBy>
+                        <node id="biosynthesis" label="biosynthesis"/>
+                        <node id="blood" label="blood"/>
+                        <node id="cerebrospinal fluid" label="cerebrospinal fluid"/>
+                        <node id="deficiency" label="deficiency"/>
+                        <node id="enzymology" label="enzymology"/>
+                        <node id="pharmacokinetics" label="pharmacokinetics"/>
+                        <node id="urine" label="urine"/>
+                    </isComposedBy>
+                </node>
+                <node id="physiopathology" label="physiopathology"/>
+                <node id="secretion" label="secretion"/>
+            </isComposedBy>
+        </node>
+        <node id="psychology" label="psychology"/>
+        <node id="radiation effects" label="radiation effects"/>
+        <node id="statistics and numerical data" label="statistics and numerical data">
+            <isComposedBy>
+                <node id="epidemiology" label="epidemiology">
+                    <isComposedBy>
+                        <node id="ethnology" label="ethnology"/>
+                        <node id="mortality" label="mortality"/>
+                    </isComposedBy>
+                </node>
+                <node id="supply and distribution" label="supply and distribution"/>
+                <node id="utilization" label="utilization"/>
+            </isComposedBy>
+        </node>
+        <node id="therapeutic use" label="therapeutic use">
+            <isComposedBy>
+                <node id="administration and dosage" label="administration and dosage"/>
+                <node id="adverse effects" label="adverse effects"/>
+                <node id="contraindications" label="contraindications"/>
+                <node id="poisoning" label="poisoning"/>
+            </isComposedBy>
+        </node>
+        <node id="therapy" label="therapy">
+            <isComposedBy>
+                <node id="diet therapy" label="diet therapy"/>
+                <node id="drug therapy" label="drug therapy"/>
+                <node id="nursing" label="nursing"/>
+                <node id="prevention and control" label="prevention and control"/>
+                <node id="radiotherapy" label="radiotherapy"/>
+                <node id="rehabilitation" label="rehabilitation"/>
+                <node id="surgery" label="surgery">
+                    <isComposedBy>
+                        <node id="transplantation" label="transplantation"/>
+                    </isComposedBy>
+                </node>
+            </isComposedBy>
+        </node>
+        <node id="veterinary" label="veterinary"/>
+    </isComposedBy>
+</node>
