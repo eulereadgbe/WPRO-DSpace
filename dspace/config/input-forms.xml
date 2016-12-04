@@ -200,7 +200,6 @@ it, please enter the types and the actual numbers or codes.</hint>
          <input-type>onebox</input-type>
          <hint>Enter appropriate MeSH headings below. </hint>
          <required></required>
-         <vocabulary>MeSH</vocabulary>
        </field>
        <field>
          <dc-schema>dc</dc-schema>
@@ -222,7 +221,6 @@ it, please enter the types and the actual numbers or codes.</hint>
          <input-type>twobox</input-type>
          <hint>Enter appropriate subject keywords or phrases. </hint>
          <required></required>
-         <vocabulary>srsc</vocabulary>
        </field>
 
        <field>
@@ -422,7 +420,6 @@ it, please enter the types and the actual numbers or codes.</hint>
          <input-type>onebox</input-type>
          <hint>Enter appropriate MeSH headings below. </hint>
          <required></required>
-         <vocabulary>MeSH</vocabulary>
        </field>
        <field>
          <dc-schema>dc</dc-schema>
@@ -444,7 +441,6 @@ it, please enter the types and the actual numbers or codes.</hint>
          <input-type>twobox</input-type>
          <hint> Enter appropriate subject keywords or phrases below. </hint>
          <required></required>
-         <vocabulary>srsc</vocabulary>
        </field>
        <field>
          <dc-schema>dc</dc-schema>
@@ -628,7 +624,6 @@ it, please enter the types and the actual numbers or codes.</hint>
          <input-type>onebox</input-type>
          <hint>Enter appropriate MeSH headings below. </hint>
          <required></required>
-         <vocabulary>MeSH</vocabulary>
        </field>
        <field>
          <dc-schema>dc</dc-schema>
@@ -650,7 +645,6 @@ it, please enter the types and the actual numbers or codes.</hint>
          <input-type>twobox</input-type>
          <hint> Enter appropriate subject keywords or phrases below. </hint>
          <required></required>
-         <vocabulary>srsc</vocabulary>
        </field>
        <field>
          <dc-schema>dc</dc-schema>
@@ -813,7 +807,6 @@ it, please enter the types and the actual numbers or codes.</hint>
          <input-type>onebox</input-type>
          <hint>Enter appropriate MeSH headings below. </hint>
          <required></required>
-         <vocabulary>MeSH</vocabulary>
        </field>
        <field>
          <dc-schema>dc</dc-schema>
@@ -835,7 +828,6 @@ it, please enter the types and the actual numbers or codes.</hint>
          <input-type>twobox</input-type>
          <hint> Enter appropriate subject keywords or phrases below. </hint>
          <required></required>
-         <vocabulary>srsc</vocabulary>
        </field>
        <field>
          <dc-schema>dc</dc-schema>

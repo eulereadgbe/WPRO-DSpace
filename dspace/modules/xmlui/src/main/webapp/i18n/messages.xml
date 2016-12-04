@@ -2414,7 +2414,11 @@
   <message key="xmlui.ChoiceLookupTransformer.field.dc_subject_mesh.title">Medical Subject Headings lookup</message>
   <message key="xmlui.ChoiceLookupTransformer.field.dc_subject_mesh.help">MeSH Main Heading Terms</message>
 
-  <!-- mobile theme -->
+  <!-- Choice Lookup for MeSH Qualifier -->
+	<message key="xmlui.ChoiceLookupTransformer.field.dc_subject_meshqualifier.title">MeSH Qualifier lookup</message>
+	<message key="xmlui.ChoiceLookupTransformer.field.dc_subject_meshqualifier.help">MeSH Qualifier Terms</message>
+
+	<!-- mobile theme -->
   <message key="xmlui.mobile.home_mobile">DSpace Mobile</message>
   <message key="xmlui.mobile.search_all">Search ALL</message>
   <message key="xmlui.mobile.browse_all">Browse ALL by</message>
