@@ -1518,6 +1518,7 @@
 	<message key="xmlui.administrative.item.AddBitstreamForm.head1">Upload a new bitstream</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.bundle_label">Bundle</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.bundle.ORIGINAL">Content Files (default)</message>
+	<message key="xmlui.administrative.item.AddBitstreamForm.bundle.TEXT">正文</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.bundle.METADATA">Metadata Files</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.bundle.THUMBNAIL">Thumbnails</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.bundle.LICENSE">Licenses</message>
