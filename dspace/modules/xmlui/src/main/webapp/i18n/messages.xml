@@ -2560,8 +2560,8 @@
 		</p>
 		<p>
 			Its content is freely accessible and searchable in English. Content in Chinese and French are currently
-			digitized and are available on request at <a target="_blank" href="mailto:wprorepository@wpro.who.int">
-			wprorepository@wpro.who.int</a>.
+            digitized and are available on request at <a target="_blank" href="mailto:library@wpro.who.int">
+			library@wpro.who.int</a>.
 		</p>
 	</message>
 
@@ -2573,4 +2573,5 @@
 	<message key="wpro.related.link">Related links</message>
 	<message key="wpro.related.link.who.iris">Global IRIS</message>
 	<message key="wpro.related.link.wpro.library">WPRO Library</message>
+	<message key="wpro.help.link">Help</message>
 </catalogue>
