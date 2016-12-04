@@ -852,6 +852,13 @@
                         <a>
                             <xsl:attribute name="href">
                                 <xsl:choose>
+                                    <xsl:when test="/dri:document//dri:field[@id='aspect.discovery.SimpleSearch.field.query']/dri:value/text()!='' and $query-string=''">
+                                        <xsl:value-of select="$current-uri"/>
+                                        <xsl:text>?query=</xsl:text>
+                                        <xsl:value-of select="/dri:document//dri:field[@id='aspect.discovery.SimpleSearch.field.query']/dri:value/text()"/>
+                                        <xsl:text>&amp;locale-attribute=</xsl:text>
+                                        <xsl:value-of select="$locale"/>
+                                    </xsl:when>
                                     <xsl:when test="contains($query-string,'locale-attribute=')">
                                         <xsl:value-of select="$current-uri"/>
                                         <xsl:text>?</xsl:text>
