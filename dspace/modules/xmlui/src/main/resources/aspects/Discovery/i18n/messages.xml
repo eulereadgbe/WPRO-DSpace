@@ -108,6 +108,7 @@
 	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.description">Description</message>
 	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.identifier">Identifier</message>
 	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.series">Series</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.has_content_in_original_bundle">Has File(s)</message>
 
 
 
