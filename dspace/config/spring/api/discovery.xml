@@ -432,7 +432,8 @@
         <property name="indexFieldName" value="keywords"/>
         <property name="metadataFields">
             <list>
-                <value>dc.subject.*</value>
+                <value>dc.subject</value>
+                <value>dc.subject.meshqualifier</value>
             </list>
         </property>
         <property name="facetLimit" value="5"/>
