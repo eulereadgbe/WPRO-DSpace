@@ -119,10 +119,10 @@
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.author_filter">Author</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.coauthor">Co-Author</message>
     <message key="xmlui.Discovery.AbstractSearch.type_subject">Filter by: Subject</message>
-    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject">Subject</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject">Subject (MeSH)</message>
 	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.keywords">Keywords</message>
 	<message key="xmlui.Discovery.AbstractSearch.type_keywords">Filter by: Keyword</message>
-    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject_filter">Subject</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject_filter">Subject (MeSH)</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateIssued.year">Date Issued</message>
     <message key="xmlui.Discovery.AbstractSearch.type_type">Filter by: Type</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.language">Language (ISO)</message>
