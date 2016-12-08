@@ -99,8 +99,11 @@
         <property name="sidebarFacets">
             <list>
                 <ref bean="searchFilterSubject" />
+                <ref bean="searchFilterKeywords" />
                 <ref bean="searchFilterIssued" />
-		        <ref bean="searchFilterContentInOriginalBundle"/>
+                <ref bean="searchFilterType" />
+                <ref bean="searchFilterLanguage" />
+                <ref bean="searchFilterContentInOriginalBundle"/>
             </list>
         </property>
         <!-- Set TagCloud configuration per discovery configuration -->
@@ -110,9 +113,17 @@
             <list>
                 <ref bean="searchFilterTitle" />
                 <ref bean="searchFilterAuthor" />
+                <ref bean="searchFilterCoAuthor" />
                 <ref bean="searchFilterSubject" />
+                <ref bean="searchFilterKeywords" />
+                <ref bean="searchFilterAbstract"/>
+                <ref bean="searchFilterIdentifier"/>
+                <ref bean="searchFilterSeries"/>
                 <ref bean="searchFilterIssued" />
-		        <ref bean="searchFilterContentInOriginalBundle"/>
+                <ref bean="searchFilterType" />
+                <ref bean="searchFilterLanguage" />
+                <ref bean="searchFilterLocation" />
+                <ref bean="searchFilterContentInOriginalBundle"/>
                 <ref bean="searchFilterFileNameInOriginalBundle" />
                 <ref bean="searchFilterFileDescriptionInOriginalBundle" />
             </list>
@@ -212,8 +223,11 @@
         <property name="sidebarFacets">
             <list>
                 <ref bean="searchFilterSubject" />
+                <ref bean="searchFilterKeywords" />
                 <ref bean="searchFilterIssued" />
-		        <ref bean="searchFilterContentInOriginalBundle"/>
+                <ref bean="searchFilterType" />
+                <ref bean="searchFilterLanguage" />
+                <ref bean="searchFilterContentInOriginalBundle"/>
             </list>
         </property>
         <!-- Set TagCloud configuration per discovery configuration -->
@@ -223,9 +237,17 @@
             <list>
                 <ref bean="searchFilterTitle" />
                 <ref bean="searchFilterAuthor" />
+                <ref bean="searchFilterCoAuthor" />
                 <ref bean="searchFilterSubject" />
+                <ref bean="searchFilterKeywords" />
+                <ref bean="searchFilterAbstract"/>
+                <ref bean="searchFilterIdentifier"/>
+                <ref bean="searchFilterSeries"/>
                 <ref bean="searchFilterIssued" />
-		        <ref bean="searchFilterContentInOriginalBundle"/>
+                <ref bean="searchFilterType" />
+                <ref bean="searchFilterLanguage" />
+                <ref bean="searchFilterLocation" />
+                <ref bean="searchFilterContentInOriginalBundle"/>
                 <ref bean="searchFilterFileNameInOriginalBundle" />
                 <ref bean="searchFilterFileDescriptionInOriginalBundle" />
             </list>
@@ -400,14 +422,36 @@
         <property name="sortOrderFilterPage" value="COUNT"/>
     </bean>
 
+    <bean id="searchFilterCoAuthor" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
+        <property name="indexFieldName" value="coauthor"/>
+        <property name="metadataFields">
+            <list>
+                <value>wpro.contributor.coauthor</value>
+            </list>
+        </property>
+    </bean>
+
     <bean id="searchFilterSubject" class="org.dspace.discovery.configuration.HierarchicalSidebarFacetConfiguration">
         <property name="indexFieldName" value="subject"/>
+        <property name="metadataFields">
+            <list>
+                <value>dc.subject.mesh</value>
+            </list>
+        </property>
+        <property name="facetLimit" value="5"/>
+        <property name="sortOrderSidebar" value="COUNT"/>
+        <property name="sortOrderFilterPage" value="COUNT"/>
+        <property name="splitter" value="::"/>
+    </bean>
+
+    <bean id="searchFilterKeywords" class="org.dspace.discovery.configuration.HierarchicalSidebarFacetConfiguration">
+        <property name="indexFieldName" value="keywords"/>
         <property name="metadataFields">
             <list>
                 <value>dc.subject.*</value>
             </list>
         </property>
-        <property name="facetLimit" value="10"/>
+        <property name="facetLimit" value="5"/>
         <property name="sortOrderSidebar" value="COUNT"/>
         <property name="sortOrderFilterPage" value="COUNT"/>
         <property name="splitter" value="::"/>
@@ -424,7 +468,67 @@
         <property name="sortOrderSidebar" value="COUNT"/>
         <property name="sortOrderFilterPage" value="COUNT"/>
     </bean>
-    
+
+    <bean id="searchFilterAbstract" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
+        <property name="indexFieldName" value="description"/>
+        <property name="metadataFields">
+            <list>
+                <value>dc.description.*</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="searchFilterIdentifier" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
+        <property name="indexFieldName" value="identifier"/>
+        <property name="metadataFields">
+            <list>
+                <value>dc.identifier.*</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="searchFilterSeries" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
+        <property name="indexFieldName" value="series"/>
+        <property name="metadataFields">
+            <list>
+                <value>dc.relation.ispartofseries</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="searchFilterType" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
+        <property name="indexFieldName" value="type"/>
+        <property name="metadataFields">
+            <list>
+                <value>dc.type</value>
+            </list>
+        </property>
+        <property name="facetLimit" value="5"/>
+        <property name="sortOrderSidebar" value="COUNT"/>
+        <property name="sortOrderFilterPage" value="COUNT"/>
+    </bean>
+
+    <bean id="searchFilterLanguage" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
+        <property name="indexFieldName" value="language"/>
+        <property name="metadataFields">
+            <list>
+                <value>dc.language.iso</value>
+            </list>
+        </property>
+        <property name="facetLimit" value="5"/>
+        <property name="sortOrderSidebar" value="COUNT"/>
+        <property name="sortOrderFilterPage" value="COUNT"/>
+    </bean>
+
+    <bean id="searchFilterLocation" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
+        <property name="indexFieldName" value="location"/>
+        <property name="metadataFields">
+            <list>
+                <value>wpro.description.location</value>
+            </list>
+        </property>
+    </bean>
+
     <bean id="searchFilterContentInOriginalBundle" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
         <property name="indexFieldName" value="has_content_in_original_bundle"/>
         <property name="metadataFields">
