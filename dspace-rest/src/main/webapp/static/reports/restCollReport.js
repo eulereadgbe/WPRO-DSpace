@@ -8,7 +8,7 @@
 var CollReport = function() {
     Report.call(this);
     //If sortable.js is included, uncomment the following
-    //this.hasSorttable = function(){return true;}
+    this.hasSorttable = function(){return true;}
     
     this.COLL_LIMIT = 20;
     this.TOOBIG = 10000;
