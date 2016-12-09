@@ -9,7 +9,7 @@ var QueryReport = function() {
     Report.call(this);
     
     //If sortable.js is included, uncomment the following
-    //this.hasSorttable = function(){return true;}
+    this.hasSorttable = function(){return true;}
     
     this.getDefaultParameters = function(){
         return {

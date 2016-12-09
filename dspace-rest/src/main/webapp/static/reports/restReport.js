@@ -12,9 +12,9 @@ var Report = function() {
     this.ITEM_LIMIT = 100;
 
     //set default to work on demo.dspace.org
-    this.ROOTPATH = "/xmlui/handle/"
+    //this.ROOTPATH = "/xmlui/handle/"
     //this.ROOTPATH = "/jspui/handle/"
-    //this.ROOTPATH = "/handle/"
+    this.ROOTPATH = "/handle/"
     
     //disable this setting if Password Authentication is not supported
     this.makeAuthLink = function(){return false;};
