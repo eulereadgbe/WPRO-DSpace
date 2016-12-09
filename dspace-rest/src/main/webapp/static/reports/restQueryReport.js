@@ -9,7 +9,7 @@ var QueryReport = function() {
     Report.call(this);
     
     //If sortable.js is included, uncomment the following
-    //this.hasSorttable = function(){return true;}
+    this.hasSorttable = function(){return true;}
 
     //Indicate if Password Authentication is supported
     //this.makeAuthLink = function(){return true;};
@@ -120,9 +120,9 @@ var QueryReport = function() {
           $.each(data.bitfields, function(index, bitfield) {
             if (bitfield != "") {
               self.myHtmlUtil.addTh(tr,bitfield).addClass("returnFields");
-              mdCols[mdCols.length] = bitfield;      
+              mdCols[mdCols.length] = bitfield;
             }
-          });     
+          });
         }
 
         $.each(data.items, function(index, item){

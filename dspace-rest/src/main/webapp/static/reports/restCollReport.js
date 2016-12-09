@@ -8,7 +8,7 @@
 var CollReport = function() {
     Report.call(this);
     //If sortable.js is included, uncomment the following
-    //this.hasSorttable = function(){return true;}
+    this.hasSorttable = function(){return true;}
 
     //Indicate if Password Authentication is supported
     //this.makeAuthLink = function(){return true;};
@@ -31,7 +31,7 @@ var CollReport = function() {
     this.IACCIDX_ITEM = 2;
     this.getDefaultParameters = function(){
         return {
-            "show_fields[]" : [], 
+            "show_fields[]" : [],
             "show_fields_bits[]" : [],
             filters       : "",
             limit         : this.COUNT_LIMIT,
@@ -415,10 +415,10 @@ var CollReport = function() {
         var bitfields = $("#show-fields-bits select").val();
         if (bitfields != null) {
           $.each(bitfields, function(index, bitf){
-            self.myHtmlUtil.addTh(tr, bitf);    
-          });   
+            self.myHtmlUtil.addTh(tr, bitf);
+          });
         }
-    
+
         var expand = "items";
         if (fields != null) {
           expand += ",metadata";
@@ -460,7 +460,7 @@ var CollReport = function() {
                                     td.append($("<div>"+mv.value+"</div>"));
                                 }
                             });
-                        });    
+                        });
                     }
                     if (bitfields != null) {
                       $.each(bitfields, function(index, bitfield){
