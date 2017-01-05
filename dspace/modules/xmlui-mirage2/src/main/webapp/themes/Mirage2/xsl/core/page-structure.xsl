@@ -776,7 +776,7 @@
                         <div class="hidden-print footer-content">
                             <a>
                                 <xsl:attribute name="href">
-                                    <xsl:text>mailto:library@wpro.who.int</xsl:text>
+                                    <xsl:text>mailto:wproliballstaff@who.int</xsl:text>
                                 </xsl:attribute>
                                 <xsl:attribute name="target">
                                     <xsl:text>_blank</xsl:text>
