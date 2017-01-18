@@ -75,98 +75,11 @@
                 </div>
             </xsl:when>
             <xsl:otherwise>
-                <h3 class="ds-list-head">
-                    <i18n:text>xmlui.ArtifactBrowser.CommunityViewer.head_sub_communities</i18n:text>
-                </h3>
-                <ul class="ds-artifact-list list-unstyled">
-                    <!-- External Metadata URL: cocoon://metadata/handle/10665.1/9972/mets.xml?sections=dmdSec,fileSec&fileGrpTypes=THUMBNAIL-->
-                    <li class="ds-artifact-item odd">
-                        <div class="artifact-description">
-                            <h4 class="artifact-title">
-                                <a href="/handle/10665.1/9972">
-                                    <span class="Z3988">Regional Committee for the Western Pacific - Comité régional
-                                        pour le Pacifique occidental
-                                    </span>
-                                </a>
-                            </h4>
-                        </div>
-                    </li>
-                </ul>
-                <h3 class="ds-list-head">
-                    <i18n:text>xmlui.ArtifactBrowser.CommunityViewer.head_sub_collections</i18n:text>
-                </h3>
-                <ul class="ds-artifact-list list-unstyled">
-                    <!-- External Metadata URL: cocoon://metadata/handle/10665.1/10963/mets.xml?sections=dmdSec,fileSec&fileGrpTypes=THUMBNAIL-->
-                    <li class="ds-artifact-item odd">
-                        <div class="artifact-description">
-                            <h4 class="artifact-title">
-                                <a href="/handle/10665.1/10963">
-                                    <span class="Z3988">Bulletins (Measles, Polio, Rubella) - in process</span>
-                                </a>
-                            </h4>
-                        </div>
-                    </li>
-                    <!-- External Metadata URL: cocoon://metadata/handle/10665.1/1280/mets.xml?sections=dmdSec,fileSec&fileGrpTypes=THUMBNAIL-->
-                    <li class="ds-artifact-item even">
-                        <div class="artifact-description">
-                            <h4 class="artifact-title">
-                                <a href="/handle/10665.1/1280">
-                                    <span class="Z3988">Information products</span>
-                                </a>
-                            </h4>
-                        </div>
-                    </li>
-                    <!-- External Metadata URL: cocoon://metadata/handle/10665.1/1278/mets.xml?sections=dmdSec,fileSec&fileGrpTypes=THUMBNAIL-->
-                    <li class="ds-artifact-item odd">
-                        <div class="artifact-description">
-                            <h4 class="artifact-title">
-                                <a href="/handle/10665.1/1278">
-                                    <span class="Z3988">Meeting reports</span>
-                                </a>
-                            </h4>
-                        </div>
-                    </li>
-                </ul>
-            </xsl:otherwise>
-        </xsl:choose>
-    </xsl:template>
-
-    <xsl:template match="dri:referenceSet[@id='aspect.discovery.SiteRecentSubmissions.referenceSet.site-last-submitted' and @rend='recent-submissions']
-    |dri:referenceSet[@id='aspect.discovery.CommunityRecentSubmissions.referenceSet.community-last-submitted'and @rend='recent-submissions']">
-        <xsl:choose>
-            <xsl:when test="$pagemeta/dri:metadata[@element='request'][@qualifier='URI']='handle/10665.1/9971'
-        or $pagemeta/dri:metadata[@element='request'][@qualifier='URI']=''">
-                <xsl:for-each select="dri:reference">
-                    <xsl:variable name="externalMetadataURL">
-                        <xsl:text>cocoon:/</xsl:text>
-                        <xsl:value-of select="@url"/>
-                        <!-- No options selected, render the full METS document -->
-                    </xsl:variable>
-                    <xsl:variable name="handle">
+                <xsl:variable name="top-community">
                         <xsl:value-of select="$current-uri"/>
-                        <xsl:value-of select="substring-before(substring-after(@url,'/metadata'),'/mets.xml')"/>
-                        <xsl:text>?XML</xsl:text>
+                    <xsl:text>handle/10665.1/9971?XML</xsl:text>
                     </xsl:variable>
-                    <xsl:variable name="issue-date"  select="document($externalMetadataURL)//dim:field[@element='date'][@qualifier='issued'][1]/text()"/>
-                    <xsl:variable name="owning-collection"  select="document($handle)//dri:trail[@target][last()]/@target"/>
-                    <!--
-                                   Assuming dates conform to YYYY-MM-DD syntax, a simple string compare should work.
-                                   An XSLT extension would be needed to computer the current date.
-                                -->
-                    <xsl:if test="substring($issue-date,1,4) = date:year()">
-                        <xsl:comment> Issue date: <xsl:value-of select="$issue-date"/> </xsl:comment>
-                        <xsl:comment> Current year is: <xsl:value-of select="date:year()"/> </xsl:comment>
-                        <xsl:comment> Owning collection: <xsl:value-of select="$owning-collection"/> </xsl:comment>
-                        <ul class="ds-artifact-list list-unstyled">
-                            <xsl:apply-templates select="." mode="summaryList"/>
-                        </ul>
-                    </xsl:if>
-                </xsl:for-each>
-            </xsl:when>
-            <xsl:otherwise>
-                <ul class="ds-artifact-list list-unstyled">
-                    <xsl:apply-templates select="." mode="summaryList"/>
-                </ul>
+                <xsl:apply-templates select="document($top-community)//dri:div[@id='aspect.artifactbrowser.CommunityViewer.div.community-view']/node()" mode="detailView" />
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
