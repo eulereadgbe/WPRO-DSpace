@@ -31,7 +31,8 @@
                 xmlns:dc="http://purl.org/dc/elements/1.1/"
                 xmlns:confman="org.dspace.core.ConfigurationManager"
                 xmlns:util="org.dspace.app.xmlui.utils.XSLUtils"
-                exclude-result-prefixes="i18n dri mets xlink xsl dim xhtml mods dc confman util">
+                xmlns:date="http://exslt.org/dates-and-times"
+                exclude-result-prefixes="i18n dri mets xlink xsl dim xhtml mods dc confman util date">
 
     <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
 
@@ -769,7 +770,7 @@
                             <span>
                                 <a href="http://www.wpro.who.int/about/copyright/en/" target="_blank">&#169;
                                     <acronym title="WHO in the Western Pacific Region">WPRO</acronym>
-                                    2015
+                                    <xsl:value-of select="date:year()"/>
                                 </a>
                             </span>
                         </div>
