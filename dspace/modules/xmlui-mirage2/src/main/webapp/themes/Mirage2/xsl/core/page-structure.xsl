@@ -772,6 +772,7 @@
                             <span>
                                 <a href="http://www.wpro.who.int/about/copyright/en/" target="_blank">&#169;
                                     <acronym title="WHO in the Western Pacific Region">WPRO</acronym>
+                                    <xsl:text>&#160;</xsl:text>
                                     <xsl:value-of select="date:year()"/>
                                 </a>
                             </span>
