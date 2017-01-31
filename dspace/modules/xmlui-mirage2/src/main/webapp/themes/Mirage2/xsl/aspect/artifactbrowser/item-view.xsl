@@ -341,8 +341,16 @@
             </xsl:if>
             <a>
                 <xsl:attribute name="href">
-                    <xsl:text>/browse?type=coauthor&amp;value=</xsl:text>
-                    <xsl:value-of select="." disable-output-escaping="yes"/>
+                    <xsl:text>/discover?filtertype=coauthor&amp;filter_relational_operator=contains&amp;filter=</xsl:text>
+                    <xsl:choose>
+                        <xsl:when test="contains(./node(),' (')">
+                            <xsl:value-of select="substring-before(./node(),' (')"
+                                          disable-output-escaping="yes"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:copy-of select="node()"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
                 </xsl:attribute>
                 <xsl:copy-of select="node()"/>
             </a>
@@ -791,7 +799,22 @@
                 </h5>
                 <span>
                     <xsl:for-each select="dim:field[@element='relation' and @qualifier='ispartofseries']">
-                        <xsl:copy-of select="./node()"/>
+                        <!-- <xsl:copy-of select="./node()"/> -->
+                        <a>
+                            <xsl:attribute name="href">
+                                <xsl:text>/discover?filtertype=series&amp;filter_relational_operator=equals&amp;filter=</xsl:text>
+                                <xsl:choose>
+                                    <xsl:when test="contains(./node(),';')">
+                                        <xsl:value-of select="substring-before(./node(),';')"
+                                                      disable-output-escaping="yes"/>
+                                    </xsl:when>
+                                    <xsl:otherwise>
+                                        <xsl:copy-of select="node()"/>
+                                    </xsl:otherwise>
+                                </xsl:choose>
+                            </xsl:attribute>
+                            <xsl:copy-of select="node()"/>
+                        </a>
                         <xsl:if test="count(following-sibling::dim:field[@element='relation' and @qualifier='ispartofseries']) != 0">
                             <br/>
                         </xsl:if>
