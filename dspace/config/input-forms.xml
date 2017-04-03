@@ -348,6 +348,16 @@ it, please enter the types and the actual numbers or codes.</hint>
        </field>
        <field>
          <dc-schema>dc</dc-schema>
+         <dc-element>coverage</dc-element>
+         <dc-qualifier>spatial</dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Place of publication</label>
+         <input-type>onebox</input-type>
+         <hint>Enter the place or location where the publication was published.</hint>
+         <required></required>
+       </field>
+       <field>
+         <dc-schema>dc</dc-schema>
          <dc-element>identifier</dc-element>
          <dc-qualifier>citation</dc-qualifier>
          <repeatable>false</repeatable>

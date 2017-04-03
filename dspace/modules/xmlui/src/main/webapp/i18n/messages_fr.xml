@@ -2132,6 +2132,7 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.item-govdoc">No publ. gouv.</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-date">Date</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-publisher">&#201;diteur</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-place">Lieu de publication</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-series">No. de la collection/du rapport</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-subject">Sujet</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-keyword">Mots-cl&#233;s</message>
