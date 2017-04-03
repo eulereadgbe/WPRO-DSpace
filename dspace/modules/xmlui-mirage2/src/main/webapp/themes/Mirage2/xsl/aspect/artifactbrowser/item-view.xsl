@@ -116,15 +116,16 @@
                             <xsl:call-template name="itemSummaryView-DIM-file-section"/>
                         </div>
                     </div>
-                    <xsl:call-template name="itemSummaryView-DIM-date"/>
                     <xsl:call-template name="share" />
                 </div>
                 <div class="col-sm-8">
                     <xsl:call-template name="itemSummaryView-DIM-other-title"/>
                     <xsl:call-template name="itemSummaryView-DIM-authors"/>
                     <xsl:call-template name="itemSummaryView-DIM-coauthors"/>
-                    <xsl:call-template name="itemSummaryView-DIM-keyword"/>
+                    <xsl:call-template name="itemSummaryView-DIM-date"/>
                     <xsl:call-template name="itemSummaryView-DIM-publisher"/>
+                    <xsl:call-template name="itemSummaryView-DIM-place"/>
+                    <xsl:call-template name="itemSummaryView-DIM-keyword"/>
                     <xsl:call-template name="itemSummaryView-DIM-series"/>
                     <xsl:call-template name="itemSummaryView-DIM-govdoc"/>
                     <xsl:call-template name="itemSummaryView-DIM-abstract"/>
@@ -783,6 +784,24 @@
                     <xsl:for-each select="dim:field[@element='publisher' and not(@qualifier)]">
                         <xsl:copy-of select="./node()"/>
                         <xsl:if test="count(following-sibling::dim:field[@element='publisher' and not(@qualifier)]) != 0">
+                            <xsl:text>; </xsl:text>
+                        </xsl:if>
+                    </xsl:for-each>
+                </span>
+            </div>
+        </xsl:if>
+    </xsl:template>
+
+    <xsl:template name="itemSummaryView-DIM-place">
+        <xsl:if test="dim:field[@element='coverage' and @qualifier='spatial']">
+            <div class="simple-item-view-uri item-page-field-wrapper table">
+                <h5>
+                    <i18n:text>xmlui.dri2xhtml.METS-1.0.item-place</i18n:text>
+                </h5>
+                <span>
+                    <xsl:for-each select="dim:field[@element='coverage' and @qualifier='spatial']">
+                        <xsl:copy-of select="./node()"/>
+                        <xsl:if test="count(following-sibling::dim:field[@element='coverage' and @qualifier='spatial']) != 0">
                             <xsl:text>; </xsl:text>
                         </xsl:if>
                     </xsl:for-each>

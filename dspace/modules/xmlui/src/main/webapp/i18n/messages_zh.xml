@@ -2225,7 +2225,8 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.item-edition">其他版本</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-govdoc">政府文件号</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-date">发表日期</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-publisher">出版者</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-publisher">出版人</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-place">出版地</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-series">系列/报告编号</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-subject">主题</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-keyword">关键字</message>
